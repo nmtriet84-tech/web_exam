@@ -1,4 +1,4 @@
-const TOTAL_QUESTIONS = 20;
+﻿const TOTAL_QUESTIONS = 20;
 const DATA_BASE_PATH = "data/EN08_GRAMMAR";
 
 let ALL_QUESTIONS = [];
@@ -43,21 +43,11 @@ async function init() {
         updateSelectionSummary();
     } catch (error) {
         console.error(error);
-        selectionCount.textContent = "Không tải được dữ liệu JSON.";
-        questionPoolCount.textContent = "Kiểm tra thư mục data/EN08_GRAMMAR trên GitHub.";
+        selectionCount.textContent = "Khong tai duoc du lieu JSON.";
+        questionPoolCount.textContent = "Kiem tra thu muc data/EN08_GRAMMAR tren GitHub.";
     } finally {
         setLoadingState(false);
     }
-    return;
-
-    if (!Array.isArray(window.ALL_QUESTIONS) && typeof ALL_QUESTIONS === "undefined") {
-        selectionCount.textContent = "Không tìm thấy dữ liệu câu hỏi.";
-        startBtn.disabled = true;
-        return;
-    }
-
-    renderSelector();
-    updateSelectionSummary();
 }
 
 function getQuestionUnit(question) {
@@ -218,8 +208,8 @@ function updateSelectionSummary() {
     const readingCount = new Set(pool.filter((question) => question.r).map((question) => question.r)).size;
     const mcCount = pool.filter((question) => !question.r).length;
 
-    selectionCount.textContent = `${selectedGrammar.length} grammar points đã chọn`;
-    questionPoolCount.textContent = `${readingCount} bài đọc, ${mcCount} câu MC`;
+    selectionCount.textContent = `${selectedGrammar.length} grammar points da chon`;
+    questionPoolCount.textContent = `${readingCount} bai doc, ${mcCount} cau MC`;
 }
 
 function generateExam() {
@@ -229,7 +219,7 @@ function generateExam() {
     const readingRefs = [...new Set(readingQuestions.map((question) => question.r))];
 
     if (readingRefs.length < 2) {
-        alert("Cần ít nhất 2 bài đọc trong phần đã chọn.");
+        alert("Can it nhat 2 bai doc trong phan da chon.");
         return;
     }
 
@@ -240,7 +230,7 @@ function generateExam() {
     const remainingSlots = TOTAL_QUESTIONS - finalReadings.length;
 
     if (remainingSlots < 0 || mcPool.length < remainingSlots) {
-        alert(`Không đủ câu hỏi để tạo đề ${TOTAL_QUESTIONS} câu. Hiện có ${finalReadings.length} câu đọc và ${mcPool.length} câu trắc nghiệm.`);
+        alert(`Khong du cau hoi de tao de ${TOTAL_QUESTIONS} cau. Hien co ${finalReadings.length} cau doc va ${mcPool.length} cau trac nghiem.`);
         return;
     }
 
@@ -272,7 +262,7 @@ function renderQuestion() {
     progressFill.style.width = `${((currentIdx + 1) / total) * 100}%`;
     qCounter.textContent = `${currentIdx + 1} / ${total}`;
     examTitle.textContent = `Question ${currentIdx + 1}`;
-    answeredBadge.textContent = `${answeredCount}/${total} đã trả lời`;
+    answeredBadge.textContent = `${answeredCount}/${total} da tra loi`;
     questionMeta.textContent = `${getQuestionUnit(question)} - ${getQuestionGrammar(question)}`;
 
     renderQuestionNav();
@@ -287,12 +277,16 @@ function renderQuestion() {
 
 function renderQuestionNav() {
     questionNav.replaceChildren();
+    let activeButton = null;
 
     currentExam.forEach((question, index) => {
         const button = document.createElement("button");
         button.type = "button";
         button.className = "question-nav-btn";
-        if (index === currentIdx) button.classList.add("active");
+        if (index === currentIdx) {
+            button.classList.add("active");
+            activeButton = button;
+        }
         if (userAnswers[question.id] !== undefined) button.classList.add("answered");
         button.textContent = index + 1;
         button.setAttribute("aria-label", `Question ${index + 1}`);
@@ -302,6 +296,8 @@ function renderQuestionNav() {
         });
         questionNav.appendChild(button);
     });
+
+    activeButton?.scrollIntoView({ block: "nearest", inline: "center" });
 }
 
 function renderReading(question) {
@@ -370,10 +366,10 @@ function showResult() {
 }
 
 function getResultMessage(score) {
-    if (score >= 18) return "Excellent! Bạn đã sẵn sàng cho bài kiểm tra thật.";
-    if (score >= 15) return "Good job! Chỉ cần ôn lại vài điểm nhỏ nữa.";
-    if (score >= 10) return "Khá ổn, nhưng nên xem lại phần giải thích bên dưới.";
-    return "Nên ôn tập thêm các grammar points rồi thử lại một đề mới.";
+    if (score >= 18) return "Excellent! Ban da san sang cho bai kiem tra that.";
+    if (score >= 15) return "Good job! Chi can on lai vai diem nho nua.";
+    if (score >= 10) return "Kha on, nhung nen xem lai phan giai thich ben duoi.";
+    return "Nen on tap them cac grammar points roi thu lai mot de moi.";
 }
 
 function renderReview() {
@@ -390,20 +386,20 @@ function renderReview() {
 
         const status = document.createElement("span");
         status.className = "review-status";
-        status.textContent = isCorrect ? "Đúng" : "Xem lại";
+        status.textContent = isCorrect ? "Dung" : "Xem lai";
 
         const title = document.createElement("h3");
         title.textContent = `Question ${index + 1}: ${question.q}`;
 
         const chosen = document.createElement("p");
-        chosen.innerHTML = `<strong>Câu trả lời của bạn:</strong> ${selectedOption ? escapeHtml(selectedOption.text) : "Chưa trả lời"}`;
+        chosen.innerHTML = `<strong>Cau tra loi cua ban:</strong> ${selectedOption ? escapeHtml(selectedOption.text) : "Chua tra loi"}`;
 
         const correct = document.createElement("p");
-        correct.innerHTML = `<strong>Đáp án đúng:</strong> ${escapeHtml(correctOption.text)}`;
+        correct.innerHTML = `<strong>Dap an dung:</strong> ${escapeHtml(correctOption.text)}`;
 
         const explain = document.createElement("p");
         explain.className = "review-explain";
-        explain.textContent = question.e || "Chưa có giải thích cho câu này.";
+        explain.textContent = question.e || "Chua co giai thich cho cau nay.";
 
         item.append(status, title, chosen, correct, explain);
         reviewList.appendChild(item);
@@ -445,7 +441,7 @@ nextBtn.addEventListener("click", () => {
 });
 submitBtn.addEventListener("click", () => {
     const answeredCount = Object.keys(userAnswers).length;
-    if (answeredCount < currentExam.length && !confirm(`Bạn mới trả lời ${answeredCount}/${currentExam.length} câu. Vẫn nộp bài?`)) return;
+    if (answeredCount < currentExam.length && !confirm(`Ban moi tra loi ${answeredCount}/${currentExam.length} cau. Van nop bai?`)) return;
     showResult();
 });
 newExamBtn.addEventListener("click", () => {
@@ -456,3 +452,4 @@ newExamBtn.addEventListener("click", () => {
 });
 
 init();
+
