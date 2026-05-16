@@ -1,5 +1,6 @@
 ﻿const TOTAL_QUESTIONS = 20;
 const DATA_BASE_PATH = "data/EN08_GRAMMAR";
+const EXAM_DURATION_SECONDS = 20 * 60;
 
 let ALL_QUESTIONS = [];
 let ALL_READINGS = [];
@@ -8,6 +9,8 @@ let ALL_GRAMMAR = {};
 let currentExam = [];
 let userAnswers = {};
 let currentIdx = 0;
+let remainingSeconds = EXAM_DURATION_SECONDS;
+let timerId = null;
 
 const setupScreen = document.getElementById("setup-screen");
 const examScreen = document.getElementById("exam-screen");
@@ -31,9 +34,11 @@ const prevBtn = document.getElementById("prev-btn");
 const nextBtn = document.getElementById("next-btn");
 const submitBtn = document.getElementById("submit-btn");
 const finalScore = document.getElementById("final-score");
+const scoreTen = document.getElementById("score-ten");
 const resultMsg = document.getElementById("result-msg");
 const reviewList = document.getElementById("review-list");
 const newExamBtn = document.getElementById("new-exam-btn");
+const timerBadge = document.getElementById("timer-badge");
 
 async function init() {
     setLoadingState(true);
@@ -43,8 +48,8 @@ async function init() {
         updateSelectionSummary();
     } catch (error) {
         console.error(error);
-        selectionCount.textContent = "Khong tai duoc du lieu JSON.";
-        questionPoolCount.textContent = "Kiem tra thu muc data/EN08_GRAMMAR tren GitHub.";
+        selectionCount.textContent = "Không tải được dữ liệu JSON.";
+        questionPoolCount.textContent = "Kiểm tra thư mục data/EN08_GRAMMAR trên GitHub.";
     } finally {
         setLoadingState(false);
     }
@@ -208,8 +213,8 @@ function updateSelectionSummary() {
     const readingCount = new Set(pool.filter((question) => question.r).map((question) => question.r)).size;
     const mcCount = pool.filter((question) => !question.r).length;
 
-    selectionCount.textContent = `${selectedGrammar.length} grammar points da chon`;
-    questionPoolCount.textContent = `${readingCount} bai doc, ${mcCount} cau MC`;
+    selectionCount.textContent = `${selectedGrammar.length} grammar points đã chọn`;
+    questionPoolCount.textContent = `${readingCount} bài đọc, ${mcCount} câu MC`;
 }
 
 function generateExam() {
@@ -219,7 +224,7 @@ function generateExam() {
     const readingRefs = [...new Set(readingQuestions.map((question) => question.r))];
 
     if (readingRefs.length < 2) {
-        alert("Can it nhat 2 bai doc trong phan da chon.");
+        alert("Cần ít nhất 2 bài đọc trong phần đã chọn.");
         return;
     }
 
@@ -230,7 +235,7 @@ function generateExam() {
     const remainingSlots = TOTAL_QUESTIONS - finalReadings.length;
 
     if (remainingSlots < 0 || mcPool.length < remainingSlots) {
-        alert(`Khong du cau hoi de tao de ${TOTAL_QUESTIONS} cau. Hien co ${finalReadings.length} cau doc va ${mcPool.length} cau trac nghiem.`);
+        alert(`Không đủ câu hỏi để tạo đề ${TOTAL_QUESTIONS} câu. Hiện có ${finalReadings.length} câu đọc và ${mcPool.length} câu trắc nghiệm.`);
         return;
     }
 
@@ -250,8 +255,39 @@ function startTest() {
     document.body.classList.remove("result-active");
     currentIdx = 0;
     userAnswers = {};
+    startTimer();
     window.scrollTo({ top: 0, behavior: "auto" });
     renderQuestion();
+}
+
+function startTimer() {
+    stopTimer();
+    remainingSeconds = EXAM_DURATION_SECONDS;
+    updateTimerDisplay();
+    timerId = window.setInterval(() => {
+        remainingSeconds -= 1;
+        updateTimerDisplay();
+
+        if (remainingSeconds <= 0) {
+            stopTimer();
+            showResult({ timedOut: true });
+        }
+    }, 1000);
+}
+
+function stopTimer() {
+    if (timerId) {
+        window.clearInterval(timerId);
+        timerId = null;
+    }
+}
+
+function updateTimerDisplay() {
+    const safeSeconds = Math.max(remainingSeconds, 0);
+    const minutes = Math.floor(safeSeconds / 60).toString().padStart(2, "0");
+    const seconds = (safeSeconds % 60).toString().padStart(2, "0");
+    timerBadge.textContent = `${minutes}:${seconds}`;
+    timerBadge.classList.toggle("timer-warning", safeSeconds <= 60);
 }
 
 function renderQuestion() {
@@ -262,7 +298,7 @@ function renderQuestion() {
     progressFill.style.width = `${((currentIdx + 1) / total) * 100}%`;
     qCounter.textContent = `${currentIdx + 1} / ${total}`;
     examTitle.textContent = `Question ${currentIdx + 1}`;
-    answeredBadge.textContent = `${answeredCount}/${total} da tra loi`;
+    answeredBadge.textContent = `${answeredCount}/${total} đã trả lời`;
     questionMeta.textContent = `${getQuestionUnit(question)} - ${getQuestionGrammar(question)}`;
 
     renderQuestionNav();
@@ -347,7 +383,8 @@ function selectOption(index) {
     renderQuestion();
 }
 
-function showResult() {
+function showResult(options = {}) {
+    stopTimer();
     examScreen.hidden = true;
     resultScreen.hidden = false;
     document.body.classList.remove("exam-active");
@@ -361,15 +398,16 @@ function showResult() {
     }, 0);
 
     finalScore.textContent = score;
-    resultMsg.textContent = getResultMessage(score);
+    scoreTen.textContent = `Điểm thang 10: ${(score / TOTAL_QUESTIONS * 10).toFixed(1)}`;
+    resultMsg.textContent = options.timedOut ? `Hết giờ. ${getResultMessage(score)}` : getResultMessage(score);
     renderReview();
 }
 
 function getResultMessage(score) {
-    if (score >= 18) return "Excellent! Ban da san sang cho bai kiem tra that.";
-    if (score >= 15) return "Good job! Chi can on lai vai diem nho nua.";
-    if (score >= 10) return "Kha on, nhung nen xem lai phan giai thich ben duoi.";
-    return "Nen on tap them cac grammar points roi thu lai mot de moi.";
+    if (score >= 18) return "Excellent! Bạn đã sẵn sàng cho bài kiểm tra thật.";
+    if (score >= 15) return "Good job! Chỉ cần ôn lại vài điểm nhỏ nữa.";
+    if (score >= 10) return "Khá ổn, nhưng nên xem lại phần giải thích bên dưới.";
+    return "Nên ôn tập thêm các grammar points rồi thử lại một đề mới.";
 }
 
 function renderReview() {
@@ -386,24 +424,45 @@ function renderReview() {
 
         const status = document.createElement("span");
         status.className = "review-status";
-        status.textContent = isCorrect ? "Dung" : "Xem lai";
+        status.textContent = isCorrect ? "Đúng" : "Xem lại";
 
         const title = document.createElement("h3");
         title.textContent = `Question ${index + 1}: ${question.q}`;
 
+        const readingReview = createReadingReview(question);
+
         const chosen = document.createElement("p");
-        chosen.innerHTML = `<strong>Cau tra loi cua ban:</strong> ${selectedOption ? escapeHtml(selectedOption.text) : "Chua tra loi"}`;
+        chosen.innerHTML = `<strong>Câu trả lời của bạn:</strong> ${selectedOption ? escapeHtml(selectedOption.text) : "Chưa trả lời"}`;
 
         const correct = document.createElement("p");
-        correct.innerHTML = `<strong>Dap an dung:</strong> ${escapeHtml(correctOption.text)}`;
+        correct.innerHTML = `<strong>Đáp án đúng:</strong> ${escapeHtml(correctOption.text)}`;
 
         const explain = document.createElement("p");
         explain.className = "review-explain";
-        explain.textContent = question.e || "Chua co giai thich cho cau nay.";
+        explain.textContent = question.e || "Chưa có giải thích cho câu này.";
 
-        item.append(status, title, chosen, correct, explain);
+        item.append(status, title);
+        if (readingReview) item.appendChild(readingReview);
+        item.append(chosen, correct, explain);
         reviewList.appendChild(item);
     });
+}
+
+function createReadingReview(question) {
+    if (!question.r) return null;
+
+    const passage = ALL_READINGS.find((reading) => reading.id === question.r);
+    const wrapper = document.createElement("section");
+    wrapper.className = "review-reading";
+
+    const title = document.createElement("h4");
+    title.textContent = passage?.title ? `${passage.title} (${question.r})` : `Reading Passage (${question.r})`;
+
+    const content = document.createElement("p");
+    content.textContent = passage?.content || "Không tìm thấy bài đọc.";
+
+    wrapper.append(title, content);
+    return wrapper;
 }
 
 function escapeHtml(value) {
@@ -441,10 +500,11 @@ nextBtn.addEventListener("click", () => {
 });
 submitBtn.addEventListener("click", () => {
     const answeredCount = Object.keys(userAnswers).length;
-    if (answeredCount < currentExam.length && !confirm(`Ban moi tra loi ${answeredCount}/${currentExam.length} cau. Van nop bai?`)) return;
+    if (answeredCount < currentExam.length && !confirm(`Bạn mới trả lời ${answeredCount}/${currentExam.length} câu. Vẫn nộp bài?`)) return;
     showResult();
 });
 newExamBtn.addEventListener("click", () => {
+    stopTimer();
     resultScreen.hidden = true;
     setupScreen.hidden = false;
     document.body.classList.remove("exam-active", "result-active");

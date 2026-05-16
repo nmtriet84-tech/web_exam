@@ -324,6 +324,31 @@ h2 {
     font-weight: 800;
 }
 
+.exam-status {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.timer-badge {
+    min-height: 40px;
+    display: grid;
+    place-items: center;
+    padding: 0 14px;
+    border-radius: 8px;
+    background: #eaf6f4;
+    color: var(--primary);
+    font-weight: 900;
+    font-variant-numeric: tabular-nums;
+}
+
+.timer-badge.timer-warning {
+    background: #fff0ef;
+    color: var(--danger);
+}
+
 .progress-bar {
     height: 10px;
     overflow: hidden;
@@ -516,6 +541,13 @@ h2 {
     font-weight: 700;
 }
 
+.score-ten {
+    margin-bottom: 8px;
+    color: var(--primary);
+    font-size: 1.05rem;
+    font-weight: 900;
+}
+
 .review-section {
     padding-top: 24px;
 }
@@ -576,6 +608,25 @@ h2 {
     color: var(--muted);
 }
 
+.review-reading {
+    margin: 12px 0;
+    padding: 12px;
+    border: 1px solid #eed9bd;
+    border-radius: 8px;
+    background: #fff8ee;
+}
+
+.review-reading h4 {
+    margin: 0 0 8px;
+    font-size: 0.95rem;
+}
+
+.review-reading p {
+    margin: 0;
+    white-space: pre-wrap;
+    color: #4c4033;
+}
+
 @media (max-width: 900px) {
     body.exam-active .brand-panel,
     body.result-active .brand-panel {
@@ -634,7 +685,8 @@ h2 {
         font-size: 1.35rem;
     }
 
-    .answered-badge {
+    .answered-badge,
+    .timer-badge {
         min-height: 36px;
         padding: 0 12px;
         font-size: 0.9rem;
@@ -674,10 +726,9 @@ h2 {
     }
 
     .reading-context {
-        max-height: 170px;
         margin-bottom: 12px;
         padding: 12px 14px;
-        overflow-y: auto;
+        overflow-y: visible;
         font-size: 0.92rem;
         line-height: 1.48;
     }
@@ -898,7 +949,12 @@ h2 {
         font-size: 1.25rem;
     }
 
-    .answered-badge {
+    .exam-status {
+        justify-content: flex-start;
+    }
+
+    .answered-badge,
+    .timer-badge {
         width: auto;
         justify-self: start;
         min-height: 34px;
@@ -924,7 +980,6 @@ h2 {
     }
 
     .reading-context {
-        max-height: 132px;
         margin-bottom: 10px;
         padding: 10px 12px;
         font-size: 0.88rem;
