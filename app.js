@@ -1,4 +1,9 @@
 const TOTAL_QUESTIONS = 20;
+const DATA_BASE_PATH = "data/EN08_GRAMMAR";
+
+let ALL_QUESTIONS = [];
+let ALL_READINGS = [];
+let ALL_GRAMMAR = {};
 
 let currentExam = [];
 let userAnswers = {};
@@ -30,7 +35,21 @@ const resultMsg = document.getElementById("result-msg");
 const reviewList = document.getElementById("review-list");
 const newExamBtn = document.getElementById("new-exam-btn");
 
-function init() {
+async function init() {
+    setLoadingState(true);
+    try {
+        await loadData();
+        renderSelector();
+        updateSelectionSummary();
+    } catch (error) {
+        console.error(error);
+        selectionCount.textContent = "Không tải được dữ liệu JSON.";
+        questionPoolCount.textContent = "Kiểm tra thư mục data/EN08_GRAMMAR trên GitHub.";
+    } finally {
+        setLoadingState(false);
+    }
+    return;
+
     if (!Array.isArray(window.ALL_QUESTIONS) && typeof ALL_QUESTIONS === "undefined") {
         selectionCount.textContent = "Không tìm thấy dữ liệu câu hỏi.";
         startBtn.disabled = true;
@@ -44,6 +63,38 @@ function init() {
 function getQuestionUnit(question) {
     const match = question.id.match(/U\d{2}/);
     return match ? match[0] : "U00";
+}
+
+async function loadData() {
+    const [questions, readings, grammar] = await Promise.all([
+        fetchJson(`${DATA_BASE_PATH}/questions.json`),
+        fetchJson(`${DATA_BASE_PATH}/reading.json`),
+        fetchJson(`${DATA_BASE_PATH}/unit.json`)
+    ]);
+
+    if (!Array.isArray(questions)) throw new Error("questions.json must be an array.");
+    if (!Array.isArray(readings)) throw new Error("reading.json must be an array.");
+    if (!grammar || typeof grammar !== "object" || Array.isArray(grammar)) {
+        throw new Error("unit.json must be an object.");
+    }
+
+    ALL_QUESTIONS = questions;
+    ALL_READINGS = readings;
+    ALL_GRAMMAR = grammar;
+}
+
+async function fetchJson(url) {
+    const response = await fetch(url, { cache: "no-store" });
+    if (!response.ok) {
+        throw new Error(`Cannot load ${url}: ${response.status} ${response.statusText}`);
+    }
+    return response.json();
+}
+
+function setLoadingState(isLoading) {
+    startBtn.disabled = isLoading;
+    selectAllBtn.disabled = isLoading;
+    clearAllBtn.disabled = isLoading;
 }
 
 function getQuestionGrammar(question) {
