@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Grade 8 - Exam Practice</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="app-shell">
+        <section class="brand-panel">
+            <div>
+                <p class="eyebrow">Grade 8 English</p>
+                <h1>Exam Practice</h1>
+                <p class="subtitle">Tạo đề luyện tập 20 câu từ ngân hàng ngữ pháp và bài đọc.</p>
+            </div>
+            <div class="stats-strip" aria-label="Thong tin de luyen tap">
+                <div>
+                    <strong>20</strong>
+                    <span>câu hỏi</span>
+                </div>
+                <div>
+                    <strong>2</strong>
+                    <span>bài đọc</span>
+                </div>
+                <div>
+                    <strong>8</strong>
+                    <span>units</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="workspace-panel">
+            <div id="setup-screen" class="screen setup-screen">
+                <div class="panel-heading">
+                    <div>
+                        <p class="eyebrow">Chọn nội dung</p>
+                        <h2>Grammar Points</h2>
+                    </div>
+                    <div class="selection-actions" aria-label="Thao tác chọn nhanh">
+                        <button id="select-all-btn" class="ghost-btn" type="button">Chọn tất cả</button>
+                        <button id="clear-all-btn" class="ghost-btn" type="button">Bỏ chọn</button>
+                    </div>
+                </div>
+
+                <div class="selection-summary">
+                    <span id="selection-count">Đang tải danh sách...</span>
+                    <span id="question-pool-count"></span>
+                </div>
+
+                <div id="unified-selector" class="unified-selector" aria-live="polite"></div>
+
+                <button id="start-btn" class="primary-btn" type="button">Tạo đề luyện tập</button>
+            </div>
+
+            <div id="exam-screen" class="screen exam-screen" hidden>
+                <div class="exam-topbar">
+                    <div>
+                        <p class="eyebrow">Đang làm bài</p>
+                        <h2 id="exam-title">Question 1</h2>
+                    </div>
+                    <div id="answered-badge" class="answered-badge">0/20 đã trả lời</div>
+                </div>
+
+                <div class="progress-bar" aria-hidden="true">
+                    <div id="progress-fill" class="progress-fill"></div>
+                </div>
+
+                <div id="question-nav" class="question-nav" aria-label="Danh sách câu hỏi"></div>
+
+                <article id="reading-area" class="reading-context" hidden></article>
+
+                <article class="question-card">
+                    <p id="question-meta" class="question-meta"></p>
+                    <h3 id="question-text" class="question-text">Loading question...</h3>
+                    <div id="options-list" class="options-list"></div>
+                </article>
+
+                <div class="nav-footer">
+                    <button id="prev-btn" class="secondary-btn" type="button">Previous</button>
+                    <div id="q-counter" class="q-counter">1 / 20</div>
+                    <button id="next-btn" class="secondary-btn" type="button">Next</button>
+                    <button id="submit-btn" class="primary-btn submit-btn" type="button" hidden>Submit Exam</button>
+                </div>
+            </div>
+
+            <div id="result-screen" class="screen result-screen" hidden>
+                <div class="result-hero">
+                    <p class="eyebrow">Kết quả</p>
+                    <h2>Exam Completed</h2>
+                    <div class="score-circle">
+                        <span id="final-score" class="score-value">0</span>
+                        <span class="score-label">out of 20</span>
+                    </div>
+                    <p id="result-msg" class="result-msg"></p>
+                    <button id="new-exam-btn" class="primary-btn" type="button">Làm đề mới</button>
+                </div>
+
+                <section class="review-section">
+                    <div class="panel-heading">
+                        <div>
+                            <p class="eyebrow">Xem lại</p>
+                            <h2>Đáp án và giải thích</h2>
+                        </div>
+                    </div>
+                    <div id="review-list" class="review-list"></div>
+                </section>
+            </div>
+        </section>
+    </main>
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
