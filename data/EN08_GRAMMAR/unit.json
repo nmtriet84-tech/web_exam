@@ -1,0 +1,62 @@
+{
+  "U01": {
+    "title": "FREE TIME",
+    "grammar": {
+      "GR-01": "Verbs (to express preference) + gerund",
+      "GR-02": "Present Simple for future meaning",
+      "GR-03": "Prepositions of time (at, on, in, until)"
+    }
+  },
+  "U02": {
+    "title": "LIFE IN THE COUNTRY",
+    "grammar": {
+      "GR-01": "Quantifiers with countable/uncountable nouns",
+      "GR-02": "Verbs (to express preference) + to-infinitives",
+      "GR-03": "Adverbs of frequency"
+    }
+  },
+  "U03": {
+    "title": "PROTECTING THE ENVIRONMENT",
+    "grammar": {
+      "GR-01": "First Conditional (If / Unless)",
+      "GR-02": "Compound sentences with and (FANBOYS)",
+      "GR-03": "Complex sentences with so (that) (Purpose)"
+    }
+  },
+  "U04": {
+    "title": "DISASTERS",
+    "grammar": {
+      "GR-01": "Wh-questions (Information questions)",
+      "GR-02": "Prepositions of place",
+      "GR-03": "Prepositions of movement"
+    }
+  },
+  "U05": {
+    "title": "SCIENCE AND TECHNOLOGY",
+    "grammar": {
+      "GR-01": "Wh-questions and Yes/No questions",
+      "GR-02": "Comparative adverbs"
+    }
+  },
+  "U06": {
+    "title": "LIFE ON OTHER PLANETS",
+    "grammar": {
+      "GR-01": "Past Continuous and Past Simple",
+      "GR-02": "Future forms (will, be going to, Present forms)"
+    }
+  },
+  "U07": {
+    "title": "TEENS",
+    "grammar": {
+      "GR-01": "Possessive pronouns",
+      "GR-02": "Reported speech for statements"
+    }
+  },
+  "U08": {
+    "title": "TRADITIONS OF ETHNIC GROUPS IN VIETNAM",
+    "grammar": {
+      "GR-01": "Articles (a, an, the, zero article)",
+      "GR-02": "Reported speech for questions"
+    }
+  }
+}
