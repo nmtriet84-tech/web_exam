@@ -1156,7 +1156,7 @@ body.exam-active {
     background: rgba(15, 23, 42, 0.75);
     backdrop-filter: blur(12px);
     z-index: 9999;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     animation: modalFadeIn 0.3s ease forwards;

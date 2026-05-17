@@ -778,7 +778,7 @@ function handleExamCheating() {
     
     // Hiển thị modal cảnh báo gian lận
     if (cheatModal) {
-        cheatModal.hidden = false;
+        cheatModal.style.display = "flex";
     }
 }
 
@@ -786,7 +786,7 @@ function handleExamCheating() {
 if (cheatResetBtn) {
     cheatResetBtn.addEventListener("click", () => {
         if (cheatModal) {
-            cheatModal.hidden = true;
+            cheatModal.style.display = "none";
         }
         isCheatTriggered = false;
         
