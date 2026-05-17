@@ -18,7 +18,9 @@ const setupScreen = document.getElementById("setup-screen");
 const examScreen = document.getElementById("exam-screen");
 const resultScreen = document.getElementById("result-screen");
 const unifiedSelector = document.getElementById("unified-selector");
-const startBtn = document.getElementById("start-btn");
+const start15Btn = document.getElementById("start-15-btn");
+const start30Btn = document.getElementById("start-30-btn");
+let currentExamTargetCount = 20;
 const selectAllBtn = document.getElementById("select-all-btn");
 const clearAllBtn = document.getElementById("clear-all-btn");
 const selectionCount = document.getElementById("selection-count");
@@ -67,8 +69,7 @@ function renderDatasetSelector() {
     DATASETS.forEach(ds => {
         const btn = document.createElement('button');
         btn.type = 'button';
-        btn.className = 'secondary-btn dataset-btn';
-        btn.style.cssText = 'border-radius: 8px; flex: 1; padding: 12px; font-weight: 600; min-width: 150px;';
+        btn.className = 'dataset-btn';
         btn.id = `ds-btn-${ds.id}`;
         btn.textContent = ds.title;
         btn.addEventListener('click', () => setMode(ds.id));
@@ -82,16 +83,18 @@ async function setMode(datasetId) {
     
     document.querySelectorAll('.dataset-btn').forEach(btn => {
         if (btn.id === `ds-btn-${datasetId}`) {
-            btn.classList.replace('secondary-btn', 'primary-btn');
+            btn.classList.add('active');
         } else {
-            btn.classList.replace('primary-btn', 'secondary-btn');
+            btn.classList.remove('active');
         }
     });
     
+    const eyebrow = document.getElementById('brand-eyebrow');
     const subtitle = document.getElementById('brand-subtitle');
     const readingStat = document.getElementById('reading-stat');
     const setupTitle = document.getElementById('setup-title');
     
+    if (eyebrow) eyebrow.textContent = currentDataset.eyebrow || 'Grade 8 English';
     if (subtitle) subtitle.textContent = currentDataset.subtitle || '';
     if (readingStat) readingStat.style.display = currentDataset.has_reading ? 'block' : 'none';
     if (setupTitle) setupTitle.textContent = currentDataset.setup_title || 'Select Units';
@@ -134,7 +137,8 @@ async function fetchJson(url) {
 }
 
 function setLoadingState(isLoading) {
-    startBtn.disabled = isLoading;
+    if (start15Btn) start15Btn.disabled = isLoading;
+    if (start30Btn) start30Btn.disabled = isLoading;
     selectAllBtn.disabled = isLoading;
     clearAllBtn.disabled = isLoading;
 }
@@ -298,14 +302,14 @@ function updateSelectionSummary() {
     }
 }
 
-function generateExam() {
+function generateExam(targetCount) {
     const pool = getSelectedPool();
     if (pool.length === 0) {
         alert("Vui lòng chọn ít nhất 1 phần để tạo đề.");
         return;
     }
     
-    const targetCount = parseInt(document.getElementById('exam-duration').value); // 20 or 40
+    currentExamTargetCount = targetCount;
     if (pool.length < targetCount) {
         alert(`Ngân hàng đề không đủ ${targetCount} câu (hiện chỉ có ${pool.length} câu trong các phần đã chọn). Vui lòng chọn thêm Unit/Chuyên đề.`);
         return;
@@ -414,6 +418,16 @@ function startTest() {
     document.body.classList.remove("result-active");
     currentIdx = 0;
     userAnswers = {};
+    
+    // Cập nhật thông số dynamic ở panel bên trái
+    const qCountEl = document.getElementById("stat-questions");
+    const rCountEl = document.getElementById("stat-readings");
+    const dCountEl = document.getElementById("stat-duration");
+    
+    if (qCountEl) qCountEl.textContent = currentExam.length;
+    if (rCountEl) rCountEl.textContent = new Set(currentExam.filter(q => q.r).map(q => q.r)).size;
+    if (dCountEl) dCountEl.textContent = currentExam.length === 40 ? 30 : 15;
+    
     startTimer();
     window.scrollTo({ top: 0, behavior: "auto" });
     renderQuestion();
@@ -422,8 +436,7 @@ function startTest() {
 function startTimer() {
     stopTimer();
     
-    const targetCount = parseInt(document.getElementById('exam-duration').value);
-    const durationMins = targetCount === 40 ? 30 : 15;
+    const durationMins = currentExamTargetCount === 40 ? 30 : 15;
     remainingSeconds = durationMins * 60;
     
     updateTimerDisplay();
@@ -476,7 +489,7 @@ function renderQuestion() {
 
     renderQuestionNav();
     renderReading(question);
-    questionText.textContent = question.q;
+    questionText.innerHTML = question.q;
     
     const qImg = document.getElementById("question-img");
     if(qImg) {
@@ -622,7 +635,7 @@ function renderReview() {
         status.textContent = isCorrect ? "Đúng" : "Xem lại";
 
         const title = document.createElement("h3");
-        title.textContent = `Question ${index + 1}: ${question.q}`;
+        title.innerHTML = `Question ${index + 1}: ${question.q}`;
 
         const readingReview = createReadingReview(question);
 
@@ -685,7 +698,8 @@ function shuffle(array) {
 
 selectAllBtn.addEventListener("click", () => setAllSelections(true));
 clearAllBtn.addEventListener("click", () => setAllSelections(false));
-startBtn.addEventListener("click", generateExam);
+if (start15Btn) start15Btn.addEventListener("click", () => generateExam(20));
+if (start30Btn) start30Btn.addEventListener("click", () => generateExam(40));
 prevBtn.addEventListener("click", () => {
     if (currentIdx > 0) {
         currentIdx--;
@@ -708,6 +722,16 @@ newExamBtn.addEventListener("click", () => {
     resultScreen.hidden = true;
     setupScreen.hidden = false;
     document.body.classList.remove("exam-active", "result-active");
+    
+    // Reset left column stats back to default on returning to setup
+    const qCountEl = document.getElementById("stat-questions");
+    const rCountEl = document.getElementById("stat-readings");
+    const dCountEl = document.getElementById("stat-duration");
+    
+    if (qCountEl) qCountEl.textContent = 20;
+    if (rCountEl) rCountEl.textContent = 2;
+    if (dCountEl) dCountEl.textContent = 15;
+    
     window.scrollTo({ top: 0, behavior: "smooth" });
 });
 

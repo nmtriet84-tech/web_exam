@@ -7,32 +7,32 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=20260516-timer-reading-review">
+    <link rel="stylesheet" href="style.css?v=20260517-quick-start-buttons">
 </head>
 <body>
     <main class="app-shell">
         <section class="brand-panel">
             <div>
-                <p class="eyebrow">Grade 8 English</p>
+                <p id="brand-eyebrow" class="eyebrow">Grade 8 English</p>
                 <h1>Exam Practice</h1>
                 <p id="brand-subtitle" class="subtitle">Đang tải cấu hình bộ đề...</p>
             </div>
             
-            <div id="dataset-selector" class="mode-selector" style="display: flex; gap: 10px; margin-top: 1.5rem; margin-bottom: 1rem; width: 100%; flex-wrap: wrap;">
+            <div id="dataset-selector" class="mode-selector">
                 <!-- Nút chọn bộ đề sẽ được render tự động bằng JS -->
             </div>
             
             <div class="stats-strip" aria-label="Thông tin đề luyện tập">
                 <div>
-                    <strong>20</strong>
+                    <strong id="stat-questions">20</strong>
                     <span>câu hỏi</span>
                 </div>
                 <div id="reading-stat">
-                    <strong>2</strong>
+                    <strong id="stat-readings">2</strong>
                     <span>bài đọc</span>
                 </div>
                 <div>
-                    <strong>20</strong>
+                    <strong id="stat-duration">15</strong>
                     <span>phút</span>
                 </div>
             </div>
@@ -60,12 +60,9 @@
 
                 <div id="unified-selector" class="unified-selector" aria-live="polite"></div>
 
-                <div style="display: flex; gap: 15px; margin-top: 25px;">
-                    <select id="exam-duration" class="secondary-btn" style="padding: 12px; border-radius: 8px; flex: 1;">
-                        <option value="20">15 phút (20 câu)</option>
-                        <option value="40">30 phút (40 câu)</option>
-                    </select>
-                    <button id="start-btn" class="primary-btn" type="button" style="flex: 2;">Tạo đề luyện tập</button>
+                <div style="display: flex; gap: 12px; margin-top: 25px; width: 100%;">
+                    <button id="start-15-btn" class="primary-btn" type="button" style="flex: 1; padding: 0 10px; font-size: 0.9rem; min-height: 48px; border-radius: 8px; font-weight: 800;">Làm 15 phút<br><span style="font-size: 0.78rem; font-weight: 500; opacity: 0.9;">(20 câu)</span></button>
+                    <button id="start-30-btn" class="primary-btn" type="button" style="flex: 1; padding: 0 10px; font-size: 0.9rem; min-height: 48px; border-radius: 8px; font-weight: 800; background: var(--accent); box-shadow: 0 10px 22px rgb(217 137 53 / 0.23);">Làm 30 phút<br><span style="font-size: 0.78rem; font-weight: 500; opacity: 0.9;">(40 câu)</span></button>
                 </div>
             </div>
 
@@ -131,6 +128,6 @@
         </section>
     </main>
 
-    <script src="app.js?v=20260516-timer-reading-review"></script>
+    <script src="app.js?v=20260517-quick-start-buttons"></script>
 </body>
 </html>
