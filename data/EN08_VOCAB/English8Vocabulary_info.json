@@ -1,0 +1,62 @@
+{
+  "id": "English8Vocabulary",
+  "title": "Từ vựng tiếng Anh 8",
+  "description": "Chinh phục 530 từ vựng trọng tâm lớp 8 qua 4.770 câu hỏi trắc nghiệm thông minh, đầy đủ ví dụ và âm thanh.",
+  "category": "Vocabulary",
+  "icon": "📘",
+  "units": [
+    {
+      "id": "e8u1",
+      "title": "Unit 1: Leisure Time"
+    },
+    {
+      "id": "e8u2",
+      "title": "Unit 2: Life in the Countryside"
+    },
+    {
+      "id": "e8u3",
+      "title": "Unit 3: Teenagers"
+    },
+    {
+      "id": "e8u4",
+      "title": "Unit 4: Ethnic Groups of Viet Nam"
+    },
+    {
+      "id": "e8u5",
+      "title": "Unit 5: Our Customs and Traditions"
+    },
+    {
+      "id": "e8u6",
+      "title": "Unit 6: Lifestyles"
+    },
+    {
+      "id": "e8u7",
+      "title": "Unit 7: Environmental Protection"
+    },
+    {
+      "id": "e8u8",
+      "title": "Unit 8: Shopping"
+    },
+    {
+      "id": "e8u9",
+      "title": "Unit 9: Natural Disasters"
+    },
+    {
+      "id": "e8u10",
+      "title": "Unit 10: Communication"
+    },
+    {
+      "id": "e8u11",
+      "title": "Unit 11: Science and Technology"
+    },
+    {
+      "id": "e8u12",
+      "title": "Unit 12: Life on Other Planets"
+    }
+  ],
+  "stats": {
+    "lessons": 530,
+    "questions": 4770,
+    "units": 12
+  }
+}
