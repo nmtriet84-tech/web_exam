@@ -1,0 +1,74 @@
+{
+  "U01": {
+    "title": "Unit 1: FREE TIME",
+    "config": {
+      "pick_questions": 5
+    },
+    "grammar": {
+      "GR-00": "Vocabulary"
+    }
+  },
+  "U02": {
+    "title": "Unit 2: LIFE IN THE COUNTRY",
+    "config": {
+      "pick_questions": 5
+    },
+    "grammar": {
+      "GR-00": "Vocabulary"
+    }
+  },
+  "U03": {
+    "title": "Unit 3: PROTECTING THE ENVIRONMENT",
+    "config": {
+      "pick_questions": 5
+    },
+    "grammar": {
+      "GR-00": "Vocabulary"
+    }
+  },
+  "U04": {
+    "title": "Unit 4: DISASTERS",
+    "config": {
+      "pick_questions": 5
+    },
+    "grammar": {
+      "GR-00": "Vocabulary"
+    }
+  },
+  "U05": {
+    "title": "Unit 5: SCIENCE AND TECHNOLOGY",
+    "config": {
+      "pick_questions": 5
+    },
+    "grammar": {
+      "GR-00": "Vocabulary"
+    }
+  },
+  "U06": {
+    "title": "Unit 6: LIFE ON OTHER PLANETS",
+    "config": {
+      "pick_questions": 5
+    },
+    "grammar": {
+      "GR-00": "Vocabulary"
+    }
+  },
+  "U07": {
+    "title": "Unit 7: TEENS",
+    "config": {
+      "pick_questions": 5
+    },
+    "grammar": {
+      "GR-00": "Vocabulary"
+    }
+  },
+  "U08": {
+    "title": "Unit 8: TRADITIONS OF ETHNIC GROUPS IN VIETNAM",
+    "config": {
+      "pick_questions": 5
+    },
+    "grammar": {
+      "GR-00": "Vocabulary"
+    }
+  }
+}
