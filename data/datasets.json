@@ -1,0 +1,38 @@
+[
+  {
+    "id": "EN08_GRAMMAR",
+    "title": "📝 Luyện Ngữ Pháp Tiếng Anh 8",
+    "subtitle": "Tạo đề luyện tập 20 câu từ ngân hàng ngữ pháp và bài đọc.",
+    "setup_title": "Grammar Points",
+    "type": "grammar",
+    "has_reading": true,
+    "path": "data/EN08_GRAMMAR"
+  },
+  {
+    "id": "EN08_VOCAB",
+    "title": "📘 Luyện Từ Vựng Tiếng Anh 8",
+    "subtitle": "Tạo đề luyện tập 20 câu trắc nghiệm từ vựng chuyên sâu.",
+    "setup_title": "Vocabulary Units",
+    "type": "vocab",
+    "has_reading": false,
+    "path": "data/EN08_VOCAB"
+  },
+  {
+    "id": "EN09_VOCAB",
+    "title": "📘 Luyện Từ Vựng Tiếng Anh 9",
+    "subtitle": "Tạo đề luyện tập 20 câu trắc nghiệm từ vựng chuyên sâu (Lớp 9).",
+    "setup_title": "Vocabulary Units",
+    "type": "vocab",
+    "has_reading": false,
+    "path": "data/EN09_VOCAB"
+  },
+  {
+    "id": "TS10_ENGLISH",
+    "title": "🎓 Ôn Thi Tuyển Sinh 10",
+    "subtitle": "Tạo đề thi tuyển sinh tiếng Anh lớp 10 với cấu trúc 11 phần.",
+    "setup_title": "Exam Parts",
+    "type": "grammar",
+    "has_reading": true,
+    "path": "data/TS10_ENGLISH"
+  }
+]
