@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=20260517-security-anti-cheat-v3">
+    <link rel="stylesheet" href="style.css?v=20260517-security-anti-cheat-v6">
 </head>
 <body>
     <main class="app-shell">
@@ -61,7 +61,18 @@
 
                 <div id="unified-selector" class="unified-selector" aria-live="polite"></div>
 
-                <div style="display: flex; gap: 12px; margin-top: 25px; width: 100%;">
+                <div class="student-info-form">
+                    <div class="student-info-field">
+                        <label for="student-name">👤 Họ và tên</label>
+                        <input type="text" id="student-name" placeholder="Nhập họ và tên..." autocomplete="off" maxlength="80">
+                    </div>
+                    <div class="student-info-field">
+                        <label for="student-class">🏫 Lớp</label>
+                        <input type="text" id="student-class" placeholder="Ví dụ: 8A1" autocomplete="off" maxlength="20">
+                    </div>
+                </div>
+
+                <div style="display: flex; gap: 12px; margin-top: 16px; width: 100%;">
                     <button id="start-15-btn" class="primary-btn" type="button" style="flex: 1; padding: 0 10px; font-size: 0.9rem; min-height: 48px; border-radius: 8px; font-weight: 800;">Làm 15 phút<br><span style="font-size: 0.78rem; font-weight: 500; opacity: 0.9;">(20 câu)</span></button>
                     <button id="start-30-btn" class="primary-btn" type="button" style="flex: 1; padding: 0 10px; font-size: 0.9rem; min-height: 48px; border-radius: 8px; font-weight: 800; background: var(--accent); box-shadow: 0 10px 22px rgb(217 137 53 / 0.23);">Làm 30 phút<br><span style="font-size: 0.78rem; font-weight: 500; opacity: 0.9;">(40 câu)</span></button>
                 </div>
@@ -107,6 +118,23 @@
                 <div class="result-hero">
                     <p class="eyebrow">Kết quả</p>
                     <h2>Exam Completed</h2>
+
+                    <div id="result-student-card" class="result-student-card">
+                        <div class="result-student-row">
+                            <span class="result-student-icon">👤</span>
+                            <span id="result-student-name" class="result-student-value">—</span>
+                        </div>
+                        <div class="result-student-row">
+                            <span class="result-student-icon">🏫</span>
+                            <span id="result-student-class" class="result-student-value">—</span>
+                        </div>
+                        <div class="result-meta-row">
+                            <span id="result-datetime">—</span>
+                            <span class="result-sep">·</span>
+                            <span>Thời gian làm bài: <strong id="result-duration">—</strong></span>
+                        </div>
+                    </div>
+
                     <div class="score-circle">
                         <span id="final-score" class="score-value">0</span>
                         <span class="score-label">out of 20</span>
@@ -140,6 +168,6 @@
         </div>
     </div>
 
-    <script src="app.js?v=20260517-security-anti-cheat-v3"></script>
+    <script src="app.js?v=20260517-security-anti-cheat-v6"></script>
 </body>
 </html>

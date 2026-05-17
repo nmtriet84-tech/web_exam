@@ -13,6 +13,12 @@ let userAnswers = {};
 let currentIdx = 0;
 let remainingSeconds = 0;
 let timerId = null;
+let examStartTime = null;   // Thời điểm bắt đầu làm bài
+let examStartTimestamp = 0; // Unix timestamp để tính thời gian đã làm
+
+// Biến lưu thông tin học sinh
+let studentName = '';
+let studentClass = '';
 
 const setupScreen = document.getElementById("setup-screen");
 const examScreen = document.getElementById("exam-screen");
@@ -45,7 +51,30 @@ const reviewList = document.getElementById("review-list");
 const newExamBtn = document.getElementById("new-exam-btn");
 const timerBadge = document.getElementById("timer-badge");
 
+// Các phần tử form thông tin học sinh
+const studentNameInput = document.getElementById("student-name");
+const studentClassInput = document.getElementById("student-class");
+
+// Tải thông tin học sinh đã lưu từ localStorage
+function loadStudentInfo() {
+    const savedName = localStorage.getItem('examStudentName') || '';
+    const savedClass = localStorage.getItem('examStudentClass') || '';
+    if (studentNameInput) studentNameInput.value = savedName;
+    if (studentClassInput) studentClassInput.value = savedClass;
+}
+
+// Lưu thông tin học sinh vào localStorage
+function saveStudentInfo() {
+    const name = studentNameInput ? studentNameInput.value.trim() : '';
+    const cls = studentClassInput ? studentClassInput.value.trim() : '';
+    if (name) localStorage.setItem('examStudentName', name);
+    if (cls) localStorage.setItem('examStudentClass', cls);
+    studentName = name;
+    studentClass = cls;
+}
+
 async function init() {
+    loadStudentInfo();
     setLoadingState(true);
     try {
         DATASETS = await fetchJson('data/datasets.json');
@@ -411,6 +440,12 @@ function generateExam(targetCount) {
 }
 
 function startTest() {
+    // Lưu thông tin học sinh trước khi vào bài thi
+    saveStudentInfo();
+    
+    examStartTime = new Date();
+    examStartTimestamp = Date.now();
+    
     setupScreen.hidden = true;
     resultScreen.hidden = true;
     examScreen.hidden = false;
@@ -598,6 +633,35 @@ function showResult(options = {}) {
     document.body.classList.remove("exam-active");
     document.body.classList.add("result-active");
     window.scrollTo({ top: 0, behavior: "auto" });
+
+    // --- Thông tin học sinh và thời gian ---
+    const nameEl = document.getElementById('result-student-name');
+    const classEl = document.getElementById('result-student-class');
+    const datetimeEl = document.getElementById('result-datetime');
+    const durationEl = document.getElementById('result-duration');
+
+    if (nameEl) nameEl.textContent = studentName || '(Chưa nhập tên)';
+    if (classEl) classEl.textContent = studentClass || '(Chưa nhập lớp)';
+
+    // Thời điểm bắt đầu làm bài (VD: 17/05/2026 lúc 18:45)
+    if (datetimeEl && examStartTime) {
+        const dateStr = examStartTime.toLocaleDateString('vi-VN', {
+            day: '2-digit', month: '2-digit', year: 'numeric'
+        });
+        const timeStr = examStartTime.toLocaleTimeString('vi-VN', {
+            hour: '2-digit', minute: '2-digit'
+        });
+        datetimeEl.textContent = `${dateStr} lúc ${timeStr}`;
+    }
+
+    // Thời gian đã làm (phút:giây)
+    if (durationEl && examStartTimestamp) {
+        const elapsedMs = Date.now() - examStartTimestamp;
+        const elapsedSec = Math.floor(elapsedMs / 1000);
+        const mins = Math.floor(elapsedSec / 60);
+        const secs = elapsedSec % 60;
+        durationEl.textContent = `${mins} phút ${secs} giây`;
+    }
 
     const score = currentExam.reduce((total, question) => {
         const selectedIdx = userAnswers[question.id];
