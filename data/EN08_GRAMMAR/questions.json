@@ -27,12 +27,12 @@
     "id": "E10U01-B6-MC-GR-01003001",
     "q": "Dạng phủ định của 'like + V-ing' thường được dùng nhất là gì?",
     "o": [
+      "don't/doesn't like + V-ing",
       "dislike + V-ing",
-      "no like + V-ing",
       "like not + V-ing",
       "not like + V-ing"
     ],
-    "e": "Chọn 'do/does not like + V-ing' vì 'like' là động từ thường ở thì hiện tại đơn, nên phải mượn trợ động từ do/does thêm 'not' để phủ định. Các lựa chọn sai: 'dislike' là từ trái nghĩa chứ không phải cấu trúc phủ định trực tiếp; 'no like' và 'like not' hoàn toàn sai quy tắc tạo câu phủ định.",
+    "e": "Chọn 'don't/doesn't like + V-ing' vì 'like' là động từ thường ở thì hiện tại đơn, nên phải mượn trợ động từ don't/doesn't để phủ định. Các lựa chọn sai: 'dislike' là từ trái nghĩa chứ không phải cấu trúc phủ định trực tiếp; 'like not' và 'not like' hoàn toàn sai quy tắc tạo câu phủ định.",
     "r": ""
   },
   {
@@ -496,11 +496,11 @@
     "q": "Does your father prefer ______ tea or coffee in the morning?",
     "o": [
       "to drink",
-      "drinking",
+      "drank",
       "drink",
       "drinks"
     ],
-    "e": "Chọn 'to swim' vì sau động từ 'prefer' có thể đi với 'to-V' để diễn tả ý muốn thực hiện một hành động cụ thể ở hiện tại/tương lai. Các lựa chọn sai: 'swims' và 'swam' chia thì sai; 'to swimming' thừa giới từ 'to' khi không có vế so sánh thứ hai.",
+    "e": "Chọn 'to drink' vì sau động từ 'prefer' ta dùng cấu trúc 'to-V' để diễn đạt sở thích. Các lựa chọn khác: 'drank' chia quá khứ; 'drink' động từ nguyên mẫu không to; 'drinks' chia ngôi thứ ba đều không đúng ngữ pháp sau 'prefer'.",
     "r": ""
   },
   {
@@ -1359,12 +1359,12 @@
     "id": "E10U03-B6-MC-GR-02022001",
     "q": "______ did they use computers in the 1960s? - For big calculations.",
     "o": [
-      "What",
-      "How",
       "Why",
+      "How",
+      "What",
       "Where"
     ],
-    "e": "Chọn 'Why' (Tại sao) vì câu trả lời bắt đầu bằng 'To do...' (để làm...) nhằm mục đích giải thích nguyên nhân của hành động. Các lựa chọn sai: 'What' (Cái gì) hỏi đối tượng nhưng chủ ngữ và tân ngữ trong câu đã đầy đủ; 'How' (Cách nào) hỏi phương pháp; 'Where' (Ở đâu) hỏi địa điểm.",
+    "e": "Chọn 'Why' (Tại sao) vì câu trả lời '- For big calculations' (Cho các tính toán lớn) nhằm mục đích giải thích lý do, nguyên nhân sử dụng. Các lựa chọn sai: 'What' (Cái gì), 'How' (Cách nào), 'Where' (Ở đâu) đều không khớp với nội dung câu hỏi và câu trả lời.",
     "r": ""
   },
   {
@@ -1952,7 +1952,7 @@
       "Số nhiều",
       "Danh từ riêng"
     ],
-    "e": "Chọn 'Âm nguyên âm' (vowel sound) vì mạo từ 'an' bắt buộc phải đứng trước các từ bắt đầu bằng nguyên âm khi phát âm (u, e, o, a, i). Các lựa chọn sai: 'Chữ cái phụ âm' phải dùng mạo từ 'a'; 'Danh từ số nhiều' không dùng a/an; 'Danh từ riêng' thường không đi kèm mạo từ a/an.",
+    "e": "Chọn 'Nguyên âm (u, e, o, a, i)' vì mạo từ 'an' bắt buộc phải đứng trước các từ bắt đầu bằng nguyên âm khi phát âm (u, e, o, a, i). Các lựa chọn sai: 'Phụ âm' phải dùng mạo từ 'a'; 'Số nhiều' không dùng a/an; 'Danh từ riêng' thường không đi kèm mạo từ a/an.",
     "r": ""
   },
   {
@@ -2184,42 +2184,6 @@
     "r": ""
   },
   {
-    "id": "E10U08-B6-MC-GR-01053001",
-    "q": "Chọn từ có phần gạch chân phát âm khác với các từ còn lại: books, cups, cats, pens",
-    "o": [
-      "pens",
-      "books",
-      "cups",
-      "cats"
-    ],
-    "e": "Chọn 'pens' vì từ gốc 'pen' kết thúc bằng âm hữu thanh /n/, nên đuôi -s đọc là /z/. Các lựa chọn sai: 'books' (/k/), 'cups' (/p/), 'cats' (/t/) đều kết thúc bằng các phụ âm vô thanh, do đó đuôi -s của chúng đồng loạt phát âm là /s/.",
-    "r": ""
-  },
-  {
-    "id": "E10U08-B6-MC-GR-01054001",
-    "q": "Chọn từ có phần gạch chân phát âm là /ɪz/: laughs, misses, cooks, helps",
-    "o": [
-      "misses",
-      "laughs",
-      "cooks",
-      "helps"
-    ],
-    "e": "Chọn 'misses' vì từ gốc 'miss' tận cùng là âm gió /s/ (viết là ss), buộc phải thêm -es và đọc là /ɪz/. Các lựa chọn sai: 'laughs' (/f/), 'cooks' (/k/), 'helps' (/p/) đều tận cùng bằng âm vô thanh nên đuôi -s chỉ đọc là /s/.",
-    "r": ""
-  },
-  {
-    "id": "E10U08-B6-MC-GR-01055001",
-    "q": "Chọn từ có phần gạch chân phát âm là /z/: roof<u>s</u>, bath<u>s</u>, tree<u>s</u>, desk<u>s</u>",
-    "o": [
-      "trees",
-      "roofs",
-      "baths",
-      "desks"
-    ],
-    "e": "Chọn 'trees' vì từ gốc 'tree' tận cùng bằng nguyên âm /iː/ (luôn là âm hữu thanh), do đó đuôi -s phát âm là /z/. Các lựa chọn sai: 'roofs' (/f/), 'baths' (/θ/), 'desks' (/k/) đều tận cùng là âm vô thanh, nên đuôi -s của chúng đọc là /s/.",
-    "r": ""
-  },
-  {
     "id": "E10U08-B6-MC-GR-01056001",
     "q": "Trong các từ sau, từ nào có âm cuối phát âm giống 'watches' (/ɪz/)?",
     "o": [
@@ -2292,42 +2256,6 @@
     "r": ""
   },
   {
-    "id": "E10U08-B6-MC-GR-01062001",
-    "q": "Chọn từ có phần gạch chân phát âm khác: looked, laughed, washed, opened",
-    "o": [
-      "opened",
-      "looked",
-      "laughed",
-      "washed"
-    ],
-    "e": "Chọn 'opened' vì từ gốc kết thúc bằng âm hữu thanh /n/, nên đuôi -ed đọc là /d/. Các lựa chọn sai: 'looked' (/k/), 'laughed' (/f/ - do gh tạo ra), và 'washed' (/ʃ/) đều tận cùng bằng âm vô thanh, do đó đuôi -ed của chúng đều được đọc là /t/.",
-    "r": ""
-  },
-  {
-    "id": "E10U03-B6-MC-GR-02049001",
-    "q": "Chọn từ có phần gạch chân phát âm là /ɪd/: worked, played, started, missed",
-    "o": [
-      "started",
-      "worked",
-      "played",
-      "misses"
-    ],
-    "e": "Chọn 'started' vì từ gốc kết thúc bằng âm /t/, do đó đuôi -ed tạo thành âm tiết riêng đọc là /ɪd/. Các lựa chọn sai: 'worked' (/k/) và 'missed' (/s/) là âm vô thanh nên đọc /t/; 'played' kết thúc bằng nguyên âm nên đọc /d/.",
-    "r": ""
-  },
-  {
-    "id": "E10U08-B6-MC-GR-01063001",
-    "q": "Chọn từ có phần gạch chân phát âm là /d/: helped, planned, fixed, stepped",
-    "o": [
-      "planned",
-      "helped",
-      "fixed",
-      "stepped"
-    ],
-    "e": "Chọn 'planned' vì từ gốc kết thúc bằng âm hữu thanh /n/, khiến đuôi -ed đi kèm phải được phát âm là /d/. Các lựa chọn sai: 'helped' (/p/), 'fixed' (/ks/ - do chữ x tạo ra), và 'stepped' (/p/) đều là các âm vô thanh, nên đuôi -ed phải đọc là /t/.",
-    "r": ""
-  },
-  {
     "id": "E10U08-B6-MC-GR-01064001",
     "q": "Từ nào sau đây có âm cuối phát âm giống 'visited' (/ɪd/)?",
     "o": [
@@ -2378,8 +2306,8 @@
   {
     "q": "________ people were injured in the earthquake last night?",
     "o": [
-      "How much",
       "How many",
+      "How much",
       "How long",
       "How often"
     ],
@@ -2390,9 +2318,9 @@
   {
     "q": "________ should we hide when an earthquake happens?",
     "o": [
-      "What",
-      "When",
       "Where",
+      "When",
+      "What",
       "Why"
     ],
     "e": "Chọn Where (Ở đâu) vì câu hỏi đang tìm kiếm vị trí an toàn để trú ẩn (ví dụ: dưới gầm bàn).",
@@ -2402,8 +2330,8 @@
   {
     "q": "________ is an emergency service provider in your area?",
     "o": [
-      "What",
       "Who",
+      "What",
       "Which",
       "How"
     ],
@@ -2414,10 +2342,10 @@
   {
     "q": "________ do we need to stock up on food and water?",
     "o": [
-      "Where",
+      "Why",
       "Who",
       "How many",
-      "Why"
+      "Where"
     ],
     "e": "Chọn Why (Tại sao) vì đang hỏi về lý do cần dự trữ nhu yếu phẩm trước khi bão đổ bộ.",
     "id": "E10U02-B6-MC-GR-01017001",
@@ -2450,9 +2378,9 @@
   {
     "q": "________ can we protect our house from a flood?",
     "o": [
-      "What",
-      "When",
       "How",
+      "When",
+      "What",
       "Who"
     ],
     "e": "Chọn How (Bằng cách nào) vì đang hỏi về phương thức hoặc biện pháp bảo vệ nhà cửa.",
@@ -2474,9 +2402,9 @@
   {
     "q": "________ of these disasters is the most common in Vietnam?",
     "o": [
-      "What",
-      "How",
       "Which",
+      "How",
+      "What",
       "Where"
     ],
     "e": "Chọn Which (Cái nào) vì dùng để hỏi về sự lựa chọn trong một nhóm các thảm họa đã biết.",
@@ -2486,8 +2414,8 @@
   {
     "q": "________ long does it take for a tsunami to reach the shore?",
     "o": [
-      "How much",
       "How",
+      "How much",
       "What",
       "When"
     ],
@@ -2510,9 +2438,9 @@
   {
     "q": "The hospital is ________ the post office, just across the main street.",
     "o": [
-      "in front of",
-      "next to",
       "opposite",
+      "next to",
+      "in front of",
       "under"
     ],
     "e": "Chọn opposite (đối diện) vì có cụm \"across the street\" (băng qua đường) ngăn cách.",
@@ -2522,8 +2450,8 @@
   {
     "q": "Please put the first aid kit ________ the shelf where everyone can see it.",
     "o": [
-      "in",
       "on",
+      "in",
       "at",
       "between"
     ],
@@ -2534,9 +2462,9 @@
   {
     "q": "To stay safe during a storm, don't stand ________ tall trees.",
     "o": [
-      "on",
-      "above",
       "near",
+      "above",
+      "on",
       "at"
     ],
     "e": "Chọn near (gần) vì đứng gần cây cao khi có bão/sét là rất nguy hiểm.",
@@ -2558,9 +2486,9 @@
   {
     "q": "Look! There is a helicopter hovering ________ the flooded area.",
     "o": [
-      "under",
-      "in",
       "above",
+      "in",
+      "under",
       "next to"
     ],
     "e": "Chọn above (phía trên) để diễn tả vị trí bay lơ lửng trên một khu vực rộng.",
@@ -2570,9 +2498,9 @@
   {
     "q": "We should hide ________ a sturdy table when the ground starts shaking.",
     "o": [
-      "on",
-      "inside",
       "under",
+      "inside",
+      "on",
       "between"
     ],
     "e": "Chọn under (dưới) là vị trí an toàn nhất khi có động đất (theo hướng dẫn an toàn).",
@@ -2582,9 +2510,9 @@
   {
     "q": "The emergency exit is located ________ the end of the hallway.",
     "o": [
-      "in",
-      "on",
       "at",
+      "on",
+      "in",
       "opposite"
     ],
     "e": "Chọn at dùng cho các điểm cụ thể (at the end of).",
@@ -2594,8 +2522,8 @@
   {
     "q": "My house is ________ the park and the library, so it's very easy to find.",
     "o": [
-      "among",
       "between",
+      "among",
       "opposite",
       "next to"
     ],
@@ -2618,8 +2546,8 @@
   {
     "q": "The floodwater flowed ________ the streets and into the houses.",
     "o": [
-      "across",
       "through",
+      "across",
       "up",
       "on"
     ],
@@ -2630,9 +2558,9 @@
   {
     "q": "You should run ________ the building as quickly as possible when you hear the fire alarm.",
     "o": [
-      "into",
-      "towards",
       "out of",
+      "towards",
+      "into",
       "along"
     ],
     "e": "Chọn out of (ra khỏi) vì đây là hành động sơ tán khẩn cấp khi có báo cháy.",
@@ -2654,8 +2582,8 @@
   {
     "q": "The strong winds blew the roof ________ the house during the typhoon.",
     "o": [
-      "onto",
       "off",
+      "onto",
       "through",
       "into"
     ],
@@ -2666,9 +2594,9 @@
   {
     "q": "The rescue team walked ________ the forest to find the lost hikers.",
     "o": [
-      "into",
-      "out of",
       "through",
+      "out of",
+      "into",
       "onto"
     ],
     "e": "Chọn through (xuyên qua) khi đi giữa các cây cối trong rừng.",
@@ -2702,8 +2630,8 @@
   {
     "q": "We saw the smoke rising ________ the volcano from a distance.",
     "o": [
-      "into",
       "from",
+      "into",
       "through",
       "across"
     ],
@@ -2726,8 +2654,8 @@
   {
     "q": "During the blizzard, it was hard to walk ________ the thick snow.",
     "o": [
-      "across",
       "through",
+      "across",
       "into",
       "onto"
     ],
@@ -2738,9 +2666,9 @@
   {
     "q": "________ does your new tablet weigh?",
     "o": [
-      "How many",
-      "What",
       "How much",
+      "What",
+      "How many",
       "How far"
     ],
     "e": "Chọn How much (kết hợp với weigh) để hỏi về trọng lượng.",
@@ -2774,9 +2702,9 @@
   {
     "q": "________ can this rescue robot navigate through the dark?",
     "o": [
-      "Why",
-      "Who",
       "How",
+      "Who",
+      "Why",
       "When"
     ],
     "e": "Chọn How (Bằng cách nào) để hỏi về phương thức vận hành của robot.",
@@ -2786,8 +2714,8 @@
   {
     "q": "________ storage capacity does this computer have?",
     "o": [
-      "How many",
       "How much",
+      "How many",
       "What",
       "Which"
     ],
@@ -2822,8 +2750,8 @@
   {
     "q": "________ did you buy this expensive camera?",
     "o": [
-      "How much",
       "Where",
+      "How much",
       "Who",
       "What"
     ],
