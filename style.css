@@ -557,29 +557,34 @@ h2 {
 }
 
 .score-circle {
-    width: 168px;
-    height: 168px;
-    display: grid;
-    place-items: center;
+    width: 172px;
+    height: 172px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
     margin: 24px auto 16px;
     border-radius: 999px;
     border: 10px solid #dceee7;
     background: #f7fbfa;
+    padding: 8px;
+    box-sizing: border-box;
 }
 
 .score-value {
-    align-self: end;
-    font-size: 3.35rem;
-    line-height: 1;
+    font-size: 1.7rem;
+    line-height: 1.1;
     font-weight: 900;
     color: var(--primary);
+    text-align: center;
 }
 
 .score-label {
-    align-self: start;
     color: var(--muted);
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     font-weight: 800;
+    text-align: center;
 }
 
 .result-msg {

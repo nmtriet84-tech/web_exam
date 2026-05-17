@@ -332,6 +332,17 @@ function updateSelectionSummary() {
 }
 
 function generateExam(targetCount) {
+    // Yêu cầu điền tên trước khi làm bài
+    const nameVal = studentNameInput ? studentNameInput.value.trim() : '';
+    if (!nameVal) {
+        alert("⚠️ Vui lòng điền Họ và tên học sinh trước khi bắt đầu làm bài!");
+        if (studentNameInput) {
+            studentNameInput.focus();
+            studentNameInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+        return;
+    }
+
     const pool = getSelectedPool();
     if (pool.length === 0) {
         alert("Vui lòng chọn ít nhất 1 phần để tạo đề.");
@@ -669,8 +680,17 @@ function showResult(options = {}) {
         return total + (question.shuffledOptions[selectedIdx].originalIdx === 0 ? 1 : 0);
     }, 0);
 
-    finalScore.textContent = score;
-    scoreTen.textContent = `Điểm thang 10: ${(score / currentExam.length * 10).toFixed(1)}`;
+    // Tính điểm hệ 10 và định dạng dạng "8,5 điểm" hay "8,54 điểm"
+    const scoreTenVal = (score / currentExam.length * 10);
+    const formattedScore = Number(scoreTenVal.toFixed(2)).toString().replace('.', ',');
+    finalScore.textContent = `${formattedScore} điểm`;
+
+    // Cập nhật nhãn số câu trả lời đúng
+    const labelEl = document.getElementById('score-label-text');
+    if (labelEl) {
+        labelEl.textContent = `Đúng ${score}/${currentExam.length} câu`;
+    }
+
     resultMsg.textContent = options.timedOut ? `Hết giờ. ${getResultMessage(score)}` : getResultMessage(score);
     renderReview();
 }
