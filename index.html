@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=20260517-security-anti-copy">
+    <link rel="stylesheet" href="style.css?v=20260517-security-anti-cheat">
 </head>
 <body>
     <main class="app-shell">
@@ -129,6 +129,17 @@
         </section>
     </main>
 
-    <script src="app.js?v=20260517-security-anti-copy"></script>
+    <!-- Modal Cảnh báo gian lận (Tab switch detection warning) -->
+    <div id="cheat-modal" class="modal-overlay" hidden>
+        <div class="modal-card">
+            <div class="modal-icon">⚠️</div>
+            <h2>Phát hiện chuyển Tab!</h2>
+            <p>Hệ thống phát hiện bạn đã rời khỏi màn hình làm bài thi.</p>
+            <p class="modal-sub">Để bảo đảm tính khách quan, bài thi hiện tại đã bị hủy. Nhấn nút bên dưới để nhận đề thi mới.</p>
+            <button id="cheat-reset-btn" class="primary-btn" type="button" style="width: 100%; min-height: 48px; font-weight: 800;">Bốc đề mới & Làm lại</button>
+        </div>
+    </div>
+
+    <script src="app.js?v=20260517-security-anti-cheat"></script>
 </body>
 </html>

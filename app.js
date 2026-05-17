@@ -762,4 +762,50 @@ document.addEventListener('keydown', event => {
     }
 });
 
+// 3. Phát hiện chuyển tab hoặc rời màn hình (Tab Switching & Window Blur Detection)
+const cheatModal = document.getElementById("cheat-modal");
+const cheatResetBtn = document.getElementById("cheat-reset-btn");
+let isCheatTriggered = false;
+
+function handleExamCheating() {
+    // Chỉ kích hoạt hình phạt khi đang ở trong phòng thi tích cực và chưa bị cảnh báo trước đó
+    if (!document.body.classList.contains("exam-active") || isCheatTriggered) {
+        return;
+    }
+    
+    isCheatTriggered = true;
+    stopTimer(); // Dừng thời gian đếm ngược ngay lập tức
+    
+    // Hiển thị modal cảnh báo gian lận
+    if (cheatModal) {
+        cheatModal.hidden = false;
+    }
+}
+
+// Khi nhấn "Bốc đề mới & Làm lại" trên modal cảnh báo
+if (cheatResetBtn) {
+    cheatResetBtn.addEventListener("click", () => {
+        if (cheatModal) {
+            cheatModal.hidden = true;
+        }
+        isCheatTriggered = false;
+        
+        // Hủy kết quả làm bài hiện tại và tự động bốc bộ đề mới với cấu hình tương đương
+        const targetCount = currentExamTargetCount || 20;
+        generateExam(targetCount);
+    });
+}
+
+// Lắng nghe sự kiện ẩn/hiện tab (Page Visibility API)
+document.addEventListener("visibilitychange", () => {
+    if (document.hidden) {
+        handleExamCheating();
+    }
+});
+
+// Lắng nghe sự kiện mất tiêu điểm của trình duyệt (chuyển cửa sổ khác, chia màn hình)
+window.addEventListener("blur", () => {
+    handleExamCheating();
+});
+
 init();
