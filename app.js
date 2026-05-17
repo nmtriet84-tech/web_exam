@@ -735,4 +735,31 @@ newExamBtn.addEventListener("click", () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
+// ==========================================
+// 🛡️ CHỨC NĂNG BẢO MẬT: CẤM CHUỘT PHẢI & COPY
+// ==========================================
+
+// 1. Cấm chuột phải (Right-click) trên toàn bộ website
+document.addEventListener('contextmenu', event => {
+    event.preventDefault();
+});
+
+// 2. Cấm phím tắt sao chép, xem nguồn và F12 Inspect (Ctrl+C, Ctrl+X, Ctrl+U, F12, Ctrl+Shift+I)
+document.addEventListener('keydown', event => {
+    // Ngăn chặn Ctrl+C (Copy) và Ctrl+X (Cut)
+    if (event.ctrlKey && (event.key === 'c' || event.key === 'x' || event.key === 'C' || event.key === 'X')) {
+        event.preventDefault();
+    }
+    
+    // Ngăn chặn Ctrl+U (Xem nguồn trang - View Source)
+    if (event.ctrlKey && (event.key === 'u' || event.key === 'U')) {
+        event.preventDefault();
+    }
+    
+    // Ngăn chặn F12 hoặc Ctrl+Shift+I (Mở Chrome DevTools)
+    if (event.key === 'F12' || (event.ctrlKey && event.shiftKey && (event.key === 'i' || event.key === 'I'))) {
+        event.preventDefault();
+    }
+});
+
 init();
