@@ -1,0 +1,110 @@
+{
+  "U01": {
+    "title": "Unit 1: Local Community",
+    "grammar": {
+      "GR-00": "Từ Vựng Chuyên Sâu"
+    },
+    "config": {
+      "pick_questions": 5
+    }
+  },
+  "U02": {
+    "title": "Unit 2: City Life",
+    "grammar": {
+      "GR-00": "Từ Vựng Chuyên Sâu"
+    },
+    "config": {
+      "pick_questions": 5
+    }
+  },
+  "U03": {
+    "title": "Unit 3: Teen Stress and Pressure",
+    "grammar": {
+      "GR-00": "Từ Vựng Chuyên Sâu"
+    },
+    "config": {
+      "pick_questions": 5
+    }
+  },
+  "U04": {
+    "title": "Unit 4: Life in the Past",
+    "grammar": {
+      "GR-00": "Từ Vựng Chuyên Sâu"
+    },
+    "config": {
+      "pick_questions": 5
+    }
+  },
+  "U05": {
+    "title": "Unit 5: Wonders of Viet Nam",
+    "grammar": {
+      "GR-00": "Từ Vựng Chuyên Sâu"
+    },
+    "config": {
+      "pick_questions": 5
+    }
+  },
+  "U06": {
+    "title": "Unit 6: Viet Nam: Then and Now",
+    "grammar": {
+      "GR-00": "Từ Vựng Chuyên Sâu"
+    },
+    "config": {
+      "pick_questions": 5
+    }
+  },
+  "U07": {
+    "title": "Unit 7: Recipes and Eating Habits",
+    "grammar": {
+      "GR-00": "Từ Vựng Chuyên Sâu"
+    },
+    "config": {
+      "pick_questions": 5
+    }
+  },
+  "U08": {
+    "title": "Unit 8: Tourism",
+    "grammar": {
+      "GR-00": "Từ Vựng Chuyên Sâu"
+    },
+    "config": {
+      "pick_questions": 5
+    }
+  },
+  "U09": {
+    "title": "Unit 9: English in the World",
+    "grammar": {
+      "GR-00": "Từ Vựng Chuyên Sâu"
+    },
+    "config": {
+      "pick_questions": 5
+    }
+  },
+  "U10": {
+    "title": "Unit 10: Space Travel",
+    "grammar": {
+      "GR-00": "Từ Vựng Chuyên Sâu"
+    },
+    "config": {
+      "pick_questions": 5
+    }
+  },
+  "U11": {
+    "title": "Unit 11: Changing Roles in Society",
+    "grammar": {
+      "GR-00": "Từ Vựng Chuyên Sâu"
+    },
+    "config": {
+      "pick_questions": 5
+    }
+  },
+  "U12": {
+    "title": "Unit 12: My Future Career",
+    "grammar": {
+      "GR-00": "Từ Vựng Chuyên Sâu"
+    },
+    "config": {
+      "pick_questions": 5
+    }
+  }
+}
