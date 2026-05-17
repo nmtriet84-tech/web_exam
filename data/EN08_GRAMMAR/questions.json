@@ -3663,8 +3663,8 @@
     "id": "E10U01-B6-CL-GR-01001",
     "q": "Câu 1 (Blank 1)",
     "o": [
-      "spending",
       "spend",
+      "spending",
       "spends",
       "spent"
     ],
@@ -3675,9 +3675,9 @@
     "id": "E10U01-B6-CL-GR-01002",
     "q": "Câu 2 (Blank 2)",
     "o": [
-      "enjoy",
-      "love",
       "prefer",
+      "love",
+      "enjoy",
       "fancy"
     ],
     "e": "Dựa vào cấu trúc \"______ V-ing to V-ing\" ở phía sau, ta phải chọn prefer.",
@@ -3711,8 +3711,8 @@
     "id": "E10U01-B6-CL-GR-02001",
     "q": "Câu 1 (Blank 1)",
     "o": [
-      "starting",
       "starts",
+      "starting",
       "started",
       "is starting"
     ],
@@ -3723,10 +3723,10 @@
     "id": "E10U01-B6-CL-GR-02002",
     "q": "Câu 2 (Blank 2)",
     "o": [
-      "going",
+      "go",
       "are going",
       "will go",
-      "go"
+      "going"
     ],
     "e": "Chủ ngữ \"We\" là số nhiều, động từ ở thì hiện tại đơn giữ nguyên mẫu là go.",
     "r": "R-U01-GR-02"
@@ -3759,9 +3759,9 @@
     "id": "E10U01-B6-CL-GR-03001",
     "q": "Câu 1 (Blank 1)",
     "o": [
-      "in",
-      "on",
       "at",
+      "on",
+      "in",
       "with"
     ],
     "e": "Cụm từ cố định: at the weekend (vào cuối tuần).",
@@ -3771,9 +3771,9 @@
     "id": "E10U01-B6-CL-GR-03002",
     "q": "Câu 2 (Blank 2)",
     "o": [
-      "in",
-      "at",
       "on",
+      "at",
+      "in",
       "for"
     ],
     "e": "Dùng giới từ on trước các ngày cụ thể trong tháng (June 15th).",
@@ -3795,10 +3795,10 @@
     "id": "E10U01-B6-CL-GR-03004",
     "q": "Câu 4 (Blank 4)",
     "o": [
-      "during",
+      "until",
       "at",
       "on",
-      "until"
+      "during"
     ],
     "e": "Cấu trúc not ... until (cho đến khi). Nghĩa là bố mẹ sẽ không đến cho đến khi họ xong việc.",
     "r": "R-U01-GR-03"
@@ -3807,8 +3807,8 @@
     "id": "E10U02-B6-CL-GR-01001",
     "q": "Câu 1 (Blank 1)",
     "o": [
-      "much",
       "many",
+      "much",
       "a lot",
       "little"
     ],
@@ -3819,8 +3819,8 @@
     "id": "E10U02-B6-CL-GR-01002",
     "q": "Câu 2 (Blank 2)",
     "o": [
-      "many",
       "plenty of",
+      "many",
       "few",
       "a"
     ],
@@ -3891,9 +3891,9 @@
     "id": "E10U02-B6-CL-GR-02004",
     "q": "Câu 4 (Blank 4)",
     "o": [
-      "enjoy",
-      "hate",
       "want",
+      "hate",
+      "enjoy",
       "fancy"
     ],
     "e": "Động từ want luôn đi với to-V.",
@@ -3903,8 +3903,8 @@
     "id": "E10U02-B6-CL-GR-03001",
     "q": "Câu 1 (Blank 1)",
     "o": [
-      "never",
       "usually",
+      "never",
       "hardly",
       "rarely"
     ],
@@ -3915,9 +3915,9 @@
     "id": "E10U02-B6-CL-GR-03002",
     "q": "Câu 2 (Blank 2)",
     "o": [
-      "often",
-      "always",
       "rarely",
+      "always",
+      "often",
       "sometimes"
     ],
     "e": "Trong mùa thu hoạch, họ \"hiếm khi\" (rarely) ở nhà vì phải làm việc ngoài đồng.",
@@ -3927,8 +3927,8 @@
     "id": "E10U02-B6-CL-GR-03003",
     "q": "Câu 3 (Blank 3)",
     "o": [
-      "never",
       "often",
+      "never",
       "seldom",
       "once"
     ],
@@ -3939,9 +3939,9 @@
     "id": "E10U02-B6-CL-GR-03004",
     "q": "Câu 4 (Blank 4)",
     "o": [
-      "always",
-      "usually",
       "never",
+      "usually",
+      "always",
       "often"
     ],
     "e": "\"Không bao giờ\" (never) cảm thấy chán vì câu chuyện luôn thú vị.",
@@ -3987,8 +3987,8 @@
     "id": "E10U03-B6-CL-GR-01004",
     "q": "Câu 4 (Blank 4)",
     "o": [
-      "becomes",
       "will become",
+      "becomes",
       "become",
       "became"
     ],
@@ -3999,9 +3999,9 @@
     "id": "E10U03-B6-CL-GR-02001",
     "q": "Câu 1 (Blank 1)",
     "o": [
-      "and",
-      "but",
       "or",
+      "but",
+      "and",
       "so"
     ],
     "e": "Dùng or để đưa ra hai lựa chọn: tái chế hoặc tái sử dụng.",
@@ -4011,9 +4011,9 @@
     "id": "E10U03-B6-CL-GR-02002",
     "q": "Câu 2 (Blank 2)",
     "o": [
-      "and",
-      "but",
       "or",
+      "but",
+      "and",
       "so"
     ],
     "e": "Trong câu ghép, or còn có nghĩa là \"nếu không thì\". Tắt điện, nếu không thì sẽ lãng phí năng lượng.",
@@ -4023,8 +4023,8 @@
     "id": "E10U03-B6-CL-GR-02003",
     "q": "Câu 3 (Blank 3)",
     "o": [
-      "and",
       "but",
+      "and",
       "or",
       "so"
     ],
@@ -4035,10 +4035,10 @@
     "id": "E10U03-B6-CL-GR-02004",
     "q": "Câu 4 (Blank 4)",
     "o": [
-      "and",
+      "so",
       "but",
       "or",
-      "so"
+      "and"
     ],
     "e": "Dùng so để chỉ kết quả: Chúng tôi trẻ, vì thế chúng tôi muốn làm điều ý nghĩa.",
     "r": "R-U03-GR-02"
@@ -4047,9 +4047,9 @@
     "id": "E10U03-B6-CL-GR-03001",
     "q": "Câu 1 (Blank 1)",
     "o": [
-      "but",
-      "because",
       "so that",
+      "because",
+      "but",
       "or"
     ],
     "e": "Dùng so that để nối hai mệnh đề chỉ mục đích (Tiết kiệm nước để mà không bị cạn kiệt).",
@@ -4071,8 +4071,8 @@
     "id": "E10U03-B6-CL-GR-03003",
     "q": "Câu 3 (Blank 3)",
     "o": [
-      "because",
       "so that",
+      "because",
       "unless",
       "but"
     ],
@@ -4083,9 +4083,9 @@
     "id": "E10U03-B6-CL-GR-03004",
     "q": "Câu 4 (Blank 4)",
     "o": [
-      "and",
-      "or",
       "so that",
+      "or",
+      "and",
       "because"
     ],
     "e": "Thực hiện những hành động nhỏ để mà có thể bảo vệ hành tinh.",
@@ -4095,9 +4095,9 @@
     "id": "E10U04-B6-CL-GR-01001",
     "q": "Câu 1 (Blank 1)",
     "o": [
-      "What",
-      "Where",
       "When",
+      "Where",
+      "What",
       "Why"
     ],
     "e": "Căn cứ vào câu trả lời \"at 11:45 p.m.\" (chỉ thời gian), ta dùng từ để hỏi là When.",
@@ -4107,8 +4107,8 @@
     "id": "E10U04-B6-CL-GR-01002",
     "q": "Câu 2 (Blank 2)",
     "o": [
-      "How",
       "What",
+      "How",
       "Who",
       "Where"
     ],
@@ -4119,8 +4119,8 @@
     "id": "E10U04-B6-CL-GR-01003",
     "q": "Câu 3 (Blank 3)",
     "o": [
-      "When",
       "Where",
+      "When",
       "What",
       "Why"
     ],
@@ -4131,8 +4131,8 @@
     "id": "E10U04-B6-CL-GR-01004",
     "q": "Câu 4 (Blank 4)",
     "o": [
-      "How",
       "What",
+      "How",
       "Which",
       "Who"
     ],
@@ -4143,8 +4143,8 @@
     "id": "E10U04-B6-CL-GR-02001",
     "q": "Câu 1 (Blank 1)",
     "o": [
-      "in",
       "on",
+      "in",
       "at",
       "under"
     ],
@@ -4167,8 +4167,8 @@
     "id": "E10U04-B6-CL-GR-02003",
     "q": "Câu 3 (Blank 3)",
     "o": [
-      "on",
       "under",
+      "on",
       "above",
       "between"
     ],
@@ -4191,9 +4191,9 @@
     "id": "E10U04-B6-CL-GR-03001",
     "q": "Câu 1 (Blank 1)",
     "o": [
-      "into",
-      "through",
       "down",
+      "through",
+      "into",
       "across"
     ],
     "e": "Cụm từ down the street dùng để chỉ sự chuyển động dọc theo con phố (kể cả khi phố đang ngập lụt).",
@@ -4203,9 +4203,9 @@
     "id": "E10U04-B6-CL-GR-03002",
     "q": "Câu 2 (Blank 2)",
     "o": [
-      "through",
-      "across",
       "over",
+      "across",
+      "through",
       "into"
     ],
     "e": "Giới từ over chỉ sự chuyển động phía bên trên (trực thăng bay phía trên các tòa nhà).",
@@ -4227,8 +4227,8 @@
     "id": "E10U04-B6-CL-GR-03004",
     "q": "Câu 4 (Blank 4)",
     "o": [
-      "into",
       "out of",
+      "into",
       "through",
       "up"
     ],
@@ -4239,8 +4239,8 @@
     "id": "E10U05-B6-CL-GR-01001",
     "q": "Câu 1 (Blank 1)",
     "o": [
-      "Do",
       "Does",
+      "Do",
       "Are",
       "Is"
     ],
@@ -4251,8 +4251,8 @@
     "id": "E10U05-B6-CL-GR-01002",
     "q": "Câu 2 (Blank 2)",
     "o": [
-      "How",
       "What",
+      "How",
       "Which",
       "Who"
     ],
@@ -4263,9 +4263,9 @@
     "id": "E10U05-B6-CL-GR-01003",
     "q": "Câu 3 (Blank 3)",
     "o": [
-      "When",
-      "Why",
       "What",
+      "Why",
+      "When",
       "Where"
     ],
     "e": "Câu hỏi Wh- về khả năng (ability): What can it do? (Nó có thể làm gì?)",
@@ -4287,8 +4287,8 @@
     "id": "E10U05-B6-CL-GR-02001",
     "q": "Câu 1 (Blank 1)",
     "o": [
-      "fast",
       "faster",
+      "fast",
       "more fast",
       "fastest"
     ],
@@ -4299,9 +4299,9 @@
     "id": "E10U05-B6-CL-GR-02002",
     "q": "Câu 2 (Blank 2)",
     "o": [
-      "more quickly",
-      "quicklier",
       "quickly",
+      "quicklier",
+      "more quickly",
       "most quickly"
     ],
     "e": "Quickly là trạng từ dài, dùng cấu trúc more + adverb.",
@@ -4311,8 +4311,8 @@
     "id": "E10U05-B6-CL-GR-02003",
     "q": "Câu 3 (Blank 3)",
     "o": [
-      "more well",
       "better",
+      "more well",
       "good",
       "best"
     ],
@@ -4335,8 +4335,8 @@
     "id": "E10U06-B6-CL-GR-01001",
     "q": "Câu 1 (Blank 1)",
     "o": [
-      "sit",
       "was sitting",
+      "sit",
       "sat",
       "is sitting"
     ],
@@ -4359,9 +4359,9 @@
     "id": "E10U06-B6-CL-GR-01003",
     "q": "Câu 3 (Blank 3)",
     "o": [
-      "land",
-      "was landing",
       "landed",
+      "was landing",
+      "land",
       "lands"
     ],
     "e": "Diễn tả hành động bất ngờ xảy ra (xen vào): UFO hạ cánh. Dùng Past Simple.",
@@ -4371,9 +4371,9 @@
     "id": "E10U06-B6-CL-GR-01004",
     "q": "Câu 4 (Blank 4)",
     "o": [
-      "greets",
-      "was greeting",
       "greeted",
+      "was greeting",
+      "greets",
       "is greeting"
     ],
     "e": "Hành động kế tiếp trong chuỗi sự kiện quá khứ: Người ngoài hành tinh chào tôi. Dùng Past Simple.",
@@ -4407,9 +4407,9 @@
     "id": "E10U06-B6-CL-GR-02003",
     "q": "Câu 3 (Blank 3)",
     "o": [
-      "live",
-      "are living",
       "will live",
+      "are living",
+      "live",
       "going to live"
     ],
     "e": "Diễn tả một dự đoán không chắc chắn về tương lai xa (\"one day\").",
@@ -4431,8 +4431,8 @@
     "id": "E10U07-B6-CL-GR-01001",
     "q": "Câu 1 (Blank 1)",
     "o": [
-      "our",
       "ours",
+      "our",
       "us",
       "we"
     ],
@@ -4443,8 +4443,8 @@
     "id": "E10U07-B6-CL-GR-01002",
     "q": "Câu 2 (Blank 2)",
     "o": [
-      "their",
       "theirs",
+      "their",
       "them",
       "they"
     ],
@@ -4455,8 +4455,8 @@
     "id": "E10U07-B6-CL-GR-01003",
     "q": "Câu 3 (Blank 3)",
     "o": [
-      "her",
       "hers",
+      "her",
       "she",
       "hers'"
     ],
@@ -4467,8 +4467,8 @@
     "id": "E10U07-B6-CL-GR-01004",
     "q": "Câu 4 (Blank 4)",
     "o": [
-      "their",
       "theirs",
+      "their",
       "them",
       "they"
     ],
@@ -4479,8 +4479,8 @@
     "id": "E10U07-B6-CL-GR-02001",
     "q": "Câu 1 (Blank 1)",
     "o": [
-      "loves",
       "loved",
+      "loves",
       "love",
       "loving"
     ],
@@ -4491,9 +4491,9 @@
     "id": "E10U07-B6-CL-GR-02002",
     "q": "Câu 2 (Blank 2)",
     "o": [
-      "makes",
-      "will make",
       "had made",
+      "will make",
+      "makes",
       "was making"
     ],
     "e": "Lùi thì từ Quá khứ đơn sang Quá khứ hoàn thành (đã đóng phim đầu tiên từ lúc 10 tuổi).",
@@ -4503,9 +4503,9 @@
     "id": "E10U07-B6-CL-GR-02003",
     "q": "Câu 3 (Blank 3)",
     "o": [
-      "will film",
-      "filmed",
       "would film",
+      "filmed",
+      "will film",
       "was filming"
     ],
     "e": "Lùi thì từ \"will\" sang would cho một sự kiện diễn ra vào tháng sau (the following month).",
@@ -4539,9 +4539,9 @@
     "id": "E10U08-B6-CL-GR-01002",
     "q": "Câu 2 (Blank 2)",
     "o": [
-      "A",
-      "An",
       "The",
+      "An",
+      "A",
       "zero article"
     ],
     "e": "Dùng mạo từ The trước tên các nhóm dân tộc cụ thể (The Viet people).",
@@ -4563,9 +4563,9 @@
     "id": "E10U08-B6-CL-GR-01004",
     "q": "Câu 4 (Blank 4)",
     "o": [
-      "a",
-      "an",
       "the",
+      "an",
+      "a",
       "zero article"
     ],
     "e": "Dùng mạo từ the để chỉ các khu vực địa lý xác định (the northern mountainous areas).",
@@ -4575,8 +4575,8 @@
     "id": "E10U08-B6-CL-GR-02001",
     "q": "Câu 1 (Blank 1)",
     "o": [
-      "that",
       "if",
+      "that",
       "what",
       "who"
     ],
@@ -4599,8 +4599,8 @@
     "id": "E10U08-B6-CL-GR-02003",
     "q": "Câu 3 (Blank 3)",
     "o": [
-      "which",
       "what",
+      "which",
       "where",
       "how"
     ],
@@ -4611,8 +4611,8 @@
     "id": "E10U08-B6-CL-GR-02004",
     "q": "Câu 4 (Blank 4)",
     "o": [
-      "why",
       "how often",
+      "why",
       "where",
       "if"
     ],
