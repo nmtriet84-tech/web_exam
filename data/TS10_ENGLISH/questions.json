@@ -1,0 +1,4028 @@
+[
+  {
+    "id": "TS10-U01-GR-01-0001",
+    "q": "The library ______ quiet study spaces for students to read books.",
+    "o": [
+      "provides",
+      "presents",
+      "gives",
+      "sends"
+    ],
+    "e": "Từ vựng: Thư viện \"cung cấp\" không gian học tập."
+  },
+  {
+    "id": "TS10-U01-GR-01-0002",
+    "q": "My teacher told us we would have a meeting ______ Monday morning.",
+    "o": [
+      "on",
+      "in",
+      "for",
+      "at"
+    ],
+    "e": "Giới từ \"on\" được dùng cho các thứ trong tuần và buổi của một ngày cụ thể, ví dụ \"Monday morning\"."
+  },
+  {
+    "id": "TS10-U01-GR-01-0003",
+    "q": "When the phone rang, I ______ my homework.",
+    "o": [
+      "was doing",
+      "did",
+      "are doing",
+      "do"
+    ],
+    "e": "Thì quá khứ tiếp diễn diễn tả một hành động đang xảy ra trong quá khứ (\"was doing\") thì có một hành động khác xen vào (\"rang\")."
+  },
+  {
+    "id": "TS10-U01-GR-01-0004",
+    "q": "The math exercises in the new textbook are ______ than those in the old one.",
+    "o": [
+      "more difficult",
+      "the most difficult",
+      "as difficult",
+      "difficult"
+    ],
+    "e": "Cấu trúc so sánh hơn đối với tính từ dài \"difficult\" đi kèm với \"than\"."
+  },
+  {
+    "id": "TS10-U01-GR-01-0005",
+    "q": "If you ______ in the sun for a long time, you will have a sunburn.",
+    "o": [
+      "stay",
+      "will stay",
+      "stays",
+      "can stay"
+    ],
+    "e": "Câu điều kiện loại 1: Mệnh đề \"If\" sử dụng thì hiện tại đơn, chủ ngữ \"you\" đi với động từ nguyên mẫu."
+  },
+  {
+    "id": "TS10-U01-GR-01-0006",
+    "q": "My father is the person ______ loves my family most.",
+    "o": [
+      "who",
+      "whom",
+      "which",
+      "whose"
+    ],
+    "e": "Đại từ quan hệ \"who\" chỉ người, làm chủ ngữ thay thế cho \"the person\" ngay phía trước."
+  },
+  {
+    "id": "TS10-U01-GR-01-0007",
+    "q": "Before leaving the hall, please ______ all the lights and fans.",
+    "o": [
+      "turn off",
+      "go out",
+      "act out",
+      "get off"
+    ],
+    "e": "Cụm động từ \"turn off\" mang nghĩa là tắt các thiết bị như đèn và quạt."
+  },
+  {
+    "id": "TS10-U01-GR-01-0008",
+    "q": "Everyone should ______ forests and environment.",
+    "o": [
+      "protect",
+      "reduce",
+      "wash",
+      "prevent"
+    ],
+    "e": "Từ vựng: \"Protect\" mang nghĩa là bảo vệ rừng và môi trường."
+  },
+  {
+    "id": "TS10-U01-GR-01-0009",
+    "q": "They continued playing ______ it started to rain.",
+    "o": [
+      "although",
+      "so",
+      "however",
+      "because"
+    ],
+    "e": "Liên từ \"although\" diễn tả sự nhượng bộ, mang nghĩa \"mặc dù\": Họ vẫn tiếp tục chơi mặc dù trời bắt đầu mưa."
+  },
+  {
+    "id": "TS10-U01-GR-01-0010",
+    "q": "By the time we arrived at the station, the train ______.",
+    "o": [
+      "had left",
+      "was leaving",
+      "has left",
+      "left"
+    ],
+    "e": "Thì quá khứ hoàn thành ('had left') diễn tả hành động xảy ra trước một thời điểm hoặc hành động khác trong quá khứ."
+  },
+  {
+    "id": "TS10-U01-GR-01-0011",
+    "q": "If I ______ you, I would study harder for the final exam.",
+    "o": [
+      "were",
+      "am",
+      "was",
+      "have been"
+    ],
+    "e": "Câu điều kiện loại 2 dùng để đưa ra lời khuyên, động từ to-be luôn dùng 'were' cho mọi ngôi."
+  },
+  {
+    "id": "TS10-U01-GR-01-0012",
+    "q": "The man ______ car was stolen yesterday reported it to the police.",
+    "o": [
+      "whose",
+      "that",
+      "who",
+      "whom"
+    ],
+    "e": "Đại từ quan hệ 'whose' được dùng để chỉ sự sở hữu (chiếc xe của người đàn ông)."
+  },
+  {
+    "id": "TS10-U01-GR-01-0013",
+    "q": "They decided to ______ the meeting until next week due to the severe storm.",
+    "o": [
+      "put off",
+      "take after",
+      "turn off",
+      "go over"
+    ],
+    "e": "Cụm động từ 'put off' mang nghĩa là trì hoãn (hoãn lại)."
+  },
+  {
+    "id": "TS10-U01-GR-01-0014",
+    "q": "______ the heavy rain, they still went hiking in the mountains.",
+    "o": [
+      "Despite",
+      "Although",
+      "Because of",
+      "Since"
+    ],
+    "e": "Giới từ 'Despite' + cụm danh từ mang nghĩa nhượng bộ (Mặc dù)."
+  },
+  {
+    "id": "TS10-U01-GR-01-0015",
+    "q": "She is really looking forward ______ her grandparents this weekend.",
+    "o": [
+      "to visiting",
+      "visit",
+      "visiting",
+      "to visit"
+    ],
+    "e": "Cấu trúc 'look forward to' + V-ing mang nghĩa là mong đợi, háo hức làm điều gì đó."
+  },
+  {
+    "id": "TS10-U01-GR-01-0016",
+    "q": "The harder you practice, ______ you will perform on the stage.",
+    "o": [
+      "the better",
+      "better",
+      "the best",
+      "good"
+    ],
+    "e": "Cấu trúc so sánh kép 'The + so sánh hơn..., the + so sánh hơn...' (Càng... càng...)."
+  },
+  {
+    "id": "TS10-U01-GR-01-0017",
+    "q": "I am not used ______ up so early in the cold morning.",
+    "o": [
+      "to getting",
+      "getting",
+      "get",
+      "to get"
+    ],
+    "e": "Cấu trúc 'be used to + V-ing' diễn tả việc quen với một hành động nào đó."
+  },
+  {
+    "id": "TS10-U01-GR-01-0018",
+    "q": "It is highly recommended that she ______ a doctor immediately.",
+    "o": [
+      "see",
+      "sees",
+      "saw",
+      "seeing"
+    ],
+    "e": "Cấu trúc bàng thái cách (Subjunctive) với 'recommend that + S + V-nguyên mẫu'."
+  },
+  {
+    "id": "TS10-U01-GR-01-0019",
+    "q": "The new software is ______ more complicated than the old version.",
+    "o": [
+      "much",
+      "too",
+      "so",
+      "many"
+    ],
+    "e": "Dùng 'much' (hoặc far, a lot) trước cấu trúc so sánh hơn để nhấn mạnh mức độ."
+  },
+  {
+    "id": "TS10-U01-GR-01-0020",
+    "q": "She asked me where I ______ the previous night.",
+    "o": [
+      "had been",
+      "am",
+      "was",
+      "have been"
+    ],
+    "e": "Trong câu tường thuật, lùi thì từ quá khứ đơn (last night) sang quá khứ hoàn thành."
+  },
+  {
+    "id": "TS10-U01-GR-01-0021",
+    "q": "______ he had studied all night, he fell asleep during the math test.",
+    "o": [
+      "Because",
+      "Despite",
+      "Therefore",
+      "However"
+    ],
+    "e": "Liên từ 'Because' chỉ nguyên nhân (Bởi vì học cả đêm nên anh ấy mới ngủ gật)."
+  },
+  {
+    "id": "TS10-U01-GR-01-0022",
+    "q": "He usually avoids ______ eye contact when he is nervous talking to strangers.",
+    "o": [
+      "making",
+      "made",
+      "to make",
+      "make"
+    ],
+    "e": "Động từ 'avoid' (tránh) luôn đi kèm với V-ing."
+  },
+  {
+    "id": "TS10-U01-GR-01-0023",
+    "q": "Rarely ______ late for work since she was promoted.",
+    "o": [
+      "is she",
+      "she was",
+      "was she",
+      "she is"
+    ],
+    "e": "Cấu trúc đảo ngữ với 'Rarely' đứng đầu câu, cần đảo trợ động từ hoặc to-be lên trước chủ ngữ."
+  },
+  {
+    "id": "TS10-U01-GR-01-0024",
+    "q": "You had better ______ an umbrella because it looks like it's going to rain.",
+    "o": [
+      "take",
+      "taking",
+      "to take",
+      "taken"
+    ],
+    "e": "Cấu trúc khuyên bảo 'had better + V-nguyên mẫu' (tốt hơn hết là nên làm gì)."
+  },
+  {
+    "id": "TS10-U01-GR-01-0025",
+    "q": "The final project must ______ by the end of this month.",
+    "o": [
+      "be finished",
+      "finish",
+      "finished",
+      "be finishing"
+    ],
+    "e": "Câu bị động với động từ khiếm khuyết: 'modal verb + be + V3/ed'."
+  },
+  {
+    "id": "TS10-U01-GR-01-0026",
+    "q": "He formally apologized ______ arriving late to the international conference.",
+    "o": [
+      "for",
+      "in",
+      "at",
+      "about"
+    ],
+    "e": "Cấu trúc 'apologize for + V-ing' mang nghĩa xin lỗi vì đã làm gì."
+  },
+  {
+    "id": "TS10-U01-GR-01-0027",
+    "q": "Not only ______ beautifully, but she also plays the piano very well.",
+    "o": [
+      "does she sing",
+      "do she sing",
+      "she sings",
+      "sings she"
+    ],
+    "e": "Đảo ngữ với 'Not only... but also', mệnh đề đầu tiên mượn trợ động từ đảo lên trước chủ ngữ."
+  },
+  {
+    "id": "TS10-U01-GR-01-0028",
+    "q": "My brother is strictly interested ______ learning multiple foreign languages.",
+    "o": [
+      "in",
+      "at",
+      "with",
+      "on"
+    ],
+    "e": "Tính từ 'interested' đi kèm với giới từ 'in' (thích thú, quan tâm)."
+  },
+  {
+    "id": "TS10-U01-GR-01-0029",
+    "q": "The house ______ we lived for ten years has just been sold.",
+    "o": [
+      "where",
+      "which",
+      "when",
+      "that"
+    ],
+    "e": "Trạng từ quan hệ 'where' thay thế cho nơi chốn (tương đương in which)."
+  },
+  {
+    "id": "TS10-U01-GR-01-0030",
+    "q": "If they had departed earlier, they ______ the morning flight.",
+    "o": [
+      "would have caught",
+      "would catch",
+      "caught",
+      "will catch"
+    ],
+    "e": "Câu điều kiện loại 3 diễn tả sự việc trái ngược với quá khứ (If + quá khứ hoàn thành, S + would have + V3/ed)."
+  },
+  {
+    "id": "TS10-U01-GR-01-0031",
+    "q": "Could you tell me ______?",
+    "o": [
+      "where the station is",
+      "is where the station",
+      "the station where is",
+      "where is the station"
+    ],
+    "e": "Câu hỏi gián tiếp: trật tự từ sau từ để hỏi ('where') trở về dạng chủ ngữ + động từ bình thường."
+  },
+  {
+    "id": "TS10-U01-GR-01-0032",
+    "q": "Let's go to the new cinema downtown tonight, ______?",
+    "o": [
+      "shall we",
+      "will you",
+      "don't we",
+      "do we"
+    ],
+    "e": "Câu hỏi đuôi của câu rủ rê bắt đầu bằng 'Let's' luôn là 'shall we'."
+  },
+  {
+    "id": "TS10-U01-GR-01-0033",
+    "q": "She suggested ______ by train to reduce carbon emissions.",
+    "o": [
+      "traveling",
+      "to travel",
+      "traveled",
+      "travel"
+    ],
+    "e": "Động từ 'suggest + V-ing' dùng để đưa ra một đề xuất cùng làm gì."
+  },
+  {
+    "id": "TS10-U01-GR-01-0034",
+    "q": "We will have our car ______ tomorrow before starting our road trip.",
+    "o": [
+      "repaired",
+      "to repair",
+      "repairing",
+      "repair"
+    ],
+    "e": "Cấu trúc bị động nhờ vả: 'have something + V3/ed' (nhờ ai đó làm gì cho mình)."
+  },
+  {
+    "id": "TS10-U01-GR-01-0035",
+    "q": "He acts as if he ______ the director of the entire company.",
+    "o": [
+      "were",
+      "has been",
+      "is",
+      "will be"
+    ],
+    "e": "Cấu trúc 'as if' diễn tả một giả định không có thật, luôn dùng 'were' thay cho 'was'."
+  },
+  {
+    "id": "TS10-U01-GR-01-0036",
+    "q": "There is a ______ demand for organic and healthy food nowadays.",
+    "o": [
+      "growing",
+      "grows",
+      "grown",
+      "grow"
+    ],
+    "e": "Tính từ 'growing' ở dạng hiện tại phân từ mang nghĩa 'đang gia tăng' để bổ nghĩa cho 'demand'."
+  },
+  {
+    "id": "TS10-U01-GR-01-0037",
+    "q": "Mary was the last person ______ the classroom yesterday afternoon.",
+    "o": [
+      "to leave",
+      "leaves",
+      "leaving",
+      "left"
+    ],
+    "e": "Rút gọn mệnh đề quan hệ sau the first/ the second/ the last... bằng 'to-V'."
+  },
+  {
+    "id": "TS10-U01-GR-01-0038",
+    "q": "It’s no use ______ to persuade him; he has already made up his mind.",
+    "o": [
+      "trying",
+      "tried",
+      "to try",
+      "try"
+    ],
+    "e": "Cấu trúc 'It is no use + V-ing' có nghĩa là 'thật vô ích khi làm gì đó'."
+  },
+  {
+    "id": "TS10-U01-GR-01-0039",
+    "q": "The manager accused the accountant ______ leaking confidential information.",
+    "o": [
+      "of",
+      "about",
+      "on",
+      "for"
+    ],
+    "e": "Cấu trúc 'accuse someone of something / V-ing' (buộc tội ai về việc gì)."
+  },
+  {
+    "id": "TS10-U01-GR-01-0040",
+    "q": "By this time next year, I ______ my master's degree in economics.",
+    "o": [
+      "will have finished",
+      "will finish",
+      "have finished",
+      "finish"
+    ],
+    "e": "Dấu hiệu 'By this time + thời gian ở tương lai' dùng cho thì Tương lai hoàn thành."
+  },
+  {
+    "id": "TS10-U01-GR-01-0041",
+    "q": "Please remember ______ the front door when you leave the house.",
+    "o": [
+      "to lock",
+      "locked",
+      "locking",
+      "lock"
+    ],
+    "e": "Động từ 'remember + to-V' diễn tả việc 'nhớ phải làm gì' (chưa xảy ra)."
+  },
+  {
+    "id": "TS10-U01-GR-01-0042",
+    "q": "The more books you read, ______ your vocabulary becomes.",
+    "o": [
+      "the richer",
+      "the richest",
+      "richer",
+      "rich"
+    ],
+    "e": "Cấu trúc so sánh kép với tính từ ngắn (the + short-adj-er + S + V)."
+  },
+  {
+    "id": "TS10-U01-GR-01-0043",
+    "q": "Scarcely had I stepped out of the house ______ it started pouring.",
+    "o": [
+      "when",
+      "then",
+      "than",
+      "before"
+    ],
+    "e": "Cấu trúc đảo ngữ 'Scarcely/Hardly + had + S + V3/ed + when + S + V2/ed' (Vừa mới... thì)."
+  },
+  {
+    "id": "TS10-U01-GR-01-0044",
+    "q": "The teacher complimented her ______ her excellent presentation skills.",
+    "o": [
+      "on",
+      "for",
+      "about",
+      "with"
+    ],
+    "e": "Động từ 'compliment someone on something' (khen ngợi ai về điều gì)."
+  },
+  {
+    "id": "TS10-U01-GR-01-0045",
+    "q": "______ having a lot of money, he is not truly happy with his life.",
+    "o": [
+      "In spite of",
+      "Even though",
+      "Although",
+      "Because"
+    ],
+    "e": "Cấu trúc 'In spite of + V-ing' dùng để chỉ sự nhượng bộ (Mặc dù)."
+  },
+  {
+    "id": "TS10-U01-GR-01-0046",
+    "q": "The local authorities are taking steps to cut ______ on air pollution.",
+    "o": [
+      "down",
+      "off",
+      "out",
+      "back"
+    ],
+    "e": "Cụm động từ 'cut down on' mang ý nghĩa là cắt giảm, làm giảm bớt."
+  },
+  {
+    "id": "TS10-U01-GR-01-0047",
+    "q": "I'd rather you ______ your shoes off before entering the living room.",
+    "o": [
+      "took",
+      "taking",
+      "to take",
+      "take"
+    ],
+    "e": "Cấu trúc 'would rather + S + V-quá khứ' diễn tả mong muốn ai đó làm gì ở hiện tại."
+  },
+  {
+    "id": "TS10-U01-GR-01-0048",
+    "q": "Only after they had finished the hard work ______ to realize the mistake.",
+    "o": [
+      "did they begin",
+      "they began",
+      "they did begin",
+      "began they"
+    ],
+    "e": "Đảo ngữ với 'Only after + mệnh đề', mệnh đề chính phải đảo trợ động từ lên trước chủ ngữ."
+  },
+  {
+    "id": "TS10-U01-GR-01-0049",
+    "q": "Do you mind ______ me a hand with these heavy wooden boxes?",
+    "o": [
+      "giving",
+      "given",
+      "give",
+      "to give"
+    ],
+    "e": "Cấu trúc 'Do/Would you mind + V-ing' (Bạn có phiền làm việc gì đó không)."
+  },
+  {
+    "id": "TS10-U01-GR-01-0050",
+    "q": "The international flight was heavily delayed ______ thick fog.",
+    "o": [
+      "due to",
+      "because",
+      "despite",
+      "since"
+    ],
+    "e": "Cụm từ 'due to + Noun phrase' mang nghĩa chỉ nguyên nhân (Bởi vì)."
+  },
+  {
+    "id": "TS10-U01-GR-01-0051",
+    "q": "She congratulated me ______ passing the university entrance exams.",
+    "o": [
+      "on",
+      "in",
+      "at",
+      "about"
+    ],
+    "e": "Động từ 'congratulate someone on V-ing/something' (chúc mừng ai vì chuyện gì)."
+  },
+  {
+    "id": "TS10-U01-GR-01-0052",
+    "q": "______ had we arrived at the beach than it started to rain heavily.",
+    "o": [
+      "No sooner",
+      "Hardly",
+      "Barely",
+      "Scarcely"
+    ],
+    "e": "Cấu trúc đảo ngữ 'No sooner + had + S + V3/ed + than + S + V2/ed'."
+  },
+  {
+    "id": "TS10-U01-GR-01-0053",
+    "q": "It is essential that every student ______ the strict school rules.",
+    "o": [
+      "obey",
+      "obeys",
+      "obeying",
+      "obeyed"
+    ],
+    "e": "Cấu trúc giả định 'It is essential that + S + (should) + V-nguyên mẫu'."
+  },
+  {
+    "id": "TS10-U01-GR-01-0054",
+    "q": "If you don't know what this complicated word means, look it ______ in the dictionary.",
+    "o": [
+      "up",
+      "for",
+      "out",
+      "over"
+    ],
+    "e": "Cụm động từ 'look up' mang nghĩa tra cứu (từ điển, thông tin)."
+  },
+  {
+    "id": "TS10-U01-GR-01-0055",
+    "q": "My friend strongly objected ______ working on weekends without extra pay.",
+    "o": [
+      "to",
+      "on",
+      "at",
+      "about"
+    ],
+    "e": "Cấu trúc 'object to + V-ing' mang nghĩa là phản đối việc làm gì."
+  },
+  {
+    "id": "TS10-U01-GR-01-0056",
+    "q": "He didn't even notice me when he walked passed. He ______ deep in thought.",
+    "o": [
+      "must have been",
+      "can have been",
+      "should have been",
+      "could be"
+    ],
+    "e": "Cấu trúc 'must have + V3/ed' thể hiện sự suy luận logic chắc chắn trong quá khứ."
+  },
+  {
+    "id": "TS10-U01-GR-01-0057",
+    "q": "______ working hard all day, she still felt incredibly energetic in the evening.",
+    "o": [
+      "Despite",
+      "Since",
+      "Although",
+      "Because of"
+    ],
+    "e": "'Despite + V-ing' diễn tả sự tương phản (Mặc dù làm việc chăm chỉ, cô ấy vẫn tràn trề năng lượng)."
+  },
+  {
+    "id": "TS10-U01-GR-01-0058",
+    "q": "The modern car ______ I bought last year has broken down twice already.",
+    "o": [
+      "which",
+      "whom",
+      "who",
+      "whose"
+    ],
+    "e": "Đại từ quan hệ 'which' thay thế cho danh từ chỉ vật đóng vai trò làm tân ngữ."
+  },
+  {
+    "id": "TS10-U01-GR-01-0059",
+    "q": "All students are strictly required to hand ______ their final assignments by Friday.",
+    "o": [
+      "in",
+      "out",
+      "over",
+      "on"
+    ],
+    "e": "Cụm động từ 'hand in' có nghĩa là nộp (bài tập, báo cáo)."
+  },
+  {
+    "id": "TS10-U01-GR-01-0060",
+    "q": "Jane is very ______ to her current job because it offers great long-term benefits.",
+    "o": [
+      "dedicated",
+      "addicted",
+      "adjusted",
+      "opposed"
+    ],
+    "e": "Tính từ 'dedicated to' có nghĩa là tận tâm, hết lòng vì cái gì."
+  },
+  {
+    "id": "TS10-U02-GR-02-0001",
+    "q": "Nga: 'I have passed the exam with high marks.' - Lan: '________'",
+    "o": [
+      "Congratulations!",
+      "You’re welcome.",
+      "No problem.",
+      "Not at all."
+    ],
+    "e": "Lời chúc mừng 'Congratulations!' được dùng để đáp lại khi ai đó báo một tin vui (thi đậu điểm cao)."
+  },
+  {
+    "id": "TS10-U02-GR-02-0002",
+    "q": "Jane: 'Why don’t we go to the cinema tonight?' - Nick: '________'",
+    "o": [
+      "Great. Let’s do that.",
+      "I’m sorry to hear about that.",
+      "I’m fine, thanks.",
+      "What a nice gift!"
+    ],
+    "e": "'Great. Let’s do that.' dùng để đồng ý với một lời đề nghị (Why don't we...)."
+  },
+  {
+    "id": "TS10-U02-GR-02-0003",
+    "q": "Tom: 'I'm terribly sorry for stepping on your foot.' - Mary: '________'",
+    "o": [
+      "Never mind.",
+      "That's right.",
+      "I'd love to.",
+      "You're welcome."
+    ],
+    "e": "'Never mind' (Không sao đâu) thường được dùng để đáp lại lời xin lỗi."
+  },
+  {
+    "id": "TS10-U02-GR-02-0004",
+    "q": "Peter: 'What a beautiful dress you are wearing today, Sarah!' - Sarah: '________'",
+    "o": [
+      "It's very nice of you to say so.",
+      "You're entirely welcome.",
+      "I don't like it either.",
+      "No, thanks. I'm full."
+    ],
+    "e": "Đáp lại lời khen ngợi một cách lịch sự, ta thường dùng 'It's very nice of you to say so' (Bạn thật tốt khi nói vậy)."
+  },
+  {
+    "id": "TS10-U02-GR-02-0005",
+    "q": "Shop assistant: 'Can I help you with your luggage, madam?' - Customer: '________'",
+    "o": [
+      "Yes, please. That's very kind of you.",
+      "What a pity!",
+      "I agree with you.",
+      "No, I can't help you."
+    ],
+    "e": "'Yes, please. That's very kind of you' dùng để chấp nhận lời đề nghị giúp đỡ."
+  },
+  {
+    "id": "TS10-U02-GR-02-0006",
+    "q": "Alex: 'I firmly believe that reading books is better than watching TV.' - Bob: '________. Books encourage imagination.'",
+    "o": [
+      "I couldn't agree with you more",
+      "You must be kidding",
+      "I absolutely disagree",
+      "I'm not sure about that"
+    ],
+    "e": "'I couldn't agree with you more' thể hiện sự hoàn toàn đồng tình với ý kiến vừa được đưa ra."
+  },
+  {
+    "id": "TS10-U02-GR-02-0007",
+    "q": "Linda: 'Would you like to join us for dinner this evening?' - David: '________'",
+    "o": [
+      "I'd love to, but I have a deadline to meet.",
+      "No, I hate your dinner.",
+      "You're so kind to me.",
+      "Yes, it is very expensive."
+    ],
+    "e": "'I'd love to, but...' là cách từ chối lời mời một cách lịch sự vì có lý do chính đáng."
+  },
+  {
+    "id": "TS10-U02-GR-02-0008",
+    "q": "Student: 'Would you mind if I opened the window? It's quite stuffy in here.' - Teacher: '________'",
+    "o": [
+      "No, not at all. Go ahead.",
+      "Yes, please don't.",
+      "No, thanks. I'm cold.",
+      "Yes, I would mind."
+    ],
+    "e": "Trả lời 'No, not at all' (Không phiền chút nào) cho câu hỏi 'Would you mind if...' thể hiện sự đồng ý, cho phép."
+  },
+  {
+    "id": "TS10-U02-GR-02-0009",
+    "q": "Anna: 'I failed my driving test again!' - Bella: '________. You can try again next month.'",
+    "o": [
+      "Hard luck!",
+      "You're welcome.",
+      "Good idea!",
+      "Congratulations!"
+    ],
+    "e": "'Hard luck!' (Thật xui xẻo / Rất tiếc) dùng để chia buồn hoặc an ủi ai đó khi họ gặp thất bại."
+  },
+  {
+    "id": "TS10-U02-GR-02-0010",
+    "q": "Mother: 'You’d better take a taxi; it’s raining heavily outside.' - Son: '________'",
+    "o": [
+      "Thanks for your advice, Mom. I will.",
+      "You're exactly right. Let's walk.",
+      "Yes, I prefer walking in the rain.",
+      "I don't think it's a good idea."
+    ],
+    "e": "Đáp lại lời khuyên, ta dùng lời cảm ơn và xác nhận sẽ làm theo hướng dẫn."
+  },
+  {
+    "id": "TS10-U02-GR-02-0011",
+    "q": "John: 'Thank you so much for picking me up from the airport.' - Michael: '________'",
+    "o": [
+      "It was my pleasure.",
+      "You shouldn't have done that.",
+      "Don't mention it to anyone.",
+      "Yes, I was very tired."
+    ],
+    "e": "'It was my pleasure' (Đó là niềm vinh hạnh của tôi) là một cách lịch sự và chân thành để đáp lại lời cảm ơn."
+  },
+  {
+    "id": "TS10-U02-GR-02-0012",
+    "q": "Passenger: 'Could you please tell me where the nearest subway station is?' - Passerby: '________'",
+    "o": [
+      "Go straight ahead and take the first turning on the right.",
+      "It doesn't matter.",
+      "I hope so.",
+      "Yes, I could tell you."
+    ],
+    "e": "Đáp lại câu hỏi chỉ đường, người nói cần đưa ra hướng dẫn cụ thể thay vì chỉ trả lời 'Yes/No'."
+  },
+  {
+    "id": "TS10-U02-GR-02-0013",
+    "q": "Waiter: 'How would you like your steak done, sir?' - Customer: '________'",
+    "o": [
+      "Medium rare, please.",
+      "No, I don't like steak.",
+      "It's perfectly fine.",
+      "I like it very much."
+    ],
+    "e": "Câu hỏi 'How would you like your steak done?' dùng để hỏi mức độ chín của thịt bò (Rare, Medium, Well-done...)."
+  },
+  {
+    "id": "TS10-U02-GR-02-0014",
+    "q": "Emma: 'I think artificial intelligence will replace human teachers entirely in the future.' - Mark: '________. Human interaction is irreplaceable.'",
+    "o": [
+      "I beg to differ",
+      "You can say that again",
+      "There is no doubt about it",
+      "I absolutely agree"
+    ],
+    "e": "'I beg to differ' là một cách nói lịch sự, trang trọng để thể hiện sự bất đồng quan điểm (Tôi không đồng ý)."
+  },
+  {
+    "id": "TS10-U02-GR-02-0015",
+    "q": "Susan: 'I'm taking my IELTS speaking test tomorrow morning.' - Chris: '________'",
+    "o": [
+      "Break a leg!",
+      "Good morning!",
+      "Have a nice trip!",
+      "Congratulations!"
+    ],
+    "e": "Thành ngữ 'Break a leg!' được dùng để chúc ai đó may mắn trước một màn trình diễn hoặc kỳ thi quan trọng."
+  },
+  {
+    "id": "TS10-U02-GR-02-0016",
+    "q": "Kevin: 'My grandfather passed away last week due to a heart attack.' - Laura: '________'",
+    "o": [
+      "I am deeply sorry for your loss.",
+      "It's nothing serious.",
+      "That's great news!",
+      "Better luck next time."
+    ],
+    "e": "'I am deeply sorry for your loss' là câu nói tiêu chuẩn và trang trọng để chia buồn khi ai đó có người thân qua đời."
+  },
+  {
+    "id": "TS10-U02-GR-02-0017",
+    "q": "Rachel: 'We have a few days off next week. Where should we go?' - Paul: '________'",
+    "o": [
+      "How about taking a short trip to the mountains?",
+      "Yes, we do have a few days off.",
+      "I am staying at home.",
+      "Because we are tired."
+    ],
+    "e": "Dùng cấu trúc 'How about + V-ing?' để đưa ra một lời gợi ý."
+  },
+  {
+    "id": "TS10-U02-GR-02-0018",
+    "q": "Customer: 'Excuse me, but there's a fly in my soup!' - Waiter: '________. I'll get you a new one right away.'",
+    "o": [
+      "I sincerely apologize for that.",
+      "That's entirely your problem.",
+      "You should have been more careful.",
+      "It's not my fault."
+    ],
+    "e": "Khi khách hàng phàn nàn, nhân viên phục vụ cần xin lỗi một cách chân thành trước ('I sincerely apologize for that')."
+  },
+  {
+    "id": "TS10-U02-GR-02-0019",
+    "q": "Harry: 'Did you know that Samantha has just won a scholarship to Harvard?' - Ron: '________! She really deserves it.'",
+    "o": [
+      "You're pulling my leg",
+      "How disappointing",
+      "I'm not surprised",
+      "What a shame"
+    ],
+    "e": "Thành ngữ 'You're pulling my leg' mang nghĩa 'Bạn đang đùa tôi đấy à', thể hiện sự ngạc nhiên trước một tin tức tốt khó tin."
+  },
+  {
+    "id": "TS10-U02-GR-02-0020",
+    "q": "Speaker: 'The password for the Wi-Fi is XyZ789abc.' - Listener: '________? I didn't quite catch that.'",
+    "o": [
+      "Could you say that again, please",
+      "What do you mean",
+      "I totally understand",
+      "Can you speak louder"
+    ],
+    "e": "'Could you say that again, please?' dùng để yêu cầu người khác lặp lại thông tin khi mình chưa nghe rõ."
+  },
+  {
+    "id": "TS10-U04-GR-04-0001",
+    "q": "a. Mike: I think we should collect our old books to give them. / b. David: I agree. That’s a meaningful thing we can do now. / c. David: Many children don’t have books to learn because severe floods have destroyed all.",
+    "o": [
+      "c-a-b",
+      "b-a-c",
+      "c-b-a",
+      "a-b-c"
+    ],
+    "e": "Câu c đưa ra bối cảnh vấn đề (trẻ em mất sách do lũ lụt), câu a đề xuất giải pháp (thu gom sách cũ) và câu b thể hiện sự đồng tình với đề xuất đó."
+  },
+  {
+    "id": "TS10-U04-GR-04-0002",
+    "q": "Hi Sam, / a. I joined a volunteer group that teaches English to children in rural areas. / b. I am writing to share something exciting with you. / c. Hope to hear from you soon. / d. Last month, I decided to try something new. / e. It’s been a great experience and I’ve learned a lot from the children, too! / Best, Jessica",
+    "o": [
+      "b-d-a-e-c",
+      "a-b-e-d-c",
+      "b-e-d-a-c",
+      "a-e-b-d-c"
+    ],
+    "e": "Câu b là mục đích viết thư, câu d nêu thời gian bắt đầu, câu a kể về hoạt động cụ thể, câu e là cảm nhận cá nhân và câu c là lời chào kết thúc."
+  },
+  {
+    "id": "TS10-U04-GR-04-0003",
+    "q": "a. Mary: Yes, that sounds like a great idea! What time? / b. John: I was wondering if you'd like to grab a coffee this afternoon. / c. John: How about 3 PM at the new cafe down the street? / d. Mary: Perfect. I'll see you there.",
+    "o": [
+      "b-a-c-d",
+      "a-b-c-d",
+      "c-a-b-d",
+      "b-c-a-d"
+    ],
+    "e": "Câu b là lời mời, câu a là sự đồng ý và hỏi giờ, câu c đề xuất thời gian & địa điểm, câu d chốt lại lịch hẹn."
+  },
+  {
+    "id": "TS10-U04-GR-04-0004",
+    "q": "Arrange the following sentences: a. First, we will visit the historical museum in the morning. / b. Finally, we'll head back to the hotel around 6 PM. / c. Dear students, here is the itinerary for our field trip tomorrow. / d. After lunch, we are scheduled to take a guided tour of the botanical gardens.",
+    "o": [
+      "c-a-d-b",
+      "c-d-a-b",
+      "a-c-d-b",
+      "a-d-b-c"
+    ],
+    "e": "Câu c mở bài giới thiệu lịch trình, theo sau là trình tự thời gian logic: First (a) -> After lunch (d) -> Finally (b)."
+  },
+  {
+    "id": "TS10-U04-GR-04-0005",
+    "q": "a. Customer: Excuse me, I bought this shirt yesterday, but it has a tear. / b. Manager: I'm terribly sorry. Would you like a refund or a replacement? / c. Customer: I'd prefer a replacement, please. / d. Manager: Certainly. Let me get a new one for you right away.",
+    "o": [
+      "a-b-c-d",
+      "c-a-b-d",
+      "a-c-b-d",
+      "b-a-c-d"
+    ],
+    "e": "Câu a là lời phàn nàn, câu b là lời xin lỗi và đưa ra lựa chọn, câu c là quyết định của khách, và câu d là cách giải quyết cuối."
+  },
+  {
+    "id": "TS10-U04-GR-04-0006",
+    "q": "Arrange the following sentences: a. Moreover, regular exercise helps improve your mental health. / b. It strengthens your muscles and keeps your heart healthy. / c. Physical activity is essential for maintaining a healthy lifestyle. / d. Therefore, everyone should aim for at least 30 minutes of workout daily.",
+    "o": [
+      "c-b-a-d",
+      "a-b-c-d",
+      "c-a-b-d",
+      "b-a-c-d"
+    ],
+    "e": "Câu c nêu luận điểm chính, câu b giải thích lợi ích thể chất, câu a bổ sung lợi ích tinh thần (Moreover), và câu d kết luận (Therefore)."
+  },
+  {
+    "id": "TS10-U04-GR-04-0007",
+    "q": "a. Interviewer: Thank you for coming. Can you tell me about your previous experience? / b. Applicant: I worked as a marketing assistant for two years. / c. Interviewer: That sounds relevant. Why did you leave that position? / d. Applicant: I am looking for a role with more leadership opportunities.",
+    "o": [
+      "a-b-c-d",
+      "a-c-b-d",
+      "c-a-b-d",
+      "b-c-a-d"
+    ],
+    "e": "Trình tự phỏng vấn: Người phỏng vấn mở đầu (a), ứng viên trả lời (b), hỏi lý do nghỉ việc (c), ứng viên giải thích mục tiêu (d)."
+  },
+  {
+    "id": "TS10-U04-GR-04-0008",
+    "q": "Arrange the following sentences: a. However, the weather took a turn for the worse shortly after we set up. / b. We decided to go camping last weekend despite the cloudy forecast. / c. We had to pack everything up and drive back home in the pouring rain. / d. At first, it was pleasant and we managed to pitch our tents quickly.",
+    "o": [
+      "b-d-a-c",
+      "a-b-c-d",
+      "d-a-c-b",
+      "b-a-d-c"
+    ],
+    "e": "Câu b nêu bối cảnh, câu d kể diễn biến ban đầu tốt đẹp, câu a nêu sự cố thời tiết (However), và câu c là kết quả (phải đi về)."
+  },
+  {
+    "id": "TS10-U04-GR-04-0009",
+    "q": "a. Sarah: Do you know what the homework is for math class? / b. Mark: I think we have to complete exercises 1 to 5 on page 42. / c. Sarah: Thanks! I completely forgot to write it down. / d. Mark: No problem. Let me know if you need help with any of the problems.",
+    "o": [
+      "a-b-c-d",
+      "a-c-b-d",
+      "b-a-c-d",
+      "c-a-b-d"
+    ],
+    "e": "Câu a hỏi bài tập, câu b trả lời thông tin, câu c cảm ơn, và câu d đáp lại lời cảm ơn kèm đề nghị giúp đỡ."
+  },
+  {
+    "id": "TS10-U04-GR-04-0010",
+    "q": "Arrange the following sentences: a. Next, add the beaten eggs and stir continuously. / b. To make a simple omelet, start by heating some oil in a pan. / c. Finally, fold the omelet in half and serve it hot. / d. Once the eggs begin to set, sprinkle some cheese and herbs on top.",
+    "o": [
+      "b-a-d-c",
+      "a-b-d-c",
+      "b-a-c-d",
+      "b-d-a-c"
+    ],
+    "e": "Trình tự nấu ăn qua các từ khóa: start by (b) -> Next (a) -> Once... (d) -> Finally (c)."
+  },
+  {
+    "id": "TS10-U04-GR-04-0011",
+    "q": "a. Employee: Excuse me, Mr. Johnson, could I take next Friday off? / b. Manager: We are quite busy right now. Is it for an urgent matter? / c. Employee: Yes, I need to attend a family wedding out of town. / d. Manager: In that case, I approve. Just make sure to finish your report beforehand.",
+    "o": [
+      "a-b-c-d",
+      "c-a-b-d",
+      "a-c-b-d",
+      "b-a-c-d"
+    ],
+    "e": "Câu a xin phép nghỉ, câu b quản lý hỏi lại lý do, câu c nhân viên trình bày lý do, câu d quản lý đồng ý kèm điều kiện."
+  },
+  {
+    "id": "TS10-U04-GR-04-0012",
+    "q": "Arrange the following sentences: a. Please review it and let me know if any changes are required. / b. Dear Mr. Smith, / c. I have attached the quarterly financial report as you requested. / d. I look forward to your feedback. / e. Best regards, Kevin.",
+    "o": [
+      "b-c-a-d-e",
+      "b-d-c-a-e",
+      "b-c-d-a-e",
+      "b-a-c-d-e"
+    ],
+    "e": "Cấu trúc email cơ bản: Lời chào (b), mục đích đính kèm tài liệu (c), yêu cầu xem xét (a), mong chờ phản hồi (d), và kết thư (e)."
+  },
+  {
+    "id": "TS10-U04-GR-04-0013",
+    "q": "a. Waiter: Are you ready to order, or do you need a few more minutes? / b. Customer: I think we're ready. I'll have the grilled salmon, please. / c. Waiter: Excellent choice. And for your side dish, would you prefer a salad or fries? / d. Customer: I'll go with the garden salad.",
+    "o": [
+      "a-b-c-d",
+      "a-c-b-d",
+      "c-a-b-d",
+      "b-a-c-d"
+    ],
+    "e": "Bồi bàn hỏi khách sẵn sàng gọi món chưa (a), khách gọi món chính (b), bồi bàn hỏi thêm món phụ (c), khách chọn món phụ (d)."
+  },
+  {
+    "id": "TS10-U04-GR-04-0014",
+    "q": "Arrange the following sentences: a. Renewable energy sources like solar and wind power are becoming more popular. / b. For instance, solar panels can now be seen on many residential rooftops. / c. This shift is mainly due to the increasing awareness of climate change. / d. As technology advances, these alternatives are also becoming more affordable.",
+    "o": [
+      "a-c-b-d",
+      "a-b-c-d",
+      "a-c-d-b",
+      "c-a-b-d"
+    ],
+    "e": "Câu a giới thiệu chủ đề, câu c giải thích nguyên nhân (this shift), câu b đưa ví dụ (For instance), và câu d bổ sung thêm nguyên nhân phụ."
+  },
+  {
+    "id": "TS10-U04-GR-04-0015",
+    "q": "a. Alice: I heard you're moving to a new apartment next month. / b. Bob: Yes, I finally found a place closer to my office. / c. Alice: That's great! Do you need any help packing your things? / d. Bob: That would be wonderful. I'm planning to pack this Saturday.",
+    "o": [
+      "a-b-c-d",
+      "b-a-c-d",
+      "a-c-b-d",
+      "c-a-b-d"
+    ],
+    "e": "Câu a mở đầu bằng thông tin nghe được, câu b xác nhận, câu c chúc mừng và ngỏ lời giúp đỡ, câu d nhận lời."
+  },
+  {
+    "id": "TS10-U04-GR-04-0016",
+    "q": "Arrange the following sentences: a. Then, the water vapor cools and condenses to form clouds. / b. The water cycle is a continuous process driven by solar energy. / c. First, the sun heats up water in oceans and rivers, causing it to evaporate. / d. Finally, precipitation occurs when the condensed water falls back as rain or snow.",
+    "o": [
+      "b-c-a-d",
+      "c-a-d-b",
+      "b-a-c-d",
+      "b-c-d-a"
+    ],
+    "e": "Câu b giới thiệu về vòng tuần hoàn nước, sau đó là trình tự diễn ra: First (c) -> Then (a) -> Finally (d)."
+  },
+  {
+    "id": "TS10-U04-GR-04-0017",
+    "q": "a. Passenger: How long does the journey to London take? / b. Ticket Agent: It takes approximately two hours on the express train. / c. Passenger: Great. I'd like to purchase one round-trip ticket, please. / d. Ticket Agent: That will be $45. How would you like to pay?",
+    "o": [
+      "a-b-c-d",
+      "b-a-c-d",
+      "c-a-b-d",
+      "a-c-b-d"
+    ],
+    "e": "Hành khách hỏi thời gian (a), nhân viên trả lời (b), hành khách quyết định mua vé (c), nhân viên báo giá và hỏi phương thức thanh toán (d)."
+  },
+  {
+    "id": "TS10-U04-GR-04-0018",
+    "q": "Arrange the following sentences: a. Despite these challenges, living in a big city offers numerous job opportunities. / b. On the other hand, the cost of living is significantly higher than in rural areas. / c. Living in a metropolis has both advantages and disadvantages. / d. Traffic congestion and noise pollution are some of the major drawbacks.",
+    "o": [
+      "c-d-b-a",
+      "c-a-b-d",
+      "a-b-c-d",
+      "c-b-d-a"
+    ],
+    "e": "Câu c giới thiệu ưu nhược điểm. Câu d nêu nhược điểm cụ thể. Câu b bổ sung thêm nhược điểm khác. Câu a chuyển sang ưu điểm (Despite these...)."
+  },
+  {
+    "id": "TS10-U04-GR-04-0019",
+    "q": "Arrange the following sentences: a. The meeting will focus on the new marketing strategy for the upcoming quarter. / b. Please confirm your attendance by Thursday afternoon. / c. Hi Team, I'm writing to schedule a brief team meeting this Friday at 10 AM. / d. Make sure to bring your progress reports.",
+    "o": [
+      "c-a-d-b",
+      "c-b-a-d",
+      "c-d-a-b",
+      "a-c-d-b"
+    ],
+    "e": "Câu c là mục đích viết email (lên lịch họp), câu a cung cấp nội dung cuộc họp, câu d dặn dò mang tài liệu, và câu b yêu cầu xác nhận cuối thư."
+  },
+  {
+    "id": "TS10-U04-GR-04-0020",
+    "q": "a. Patient: I have a terrible headache and a sore throat. / b. Doctor: Let me check your temperature. How long have you had these symptoms? / c. Doctor: Good morning. What seems to be the problem today? / d. Patient: They started the day before yesterday.",
+    "o": [
+      "c-a-b-d",
+      "b-c-a-d",
+      "c-b-a-d",
+      "a-c-b-d"
+    ],
+    "e": "Bác sĩ chào và hỏi triệu chứng (c), bệnh nhân kể triệu chứng (a), bác sĩ khám và hỏi thời gian mắc bệnh (b), bệnh nhân trả lời thời gian (d)."
+  },
+  {
+    "id": "TS10-U05-GR-05-0001",
+    "q": "“Will you visit the Love Valley when you come to Da Lat?” Quang asked me.",
+    "o": [
+      "Quang asked me if I would visit the Love Valley when I came to Da Lat.",
+      "Quang asked me if I will visit the Love Valley when I come to Da Lat.",
+      "Quang asked me if he would visit the Love Valley when he came to Da Lat.",
+      "Quang asked me if he will visit the Love Valley when he comes to Da Lat."
+    ],
+    "e": "Tường thuật câu hỏi Yes/No: thêm 'if/whether', lùi thì ('will' -> 'would', 'come' -> 'came') và đổi đại từ ('you' -> 'I')."
+  },
+  {
+    "id": "TS10-U05-GR-05-0002",
+    "q": "“Where have you been since you left the party last night?” she asked him.",
+    "o": [
+      "She asked him where he had been since he had left the party the previous night.",
+      "She asked him where he has been since he left the party the previous night.",
+      "She asked him where he had been since he left the party last night.",
+      "She asked him where had he been since he left the party the night before."
+    ],
+    "e": "Câu hỏi Wh- ở gián tiếp không đảo ngữ trợ động từ, lùi thì (hiện tại hoàn thành & quá khứ đơn -> quá khứ hoàn thành) và đổi trạng thời gian (last night -> the previous night)."
+  },
+  {
+    "id": "TS10-U05-GR-05-0003",
+    "q": "“Will you help me with this project if you have free time tomorrow?” the manager asked the employee.",
+    "o": [
+      "The manager asked the employee if he would help her with that project if he had free time the following day.",
+      "The manager asked the employee if he will help her with this project if he has free time the next day.",
+      "The manager asked the employee whether he would help her with that project if he had free time tomorrow.",
+      "The manager asked the employee if would he help her with that project if he had free time the following day."
+    ],
+    "e": "Tường thuật câu hỏi chứa mệnh đề điều kiện loại 1: lùi thì ('will' -> 'would', 'have' -> 'had'), đổi 'this' -> 'that', 'tomorrow' -> 'the following day'."
+  },
+  {
+    "id": "TS10-U05-GR-05-0004",
+    "q": "“Why don't we complain to the company about this poor service?” said John.",
+    "o": [
+      "John suggested complaining to the company about that poor service.",
+      "John asked why we don't complain to the company about that poor service.",
+      "John suggested that they should complain to the company about this poor service.",
+      "John advised us to complain to the company about that poor service."
+    ],
+    "e": "Cấu trúc đề nghị 'Why don't we + V' thường được tường thuật bằng 'suggest + V-ing', đồng thời cần đổi đại từ chỉ thị 'this' thành 'that'."
+  },
+  {
+    "id": "TS10-U05-GR-05-0005",
+    "q": "“Were you driving your car when the accident happened yesterday?” the police officer asked the man.",
+    "o": [
+      "The police officer asked the man if he had been driving his car when the accident had happened the day before.",
+      "The police officer asked the man if he was driving his car when the accident happened the day before.",
+      "The police officer asked the man if he had been driving his car when the accident happened yesterday.",
+      "The police officer asked the man whether had he been driving his car when the accident happened the previous day."
+    ],
+    "e": "Lùi thì quá khứ tiếp diễn thành quá khứ hoàn thành tiếp diễn, quá khứ đơn thành quá khứ hoàn thành, và đổi 'yesterday' thành 'the day before'."
+  },
+  {
+    "id": "TS10-U05-GR-05-0006",
+    "q": "“You haven't finished the assignment yet, have you?” the teacher asked me.",
+    "o": [
+      "The teacher asked me if I had finished the assignment yet.",
+      "The teacher asked me whether I hadn't finished the assignment yet, hadn't I.",
+      "The teacher asked me if I haven't finished the assignment yet.",
+      "The teacher asked me that I hadn't finished the assignment yet."
+    ],
+    "e": "Tường thuật câu hỏi đuôi xử lý tương tự như câu hỏi Yes/No bình thường, cần lùi thì (hiện tại hoàn thành -> quá khứ hoàn thành) và bỏ hẳn phần câu hỏi đuôi."
+  },
+  {
+    "id": "TS10-U05-GR-05-0007",
+    "q": "“Must I submit this financial report by Friday?” the accountant asked the director.",
+    "o": [
+      "The accountant asked the director if he had to submit that financial report by Friday.",
+      "The accountant asked the director whether he had to submit this financial report by Friday.",
+      "The accountant asked the director if he must submit this financial report by Friday.",
+      "The accountant asked the director if must he submit that financial report by Friday."
+    ],
+    "e": "Khi tường thuật câu hỏi có 'must' mang nghĩa bắt buộc, ta chuyển 'must' thành 'had to', nhớ đổi 'this' thành 'that' và đưa về trật tự câu khẳng định."
+  },
+  {
+    "id": "TS10-U05-GR-05-0008",
+    "q": "“Who is that man? Why is he looking at us?” she asked her friend.",
+    "o": [
+      "She asked her friend who that man was and why he was looking at them.",
+      "She asked her friend who was that man and why was he looking at them.",
+      "She asked her friend who that man is and why he is looking at them.",
+      "She asked her friend who that man was and why he was looking at us."
+    ],
+    "e": "Tường thuật 2 câu hỏi liên tiếp có thể nối bằng 'and', đảm bảo lùi thì, đổi đại từ tân ngữ ('us' -> 'them') và trả về trật tự câu khẳng định không đảo ngữ."
+  },
+  {
+    "id": "TS10-U05-GR-05-0009",
+    "q": "“Should I have told her the truth about the accident?” he asked himself.",
+    "o": [
+      "He wondered whether he should have told her the truth about the accident.",
+      "He asked himself whether should he have told her the truth about the accident.",
+      "He wondered if he had to tell her the truth about the accident.",
+      "He wondered if he should tell her the truth about the accident."
+    ],
+    "e": "Động từ khiếm khuyết trong cấu trúc 'should have + V3/ed' (chỉ sự nuối tiếc/phân vân trong quá khứ) được giữ nguyên dạng khi chuyển sang câu gián tiếp."
+  },
+  {
+    "id": "TS10-U05-GR-05-0010",
+    "q": "“Did you see the latest email I sent you two days ago?” the boss asked his secretary.",
+    "o": [
+      "The boss asked his secretary if she had seen the latest email he had sent her two days before.",
+      "The boss asked his secretary whether she had seen the latest email he had sent her two days ago.",
+      "The boss asked his secretary if had she seen the latest email he had sent her two days before.",
+      "The boss asked his secretary if she saw the latest email he sent her two days before."
+    ],
+    "e": "Cần lùi thì cả hai mệnh đề (quá khứ đơn -> quá khứ hoàn thành), đổi 'two days ago' -> 'two days before', và biến đổi chính xác các đại từ (you -> she, I -> he)."
+  },
+  {
+    "id": "TS10-U06-GR-06-0001",
+    "q": "The book is about natural wonders. I borrowed it from the library.",
+    "o": [
+      "The book which I borrowed from the library is about natural wonders.",
+      "The book which I borrowed it from the library is about natural wonders.",
+      "The book who I borrowed it from the library is about natural wonders.",
+      "The book who borrowed from the library is about natural wonders."
+    ],
+    "e": "Dùng đại từ quan hệ 'which' thay thế cho danh từ chỉ vật 'The book' và đóng vai trò làm tân ngữ, đồng thời phải bỏ đại từ tân ngữ 'it' ở mệnh đề sau."
+  },
+  {
+    "id": "TS10-U06-GR-06-0002",
+    "q": "The woman is my new manager. Her car was stolen yesterday.",
+    "o": [
+      "The woman whose car was stolen yesterday is my new manager.",
+      "The woman whose car was stolen yesterday she is my new manager.",
+      "The woman the car of who was stolen yesterday is my new manager.",
+      "The woman who her car was stolen yesterday is my new manager."
+    ],
+    "e": "Dùng đại từ quan hệ 'whose' để thay thế cho tính từ sở hữu 'Her', thể hiện sự sở hữu."
+  },
+  {
+    "id": "TS10-U06-GR-06-0003",
+    "q": "He passed the driving test. This surprised everyone.",
+    "o": [
+      "He passed the driving test, which surprised everyone.",
+      "He passed the driving test, what surprised everyone.",
+      "He passed the driving test which it surprised everyone.",
+      "He passed the driving test that surprised everyone."
+    ],
+    "e": "Dùng đại từ quan hệ 'which' có dấu phẩy phía trước để thay thế cho toàn bộ sự việc ở mệnh đề phía trước ('He passed the driving test')."
+  },
+  {
+    "id": "TS10-U06-GR-06-0004",
+    "q": "That is the man. I was talking to him about the project.",
+    "o": [
+      "That is the man to whom I was talking about the project.",
+      "That is the man to who I was talking about the project.",
+      "That is the man whom I was talking to him about the project.",
+      "That is the man to that I was talking about the project."
+    ],
+    "e": "Giới từ 'to' có thể được đảo lên trước đại từ quan hệ tân ngữ chỉ người 'whom' trong ngữ cảnh trang trọng (lưu ý không dùng 'who' hay 'that' sau giới từ, và phải bỏ 'him' ở mệnh đề sau)."
+  },
+  {
+    "id": "TS10-U06-GR-06-0005",
+    "q": "This is the restaurant. We had our first date there.",
+    "o": [
+      "This is the restaurant where we had our first date.",
+      "This is the restaurant where we had our first date there.",
+      "This is the restaurant which we had our first date there.",
+      "This is the restaurant which we had our first date."
+    ],
+    "e": "Trạng từ quan hệ 'where' (tương đương in/at which) thay thế cho trạng từ chỉ nơi chốn 'there', do đó phải bỏ 'there' ở mệnh đề sau."
+  },
+  {
+    "id": "TS10-U06-GR-06-0006",
+    "q": "The bridge was built in 1990. It connects the two cities.",
+    "o": [
+      "The bridge built in 1990 connects the two cities.",
+      "The bridge was built in 1990 connects the two cities.",
+      "The bridge building in 1990 connects the two cities.",
+      "The bridge built in 1990 which connects the two cities."
+    ],
+    "e": "Rút gọn mệnh đề quan hệ ở dạng bị động ('which was built') thành quá khứ phân từ ('built')."
+  },
+  {
+    "id": "TS10-U06-GR-06-0007",
+    "q": "The weather was very bad. We had to cancel the flight.",
+    "o": [
+      "The weather was so bad that we had to cancel the flight.",
+      "It was so a bad weather that we had to cancel the flight.",
+      "The weather was too bad that we had to cancel the flight.",
+      "The weather was such bad that we had to cancel the flight."
+    ],
+    "e": "Dùng cấu trúc 'so + tính từ + that + mệnh đề' để nối hai câu mang ý nghĩa 'quá... đến nỗi mà'."
+  },
+  {
+    "id": "TS10-U06-GR-06-0008",
+    "q": "He had a broken leg. He managed to finish the marathon.",
+    "o": [
+      "Despite having a broken leg, he managed to finish the marathon.",
+      "Although having a broken leg, he managed to finish the marathon.",
+      "Despite he had a broken leg, he managed to finish the marathon.",
+      "In spite of he had a broken leg, he managed to finish the marathon."
+    ],
+    "e": "Dùng 'Despite' (hoặc 'In spite of') + V-ing/Cụm danh từ để kết nối hai câu thể hiện sự nhượng bộ (Mặc dù)."
+  },
+  {
+    "id": "TS10-U06-GR-06-0009",
+    "q": "She didn't double-check the report. She made a lot of serious mistakes.",
+    "o": [
+      "Had she double-checked the report, she wouldn't have made a lot of serious mistakes.",
+      "Unless she double-checked the report, she wouldn't have made a lot of serious mistakes.",
+      "If she double-checked the report, she wouldn't make a lot of serious mistakes.",
+      "Had she not double-checked the report, she would have made a lot of serious mistakes."
+    ],
+    "e": "Kết hợp câu bằng hiện tượng đảo ngữ của câu điều kiện loại 3 (trái ngược với quá khứ) với cấu trúc 'Had + S + V3/ed, S + would have + V3/ed'."
+  },
+  {
+    "id": "TS10-U06-GR-06-0010",
+    "q": "He had just stepped out of the office. It started to rain heavily.",
+    "o": [
+      "No sooner had he stepped out of the office than it started to rain heavily.",
+      "No sooner had he stepped out of the office when it started to rain heavily.",
+      "Hardly had he stepped out of the office than it started to rain heavily.",
+      "No sooner he had stepped out of the office than it started to rain heavily."
+    ],
+    "e": "Cấu trúc đảo ngữ 'No sooner + had + S + V3/ed + than + S + V2/ed' dùng để diễn tả một hành động vừa mới xảy ra thì hành động khác xen tới."
+  },
+  {
+    "id": "TS10-U09-GR-09-0001",
+    "q": "Linh sang the song ______ and everyone clapped. (BEAUTY)",
+    "o": [
+      "beautifully",
+      "beautiful",
+      "beautify",
+      "beauty"
+    ],
+    "e": "Động từ thường 'sang' (quá khứ của sing) cần một trạng từ đứng sau để bổ nghĩa cho nó ('beautifully')."
+  },
+  {
+    "id": "TS10-U09-GR-09-0002",
+    "q": "Tourism plays an important part in the ______ of many nations. (DEVELOP)",
+    "o": [
+      "development",
+      "developing",
+      "developed",
+      "developer"
+    ],
+    "e": "Sau mạo từ 'the' và trước giới từ 'of' cần một danh từ chỉ sự vật/sự việc ('development': sự phát triển)."
+  },
+  {
+    "id": "TS10-U09-GR-09-0003",
+    "q": "Industrial waste ______ the water in this village last year. (POLLUTION)",
+    "o": [
+      "polluted",
+      "polluting",
+      "pollution",
+      "pollutes"
+    ],
+    "e": "Câu thiếu động từ chính. Dấu hiệu thời gian 'last year' yêu cầu động từ phải chia ở thì quá khứ đơn ('polluted')."
+  },
+  {
+    "id": "TS10-U09-GR-09-0004",
+    "q": "The novel was _____ enough to keep everyone reading till the end. (INTEREST)",
+    "o": [
+      "interesting",
+      "interestingly",
+      "interested",
+      "interest"
+    ],
+    "e": "Sau động từ to-be 'was' cần một tính từ. Vì chủ ngữ 'The novel' là vật gây ra cảm giác thú vị, ta dùng tính từ đuôi -ing ('interesting')."
+  },
+  {
+    "id": "TS10-U09-GR-09-0005",
+    "q": "He completed the task ______ without any help. (SUCCESS)",
+    "o": [
+      "successfully",
+      "successful",
+      "succeed",
+      "success"
+    ],
+    "e": "Sau tân ngữ 'the task' của động từ thường 'completed' cần một trạng từ để bổ nghĩa cho hành động ('successfully': một cách thành công)."
+  },
+  {
+    "id": "TS10-U09-GR-09-0006",
+    "q": "You must read the instructions ______ before using the machine. (CARE)",
+    "o": [
+      "carefully",
+      "careful",
+      "care",
+      "careless"
+    ],
+    "e": "Sau động từ 'read' và tân ngữ 'the instructions' cần trạng từ ('carefully': một cách cẩn thận)."
+  },
+  {
+    "id": "TS10-U09-GR-09-0007",
+    "q": "Ha Long Bay is one of the most ______ destinations in Vietnam. (ATTRACT)",
+    "o": [
+      "attractive",
+      "attractively",
+      "attraction",
+      "attract"
+    ],
+    "e": "Sau 'the most' và trước danh từ 'destinations' cần một tính từ ('attractive': hấp dẫn)."
+  },
+  {
+    "id": "TS10-U09-GR-09-0008",
+    "q": "It is ______ to drive too fast on this slippery road. (DANGER)",
+    "o": [
+      "dangerous",
+      "dangerously",
+      "danger",
+      "endanger"
+    ],
+    "e": "Cấu trúc 'It is + adj + to V' yêu cầu một tính từ ('dangerous': nguy hiểm)."
+  },
+  {
+    "id": "TS10-U09-GR-09-0009",
+    "q": "The local people are very ______ to visitors. (FRIEND)",
+    "o": [
+      "friendly",
+      "friendship",
+      "friendless",
+      "secretly"
+    ],
+    "e": "Sau động từ to-be 'are' và trạng từ chỉ mức độ 'very' cần một tính từ ('friendly': thân thiện)."
+  },
+  {
+    "id": "TS10-U09-GR-09-0010",
+    "q": "Money cannot buy true ______. (HAPPY)",
+    "o": [
+      "happiness",
+      "happily",
+      "unhappy",
+      "happy"
+    ],
+    "e": "Sau tính từ 'true' cần một danh từ ('happiness': niềm hạnh phúc)."
+  },
+  {
+    "id": "TS10-U09-GR-09-0011",
+    "q": "We should protect our ______ environment. (NATURE)",
+    "o": [
+      "natural",
+      "nature",
+      "naturalize",
+      "naturally"
+    ],
+    "e": "Trước danh từ 'environment' cần một tính từ ('natural': thuộc về tự nhiên)."
+  },
+  {
+    "id": "TS10-U09-GR-09-0012",
+    "q": "The internet is a very useful source of ______. (INFORM)",
+    "o": [
+      "information",
+      "inform",
+      "informative",
+      "informally"
+    ],
+    "e": "Sau giới từ 'of' cần một danh từ ('information': thông tin)."
+  },
+  {
+    "id": "TS10-U09-GR-09-0013",
+    "q": "Going to university is a great ______ opportunity. (EDUCATE)",
+    "o": [
+      "educational",
+      "educate",
+      "education",
+      "educator"
+    ],
+    "e": "Trước danh từ 'opportunity' cần một tính từ ('educational': mang tính giáo dục)."
+  },
+  {
+    "id": "TS10-U09-GR-09-0014",
+    "q": "It was a tough ______, but I finally chose to study abroad. (DECIDE)",
+    "o": [
+      "decision",
+      "decisive",
+      "decidedly",
+      "decide"
+    ],
+    "e": "Sau mạo từ 'a' và tính từ 'tough' cần một danh từ ('decision': quyết định)."
+  },
+  {
+    "id": "TS10-U09-GR-09-0015",
+    "q": "Ao Dai is the ______ dress of Vietnamese women. (TRADITION)",
+    "o": [
+      "traditional",
+      "tradition",
+      "traditionalist",
+      "traditionally"
+    ],
+    "e": "Trước danh từ 'dress' cần tính từ bổ nghĩa ('traditional': truyền thống)."
+  },
+  {
+    "id": "TS10-U09-GR-09-0016",
+    "q": "The singer gave a wonderful ______ last night. (PERFORM)",
+    "o": [
+      "performance",
+      "performer",
+      "perform",
+      "performing"
+    ],
+    "e": "Sau mạo từ 'a' và tính từ 'wonderful' cần danh từ chỉ sự việc ('performance': màn trình diễn)."
+  },
+  {
+    "id": "TS10-U09-GR-09-0017",
+    "q": "His presentation was very ______; everyone liked it. (IMPRESS)",
+    "o": [
+      "impressive",
+      "impress",
+      "impressively",
+      "impression"
+    ],
+    "e": "Sau động từ to-be 'was' và trạng từ 'very' cần tính từ ('impressive': ấn tượng)."
+  },
+  {
+    "id": "TS10-U09-GR-09-0018",
+    "q": "Don't buy that old car; it is not ______. (RELY)",
+    "o": [
+      "reliable",
+      "rely",
+      "reliability",
+      "reliably"
+    ],
+    "e": "Sau to-be 'is not' cần tính từ ('reliable': đáng tin cậy)."
+  },
+  {
+    "id": "TS10-U09-GR-09-0019",
+    "q": "She has lived alone for years and is very ______. (DEPEND)",
+    "o": [
+      "independent",
+      "dependent",
+      "depend",
+      "independence"
+    ],
+    "e": "Sau to-be 'is' và 'very' cần tính từ. Nghĩa của câu (sống một mình) yêu cầu tính từ 'independent' (độc lập)."
+  },
+  {
+    "id": "TS10-U09-GR-09-0020",
+    "q": "Many ______ are working hard to find a cure for the disease. (SCIENCE)",
+    "o": [
+      "scientists",
+      "scientifically",
+      "scientific",
+      "science"
+    ],
+    "e": "Chủ ngữ của câu cần danh từ chỉ người số nhiều ('scientists': các nhà khoa học)."
+  },
+  {
+    "id": "TS10-U09-GR-09-0021",
+    "q": "The view from the top of the mountain is absolutely ______. (AMAZE)",
+    "o": [
+      "amazing",
+      "amaze",
+      "amazement",
+      "amazed"
+    ],
+    "e": "Tính từ miêu tả đặc điểm bản chất của sự vật (the view) cần đuôi -ing ('amazing')."
+  },
+  {
+    "id": "TS10-U09-GR-09-0022",
+    "q": "I felt very ______ because the movie was terrible. (BORE)",
+    "o": [
+      "bored",
+      "boring",
+      "bore",
+      "boredom"
+    ],
+    "e": "Tính từ miêu tả cảm xúc của con người cần đuôi -ed ('bored')."
+  },
+  {
+    "id": "TS10-U09-GR-09-0023",
+    "q": "To my ______, my favorite team lost the match. (DISAPPOINT)",
+    "o": [
+      "disappointment",
+      "disappointed",
+      "disappointing",
+      "disappoint"
+    ],
+    "e": "Cấu trúc 'To one's + Noun' (To my disappointment: Thật đáng thất vọng đối với tôi)."
+  },
+  {
+    "id": "TS10-U09-GR-09-0024",
+    "q": "The children shouted with ______ when they saw the clown. (EXCITE)",
+    "o": [
+      "excitement",
+      "exciting",
+      "excited",
+      "excite"
+    ],
+    "e": "Sau giới từ 'with' cần danh từ ('excitement': sự phấn khích)."
+  },
+  {
+    "id": "TS10-U09-GR-09-0025",
+    "q": "He failed the exam because he was too ______ with his homework. (CARE)",
+    "o": [
+      "careless",
+      "carelessly",
+      "care",
+      "careful"
+    ],
+    "e": "Sau 'too' cần tính từ. Nghĩa của câu (thi rớt) yêu cầu tính từ mang nghĩa tiêu cực ('careless': bất cẩn)."
+  },
+  {
+    "id": "TS10-U09-GR-09-0026",
+    "q": "Eating fresh fruits and vegetables is very ______. (HEALTH)",
+    "o": [
+      "healthy",
+      "unhealthy",
+      "health",
+      "healthily"
+    ],
+    "e": "Sau to-be 'is' và 'very' cần tính từ. Ngữ cảnh tích cực nên dùng 'healthy'."
+  },
+  {
+    "id": "TS10-U09-GR-09-0027",
+    "q": "Paris is ______ for its iconic Eiffel Tower. (FAME)",
+    "o": [
+      "famous",
+      "fame",
+      "infamous",
+      "famously"
+    ],
+    "e": "Cấu trúc 'be famous for something' (nổi tiếng vì điều gì)."
+  },
+  {
+    "id": "TS10-U09-GR-09-0028",
+    "q": "Can you tell me the ______ between these two pictures? (DIFFER)",
+    "o": [
+      "difference",
+      "differently",
+      "differ",
+      "different"
+    ],
+    "e": "Sau mạo từ 'the' cần danh từ ('difference': sự khác biệt)."
+  },
+  {
+    "id": "TS10-U09-GR-09-0029",
+    "q": "We must realize the ______ of protecting the forests. (IMPORTANT)",
+    "o": [
+      "importance",
+      "importantly",
+      "unimportant",
+      "important"
+    ],
+    "e": "Sau mạo từ 'the' và trước 'of' cần danh từ ('importance': tầm quan trọng)."
+  },
+  {
+    "id": "TS10-U09-GR-09-0030",
+    "q": "Thomas Edison was a great ______ who created the light bulb. (INVENT)",
+    "o": [
+      "inventor",
+      "invent",
+      "inventive",
+      "invention"
+    ],
+    "e": "Sau tính từ 'great' cần danh từ chỉ người đóng vai trò chủ ngữ phụ ('inventor': nhà phát minh)."
+  },
+  {
+    "id": "TS10-U09-GR-09-0031",
+    "q": "They use special filters to ______ the drinking water. (PURE)",
+    "o": [
+      "purify",
+      "pure",
+      "purely",
+      "purity"
+    ],
+    "e": "Sau 'to' chỉ mục đích cần một động từ nguyên mẫu ('purify': thanh lọc, làm sạch)."
+  },
+  {
+    "id": "TS10-U09-GR-09-0032",
+    "q": "The city plans to ______ its public transport system next year. (MODERN)",
+    "o": [
+      "modernize",
+      "modernly",
+      "modernization",
+      "modern"
+    ],
+    "e": "Sau 'to' (trong plans to do something) cần động từ nguyên mẫu ('modernize': hiện đại hóa)."
+  },
+  {
+    "id": "TS10-U09-GR-09-0033",
+    "q": "______, we didn't miss the train despite the traffic jam. (LUCK)",
+    "o": [
+      "Luckily",
+      "Lucky",
+      "Unluckily",
+      "Luck"
+    ],
+    "e": "Trạng từ đứng đầu câu, cách mệnh đề chính bằng dấu phẩy để bổ nghĩa cho cả câu ('Luckily': May mắn thay)."
+  },
+  {
+    "id": "TS10-U09-GR-09-0034",
+    "q": "The kids were playing ______ in the yard. (NOISE)",
+    "o": [
+      "noisily",
+      "noiseless",
+      "noise",
+      "noisy"
+    ],
+    "e": "Động từ thường 'playing' cần trạng từ bổ nghĩa cách thức ('noisily': một cách ồn ào)."
+  },
+  {
+    "id": "TS10-U09-GR-09-0035",
+    "q": "They live quietly and ______ in a small village. (PEACE)",
+    "o": [
+      "peacefully",
+      "peaceable",
+      "peaceful",
+      "peace"
+    ],
+    "e": "Liên từ 'and' nối hai từ cùng loại. 'quietly' là trạng từ nên phía sau cũng cần trạng từ ('peacefully')."
+  },
+  {
+    "id": "TS10-U09-GR-09-0036",
+    "q": "Regular exercise keeps you fit and ______. (ACT)",
+    "o": [
+      "active",
+      "actively",
+      "action",
+      "actor"
+    ],
+    "e": "Cấu trúc 'keep + tân ngữ + tính từ' ('active': năng động)."
+  },
+  {
+    "id": "TS10-U09-GR-09-0037",
+    "q": "More trees should be planted to ______ the city. (BEAUTY)",
+    "o": [
+      "beautify",
+      "beautifully",
+      "beauty",
+      "beautiful"
+    ],
+    "e": "Sau 'to' chỉ mục đích cần một động từ nguyên mẫu ('beautify': làm đẹp)."
+  },
+  {
+    "id": "TS10-U09-GR-09-0038",
+    "q": "Tet is the most important ______ for Vietnamese people. (CELEBRATE)",
+    "o": [
+      "celebration",
+      "celebrate",
+      "celebrant",
+      "celebratory"
+    ],
+    "e": "Sau tính từ 'important' cần danh từ ('celebration': dịp lễ hội, sự kỷ niệm)."
+  },
+  {
+    "id": "TS10-U09-GR-09-0039",
+    "q": "He spent most of his ______ living in the countryside. (CHILD)",
+    "o": [
+      "childhood",
+      "childish",
+      "child",
+      "children"
+    ],
+    "e": "Sau tính từ sở hữu 'his' cần danh từ chỉ thời kỳ ('childhood': thời thơ ấu)."
+  },
+  {
+    "id": "TS10-U09-GR-09-0040",
+    "q": "English has become an ______ language used all over the world. (NATION)",
+    "o": [
+      "international",
+      "nation",
+      "national",
+      "internationally"
+    ],
+    "e": "Trước danh từ 'language' cần tính từ. Nghĩa 'used all over the world' (sử dụng trên toàn thế giới) tương ứng với 'international' (quốc tế)."
+  },
+  {
+    "id": "TS10-U10-GR-10-0001",
+    "q": "We have a long holiday, so we are going to Vung Tau. (Rewrite using 'Because')",
+    "o": [
+      "Because we have a long holiday, we are going to Vung Tau.",
+      "Because of we have a long holiday, we are going to Vung Tau.",
+      "Because having a long holiday, we are going to Vung Tau.",
+      "Because we are going to Vung Tau, we have a long holiday."
+    ],
+    "e": "Dùng liên từ 'Because' đứng đầu câu chỉ nguyên nhân ('we have a long holiday'), thay thế cho liên từ 'so' ở giữa câu."
+  },
+  {
+    "id": "TS10-U10-GR-10-0002",
+    "q": "It’s a pity! I don’t have enough money to help them. (Rewrite using 'I wish')",
+    "o": [
+      "I wish I had enough money to help them.",
+      "I wish I had had enough money to help them.",
+      "I wish I don't have enough money to help them.",
+      "I wish I have enough money to help them."
+    ],
+    "e": "Cấu trúc câu ước ở hiện tại (wish + S + V-quá khứ đơn) diễn tả một mong muốn trái ngược với thực tế ở hiện tại."
+  },
+  {
+    "id": "TS10-U10-GR-10-0003",
+    "q": "You should go to bed early or you will feel tired tomorrow. (Rewrite using 'If you')",
+    "o": [
+      "If you don't go to bed early, you will feel tired tomorrow.",
+      "If you go to bed early, you will feel tired tomorrow.",
+      "If you don't go to bed early, you wouldn't feel tired tomorrow.",
+      "If you didn't go to bed early, you will feel tired tomorrow."
+    ],
+    "e": "Câu điều kiện loại 1 (If + S + V-hiện tại đơn, S + will + V) diễn tả một giả định có thể xảy ra ở hiện tại hoặc tương lai."
+  },
+  {
+    "id": "TS10-U10-GR-10-0004",
+    "q": "She asked me, “When does your final exam start?” (Rewrite using 'She asked')",
+    "o": [
+      "She asked me when my final exam started.",
+      "She asked me when did my final exam start.",
+      "She asked me when does my final exam start.",
+      "She asked me when my final exam starts."
+    ],
+    "e": "Khi tường thuật câu hỏi có từ để hỏi (Wh-), ta không mượn trợ động từ, giữ nguyên trật tự câu khẳng định và lùi thì (hiện tại đơn chuyển thành quá khứ đơn)."
+  },
+  {
+    "id": "TS10-U10-GR-10-0005",
+    "q": "What a pity you didn't tell me about the party. (Rewrite using 'I wish')",
+    "o": [
+      "I wish you had told me about the party.",
+      "I wish you told me about the party.",
+      "I wish you would tell me about the party.",
+      "I wish you didn't tell me about the party."
+    ],
+    "e": "Cấu trúc câu ước trái với quá khứ diễn tả sự tiếc nuối: S + wish + S + had + V3/ed."
+  },
+  {
+    "id": "TS10-U10-GR-10-0006",
+    "q": "I am sorry I don't know how to play the piano. (Rewrite using 'I wish')",
+    "o": [
+      "I wish I knew how to play the piano.",
+      "I wish I didn't know how to play the piano.",
+      "I wish I know how to play the piano.",
+      "I wish I had known how to play the piano."
+    ],
+    "e": "Cấu trúc câu ước trái với hiện tại: S + wish + S + V2/ed."
+  },
+  {
+    "id": "TS10-U10-GR-10-0007",
+    "q": "It's a shame that it is raining heavily now. (Rewrite using 'I wish')",
+    "o": [
+      "I wish it weren't raining heavily now.",
+      "I wish it hadn't rained heavily now.",
+      "I wish it wouldn't rain heavily now.",
+      "I wish it isn't raining heavily now."
+    ],
+    "e": "Câu ước ở hiện tại, động từ to-be luôn được chia là 'were' (hoặc weren't) cho tất cả các ngôi."
+  },
+  {
+    "id": "TS10-U10-GR-10-0008",
+    "q": "Work harder, or you won't pass the final exam. (Rewrite using 'Unless')",
+    "o": [
+      "Unless you work harder, you won't pass the final exam.",
+      "Unless you worked harder, you wouldn't pass the final exam.",
+      "Unless you don't work harder, you won't pass the final exam.",
+      "Unless you work harder, you will pass the final exam."
+    ],
+    "e": "Unless = If... not (Trừ khi). Ta giữ nguyên vế sau, bỏ chữ 'or' và đổi vế mệnh lệnh phía trước thành khẳng định (Unless you work = If you don't work)."
+  },
+  {
+    "id": "TS10-U10-GR-10-0009",
+    "q": "He doesn't have a car, so he can't drive to work. (Rewrite using 'If')",
+    "o": [
+      "If he had a car, he could drive to work.",
+      "If he has a car, he can drive to work.",
+      "If he didn't have a car, he couldn't drive to work.",
+      "If he had had a car, he could have driven to work."
+    ],
+    "e": "Tình huống ở hiện tại -> Dùng câu điều kiện loại 2 (trái với hiện tại). Nhớ lùi thì và đổi thể (khẳng định <-> phủ định)."
+  },
+  {
+    "id": "TS10-U10-GR-10-0010",
+    "q": "She was careless, so she made a lot of mistakes. (Rewrite using 'If')",
+    "o": [
+      "If she hadn't been careless, she wouldn't have made a lot of mistakes.",
+      "If she hasn't been careless, she won't make a lot of mistakes.",
+      "If she weren't careless, she wouldn't make a lot of mistakes.",
+      "If she hadn't been careless, she would have made a lot of mistakes."
+    ],
+    "e": "Tình huống ở quá khứ -> Dùng câu điều kiện loại 3 (trái với quá khứ): If + S + had PII, S + would have PII."
+  },
+  {
+    "id": "TS10-U10-GR-10-0011",
+    "q": "Keep quiet or the teacher will punish you. (Rewrite using 'If')",
+    "o": [
+      "If you don't keep quiet, the teacher will punish you.",
+      "If you didn't keep quiet, the teacher would punish you.",
+      "If you keep quiet, the teacher will punish you.",
+      "If you won't keep quiet, the teacher punishes you."
+    ],
+    "e": "Cấu trúc: Câu mệnh lệnh + or + mệnh đề tương lai -> Đổi thành câu điều kiện loại 1 (If you don't..., S + will...)."
+  },
+  {
+    "id": "TS10-U10-GR-10-0012",
+    "q": "“Why don't we go to the beach this weekend?” said Mary. (Rewrite using 'Mary suggested')",
+    "o": [
+      "Mary suggested going to the beach that weekend.",
+      "Mary suggested that we went to the beach this weekend.",
+      "Mary suggested to go to the beach this weekend.",
+      "Mary suggested going to the beach this weekend."
+    ],
+    "e": "Tường thuật lời đề nghị: suggest + V-ing, đồng thời phải lùi trạng từ chỉ thời gian (this -> that)."
+  },
+  {
+    "id": "TS10-U10-GR-10-0013",
+    "q": "“I'm sorry I broke your favorite vase,” he said to me. (Rewrite using 'He apologized')",
+    "o": [
+      "He apologized to me for breaking my favorite vase.",
+      "He apologized to me for to break my favorite vase.",
+      "He apologized me for breaking my favorite vase.",
+      "He apologized to me to break my favorite vase."
+    ],
+    "e": "Cấu trúc xin lỗi: apologize to somebody for V-ing."
+  },
+  {
+    "id": "TS10-U10-GR-10-0014",
+    "q": "“Don't forget to turn off the lights,” she told him. (Rewrite using 'She reminded')",
+    "o": [
+      "She reminded him to turn off the lights.",
+      "She reminded him turning off the lights.",
+      "She reminded him not to turn off the lights.",
+      "She reminded him not forget to turn off the lights."
+    ],
+    "e": "Cấu trúc nhắc nhở ai làm gì: remind somebody to do something."
+  },
+  {
+    "id": "TS10-U10-GR-10-0015",
+    "q": "“Did you finish the report yesterday?” the boss asked me. (Rewrite using 'The boss asked')",
+    "o": [
+      "The boss asked me if I had finished the report the day before.",
+      "The boss asked me if I finished the report yesterday.",
+      "The boss asked me if I had finished the report yesterday.",
+      "The boss asked me whether did I finish the report the day before."
+    ],
+    "e": "Tường thuật câu hỏi Yes/No: mượn if/whether, lùi thì (quá khứ đơn -> quá khứ hoàn thành), đổi trạng từ thời gian (yesterday -> the day before)."
+  },
+  {
+    "id": "TS10-U10-GR-10-0016",
+    "q": "“I will help you with your homework tomorrow,” he said to her. (Rewrite using 'He promised')",
+    "o": [
+      "He promised to help her with her homework the following day.",
+      "He promised helping her with her homework tomorrow.",
+      "He promised to help her with her homework tomorrow.",
+      "He promised he will help her with her homework the following day."
+    ],
+    "e": "Cấu trúc hứa hẹn: promise to do something, nhớ đổi đại từ sở hữu (your -> her) và trạng từ thời gian (tomorrow -> the following day)."
+  },
+  {
+    "id": "TS10-U10-GR-10-0017",
+    "q": "“You stole my bicycle!” the boy said to his friend. (Rewrite using 'The boy accused')",
+    "o": [
+      "The boy accused his friend of stealing his bicycle.",
+      "The boy accused his friend to steal his bicycle.",
+      "The boy accused his friend for stealing his bicycle.",
+      "The boy accused his friend on stealing his bicycle."
+    ],
+    "e": "Cấu trúc buộc tội: accuse somebody of V-ing."
+  },
+  {
+    "id": "TS10-U10-GR-10-0018",
+    "q": "Although the weather was bad, we went on a picnic. (Rewrite using 'Despite')",
+    "o": [
+      "Despite the bad weather, we went on a picnic.",
+      "Despite the weather was bad, we went on a picnic.",
+      "Despite the bad weather, but we went on a picnic.",
+      "Despite of the bad weather, we went on a picnic."
+    ],
+    "e": "Cấu trúc nhượng bộ: Despite + Cụm danh từ/V-ing (lưu ý không dùng 'Despite of' hay 'Despite + mệnh đề')."
+  },
+  {
+    "id": "TS10-U10-GR-10-0019",
+    "q": "In spite of his old age, he runs five kilometers every morning. (Rewrite using 'Even though')",
+    "o": [
+      "Even though he is old, he runs five kilometers every morning.",
+      "Even though his old age, he runs five kilometers every morning.",
+      "Even though he is old, but he runs five kilometers every morning.",
+      "Even though being old, he runs five kilometers every morning."
+    ],
+    "e": "Cấu trúc: Even though + mệnh đề (S + V). Trong tiếng Anh, khi đã dùng Although/Even though thì không dùng 'but' ở mệnh đề sau."
+  },
+  {
+    "id": "TS10-U10-GR-10-0020",
+    "q": "Although she was very tired, she finished the project on time. (Rewrite using 'Despite')",
+    "o": [
+      "Despite being very tired, she finished the project on time.",
+      "Despite her tired, she finished the project on time.",
+      "Despite she was very tired, she finished the project on time.",
+      "Despite being very tired, but she finished the project on time."
+    ],
+    "e": "Nếu hai mệnh đề cùng chủ ngữ, ta có thể rút gọn thành: Despite + V-ing."
+  },
+  {
+    "id": "TS10-U10-GR-10-0021",
+    "q": "Because of the heavy rain, we couldn't go out. (Rewrite using 'Because')",
+    "o": [
+      "Because it rained heavily, we couldn't go out.",
+      "Because it rains heavy, we couldn't go out.",
+      "Because the rain was heavily, we couldn't go out.",
+      "Because it raining heavily, we couldn't go out."
+    ],
+    "e": "Đổi cụm danh từ (the heavy rain) thành mệnh đề tương đương (it rained heavily) sau liên từ Because."
+  },
+  {
+    "id": "TS10-U10-GR-10-0022",
+    "q": "The test was so difficult that none of us could do it. (Rewrite using 'It was such')",
+    "o": [
+      "It was such a difficult test that none of us could do it.",
+      "It was such a test difficult that none of us could do it.",
+      "It was such difficult a test that none of us could do it.",
+      "It was such difficult test that none of us could do it."
+    ],
+    "e": "Cấu trúc quá... đến nỗi mà: S + V + such + (a/an) + adj + Noun + that + S + V."
+  },
+  {
+    "id": "TS10-U10-GR-10-0023",
+    "q": "The coffee was too hot for me to drink. (Rewrite using 'The coffee was so')",
+    "o": [
+      "The coffee was so hot that I couldn't drink it.",
+      "The coffee was so hot that I can't drink it.",
+      "The coffee was so hot for me to drink.",
+      "The coffee was so hot that I couldn't drink."
+    ],
+    "e": "Cấu trúc so...that. Lưu ý mệnh đề sau 'that' phải đầy đủ thành phần tân ngữ (drink it) và lùi thì phù hợp với vế trước (was -> couldn't)."
+  },
+  {
+    "id": "TS10-U10-GR-10-0024",
+    "q": "He drove so carelessly that he caused an accident. (Rewrite using 'He was such')",
+    "o": [
+      "He was such a careless driver that he caused an accident.",
+      "He was such a carelessly driver that he caused an accident.",
+      "He was such careless a driver that he caused an accident.",
+      "He was such a driver careless that he caused an accident."
+    ],
+    "e": "Chuyển từ động từ thường (drove carelessly) sang to-be và cụm danh từ (was a careless driver)."
+  },
+  {
+    "id": "TS10-U10-GR-10-0025",
+    "q": "People say that he is the best doctor in town. (Rewrite using 'He is said')",
+    "o": [
+      "He is said to be the best doctor in town.",
+      "He is said that to be the best doctor in town.",
+      "He is said being the best doctor in town.",
+      "He is said to have been the best doctor in town."
+    ],
+    "e": "Câu bị động với động từ tường thuật: S2 + be + said + to V (khi cả 2 hành động cùng ở hiện tại)."
+  },
+  {
+    "id": "TS10-U10-GR-10-0026",
+    "q": "They have built a new hospital near my house. (Rewrite using 'A new hospital')",
+    "o": [
+      "A new hospital has been built near my house.",
+      "A new hospital was built near my house.",
+      "A new hospital have been built near my house.",
+      "A new hospital has built near my house."
+    ],
+    "e": "Cấu trúc bị động thì hiện tại hoàn thành: S + have/has + been + V3/ed."
+  },
+  {
+    "id": "TS10-U10-GR-10-0027",
+    "q": "They are going to build a new supermarket here. (Rewrite using 'A new supermarket')",
+    "o": [
+      "A new supermarket is going to be built here.",
+      "A new supermarket is going to build here.",
+      "A new supermarket are going to be built here.",
+      "A new supermarket will be built here."
+    ],
+    "e": "Cấu trúc bị động thì tương lai gần: S + am/is/are + going to be + V3/ed."
+  },
+  {
+    "id": "TS10-U10-GR-10-0028",
+    "q": "Someone needs to clean this room immediately. (Rewrite using 'This room')",
+    "o": [
+      "This room needs to be cleaned immediately.",
+      "This room needs be cleaned immediately.",
+      "This room needs clean immediately.",
+      "This room need to be cleaned immediately."
+    ],
+    "e": "Bị động của động từ khuyết thiếu/bán khuyết thiếu: need to be + V3/ed (với chủ ngữ 'This room' số ít nên 'needs' phải thêm s)."
+  },
+  {
+    "id": "TS10-U10-GR-10-0029",
+    "q": "No one else in the class is as tall as Peter. (Rewrite using 'Peter is')",
+    "o": [
+      "Peter is the tallest boy in the class.",
+      "Peter is taller boy in the class.",
+      "Peter is the most tall boy in the class.",
+      "Peter is tallest boy in the class."
+    ],
+    "e": "Chuyển từ so sánh bằng phủ định (không ai bằng) sang so sánh nhất (the + adj-est)."
+  },
+  {
+    "id": "TS10-U10-GR-10-0030",
+    "q": "I have never seen such a beautiful house before. (Rewrite using 'This is')",
+    "o": [
+      "This is the most beautiful house I have ever seen.",
+      "This is the more beautiful house I have ever seen.",
+      "This is the beautifulest house I have ever seen.",
+      "This is such a beautiful house I have ever seen."
+    ],
+    "e": "Cấu trúc kinh điển: Câu so sánh nhất thường đi kèm với mệnh đề ở thì hiện tại hoàn thành (This is the most... I have ever...)."
+  },
+  {
+    "id": "TS10-U10-GR-10-0031",
+    "q": "Russian is more difficult to learn than English. (Rewrite using 'English is')",
+    "o": [
+      "English is not as difficult to learn as Russian.",
+      "English is difficult to learn as Russian.",
+      "English is more difficult to learn than Russian.",
+      "English is not difficult to learn as Russian."
+    ],
+    "e": "Chuyển từ so sánh hơn (A hơn B) sang so sánh không bằng (B không bằng A): S + be + not as/so + adj + as + O."
+  },
+  {
+    "id": "TS10-U10-GR-10-0032",
+    "q": "As he gets older, he becomes more experienced. (Rewrite using 'The older')",
+    "o": [
+      "The older he gets, the more experienced he becomes.",
+      "The older he gets, the more experience he becomes.",
+      "The older he gets, more experienced he becomes.",
+      "The older he gets, the most experienced he becomes."
+    ],
+    "e": "Cấu trúc so sánh kép (Càng... càng...): The + so sánh hơn + S + V, The + so sánh hơn + S + V."
+  },
+  {
+    "id": "TS10-U10-GR-10-0033",
+    "q": "I haven't met him for three years. (Rewrite using 'The last time')",
+    "o": [
+      "The last time I met him was three years ago.",
+      "The last time I have met him was three years ago.",
+      "The last time I met him is three years ago.",
+      "The last time I met him was for three years."
+    ],
+    "e": "Chuyển thì hiện tại hoàn thành phủ định sang thì quá khứ đơn: The last time S + V2/ed + was + khoảng thời gian + ago."
+  },
+  {
+    "id": "TS10-U10-GR-10-0034",
+    "q": "He started working in this factory in 2010. (Rewrite using 'He has')",
+    "o": [
+      "He has been working in this factory since 2010.",
+      "He has been working in this factory in 2010.",
+      "He has worked in this factory from 2010.",
+      "He has started working in this factory since 2010."
+    ],
+    "e": "Chuyển từ quá khứ đơn (started + V-ing + in/ago) sang thì hiện tại hoàn thành tiếp diễn (has/have + been + V-ing + since/for)."
+  },
+  {
+    "id": "TS10-U10-GR-10-0035",
+    "q": "When did you begin studying French? (Rewrite using 'How long')",
+    "o": [
+      "How long have you been studying French?",
+      "How long did you begin studying French?",
+      "How long are you studying French?",
+      "How long have you studied French ago?"
+    ],
+    "e": "Câu hỏi bắt đầu trong quá khứ (When did you begin) chuyển sang câu hỏi kéo dài đến hiện tại (How long have you been V-ing)."
+  },
+  {
+    "id": "TS10-U10-GR-10-0036",
+    "q": "This is the first time I have eaten Sushi. (Rewrite using 'I have never')",
+    "o": [
+      "I have never eaten Sushi before.",
+      "I have never eat Sushi before.",
+      "I have never eaten Sushi ago.",
+      "I have never eaten Sushi then."
+    ],
+    "e": "Cấu trúc: This is the first time S + have/has + V3/ed = S + have/has never + V3/ed + before."
+  },
+  {
+    "id": "TS10-U10-GR-10-0037",
+    "q": "The man is standing over there. He is my uncle. (Rewrite using 'The man')",
+    "o": [
+      "The man who is standing over there is my uncle.",
+      "The man which is standing over there is my uncle.",
+      "The man is standing over there who is my uncle.",
+      "The man whom is standing over there is my uncle."
+    ],
+    "e": "Dùng đại từ quan hệ 'who' thay cho chủ ngữ chỉ người 'He', đưa mệnh đề phụ lên đứng ngay sau danh từ nó bổ nghĩa ('The man')."
+  },
+  {
+    "id": "TS10-U10-GR-10-0038",
+    "q": "It took us two hours to clean the house. (Rewrite using 'We spent')",
+    "o": [
+      "We spent two hours cleaning the house.",
+      "We spent two hours clean the house.",
+      "We spent two hours for cleaning the house.",
+      "We spent two hours to clean the house."
+    ],
+    "e": "Cấu trúc tiêu tốn thời gian: It takes/took + sb + time + to V = S + spend/spent + time + V-ing."
+  },
+  {
+    "id": "TS10-U10-GR-10-0039",
+    "q": "I found it difficult to understand the foreign teacher. (Rewrite using 'I had')",
+    "o": [
+      "I had difficulty understanding the foreign teacher.",
+      "I had difficulty to understand the foreign teacher.",
+      "I had difficult understanding the foreign teacher.",
+      "I had a difficulty understanding the foreign teacher."
+    ],
+    "e": "Cấu trúc: find it + adj + to V = have difficulty + (in) + V-ing (gặp khó khăn trong việc gì)."
+  },
+  {
+    "id": "TS10-U10-GR-10-0040",
+    "q": "Would you mind if I opened the window? (Rewrite using 'Do you mind')",
+    "o": [
+      "Do you mind if I open the window?",
+      "Do you mind if I opened the window?",
+      "Do you mind me open the window?",
+      "Do you mind if I opening the window?"
+    ],
+    "e": "Câu xin phép lịch sự: Would you mind if I + V(quá khứ đơn)? = Do you mind if I + V(hiện tại đơn)?"
+  },
+  {
+    "id": "TS10-U11-GR-11-0001",
+    "q": "The man / who / arrest / police / yesterday / be / my neighbor.",
+    "o": [
+      "The man who was arrested by the police yesterday is my neighbor.",
+      "The man who was arrested by the police yesterday was my neighbor.",
+      "The man who arrested by the police yesterday is my neighbor.",
+      "The man whom was arrested by the police yesterday is my neighbor."
+    ],
+    "e": "Mệnh đề quan hệ mang nghĩa bị động trong quá khứ (was arrested). Động từ chính của câu chia ở hiện tại đơn (is my neighbor)."
+  },
+  {
+    "id": "TS10-U11-GR-11-0002",
+    "q": "It / rain / heavily / since / we / arrive / here.",
+    "o": [
+      "It has been raining heavily since we arrived here.",
+      "It has rained heavily since we arrive here.",
+      "It is raining heavily since we arrived here.",
+      "It rained heavily since we arrive here."
+    ],
+    "e": "Cấu trúc since: Hiện tại hoàn thành (hoặc HTHT tiếp diễn) + since + Quá khứ đơn (since we arrived)."
+  },
+  {
+    "id": "TS10-U11-GR-11-0003",
+    "q": "If / he / study / harder / last year, / he / pass / entrance exam.",
+    "o": [
+      "If he had studied harder last year, he would have passed the entrance exam.",
+      "If he studied harder last year, he would pass the entrance exam.",
+      "If he had studied harder last year, he would pass the entrance exam.",
+      "If he studies harder last year, he will pass the entrance exam."
+    ],
+    "e": "Có 'last year' -> Tình huống trái với quá khứ nên phải dùng câu điều kiện loại 3 (If + S + had V3/ed, S + would have V3/ed)."
+  },
+  {
+    "id": "TS10-U11-GR-11-0004",
+    "q": "She / apologize / teacher / for / be / late / school.",
+    "o": [
+      "She apologized to the teacher for being late for school.",
+      "She apologized to the teacher for to be late for school.",
+      "She apologized to the teacher for be late for school.",
+      "She apologized the teacher for being late for school."
+    ],
+    "e": "Cấu trúc: apologize to somebody for V-ing (xin lỗi ai vì việc gì). Cụm từ: be late for school (trễ học)."
+  },
+  {
+    "id": "TS10-U11-GR-11-0005",
+    "q": "The doctor / advise / him / stop / smoke / immediately.",
+    "o": [
+      "The doctor advised him to stop smoking immediately.",
+      "The doctor advised him to stop to smoke immediately.",
+      "The doctor advised him stop to smoke immediately.",
+      "The doctor advised him stopping smoking immediately."
+    ],
+    "e": "Cấu trúc: advise sb to do sth (khuyên ai làm gì) và stop V-ing (dừng hẳn việc đang làm)."
+  },
+  {
+    "id": "TS10-U11-GR-11-0006",
+    "q": "I / have / my car / repair / by / mechanic / tomorrow.",
+    "o": [
+      "I will have my car repaired by the mechanic tomorrow.",
+      "I will have my car repair by the mechanic tomorrow.",
+      "I will have my car to be repaired by the mechanic tomorrow.",
+      "I have my car repaired by the mechanic tomorrow."
+    ],
+    "e": "Thể truyền khiến (Causative form) bị động: have something done (have my car repaired). Có 'tomorrow' nên dùng thì tương lai."
+  },
+  {
+    "id": "TS10-U11-GR-11-0007",
+    "q": "The weather / be / so / bad / that / we / decide / stay / home.",
+    "o": [
+      "The weather was so bad that we decided to stay at home.",
+      "The weather was so bad that we decide to stay at home.",
+      "The weather is so bad that we decide stay at home.",
+      "The weather is so bad that we decided to stay at home."
+    ],
+    "e": "Cấu trúc: so + adj + that + mệnh đề (quá... đến nỗi mà). Động từ 'decide to V' phải lùi về quá khứ cho phù hợp với 'was'."
+  },
+  {
+    "id": "TS10-U11-GR-11-0008",
+    "q": "Despite / be / exhausted, / she / manage / finish / report.",
+    "o": [
+      "Despite being exhausted, she managed to finish the report.",
+      "Despite of being exhausted, she managed to finish the report.",
+      "Despite she was exhausted, she managed to finish the report.",
+      "Despite be exhausted, she managed to finish the report."
+    ],
+    "e": "Cấu trúc nhượng bộ: Despite + V-ing/Noun phrase. 'manage to V' (xoay xở làm được việc gì)."
+  },
+  {
+    "id": "TS10-U11-GR-11-0009",
+    "q": "The / hard / you / practice, / the / good / you / become.",
+    "o": [
+      "The harder you practice, the better you will become.",
+      "The hard you practice, the good you will become.",
+      "The more hard you practice, the more good you become.",
+      "The harder you practice, the best you will become."
+    ],
+    "e": "Cấu trúc so sánh kép (Càng... càng): The + so sánh hơn + S + V, The + so sánh hơn + S + V."
+  },
+  {
+    "id": "TS10-U11-GR-11-0010",
+    "q": "I / wish / I / not / buy / that / expensive / car / last / month.",
+    "o": [
+      "I wish I had not bought that expensive car last month.",
+      "I wish I would not buy that expensive car last month.",
+      "I wish I did not buy that expensive car last month.",
+      "I wish I have not bought that expensive car last month."
+    ],
+    "e": "Có 'last month' -> Câu ước trái với quá khứ (S + wish + S + had + V3/ed)."
+  },
+  {
+    "id": "TS10-U11-GR-11-0011",
+    "q": "Never / before / I / see / such / beautiful / sunset.",
+    "o": [
+      "Never before have I seen such a beautiful sunset.",
+      "Never before I saw such a beautiful sunset.",
+      "Never before I have seen such a beautiful sunset.",
+      "Never before did I see such a beautiful sunset."
+    ],
+    "e": "Đảo ngữ với 'Never before': Đưa trợ động từ lên trước chủ ngữ. 'before' đi kèm thì hiện tại hoàn thành (have I seen)."
+  },
+  {
+    "id": "TS10-U11-GR-11-0012",
+    "q": "My father / use / smoke / a lot, / but / he / give / up / two years / ago.",
+    "o": [
+      "My father used to smoke a lot, but he gave it up two years ago.",
+      "My father used to smoke a lot, but he give it up two years ago.",
+      "My father used to smoking a lot, but he gave it up two years ago.",
+      "My father is used to smoking a lot, but he gave it up two years ago."
+    ],
+    "e": "Cấu trúc used to + V (thói quen trong quá khứ). Vế sau có 'two years ago' nên động từ 'give' chia quá khứ là 'gave'."
+  },
+  {
+    "id": "TS10-U11-GR-11-0013",
+    "q": "Our teacher / suggest / we / should / protect / environment.",
+    "o": [
+      "Our teacher suggested that we should protect the environment.",
+      "Our teacher suggested us to protect the environment.",
+      "Our teacher suggested that we to protect the environment.",
+      "Our teacher suggested that we protecting the environment."
+    ],
+    "e": "Cấu trúc khuyên bảo: suggest that + S + (should) + V(nguyên mẫu). Chú ý mạo từ 'the' trước 'environment'."
+  },
+  {
+    "id": "TS10-U11-GR-11-0014",
+    "q": "By the time / you / arrive / party / yesterday, / everyone / leave.",
+    "o": [
+      "By the time you arrived at the party yesterday, everyone had left.",
+      "By the time you had arrived at the party yesterday, everyone left.",
+      "By the time you arrived at the party yesterday, everyone left.",
+      "By the time you arrive at the party yesterday, everyone has left."
+    ],
+    "e": "Cấu trúc 'By the time' trong quá khứ: By the time + quá khứ đơn, quá khứ hoàn thành (hành động rời đi xảy ra trước khi đến)."
+  },
+  {
+    "id": "TS10-U11-GR-11-0015",
+    "q": "They / not / meet / each other / for / long / time.",
+    "o": [
+      "They haven't met each other for a long time.",
+      "They haven't met each other since a long time.",
+      "They didn't meet each other for a long time.",
+      "They hadn't meet each other for a long time."
+    ],
+    "e": "Dấu hiệu 'for a long time' (trong một thời gian dài) yêu cầu sử dụng thì hiện tại hoàn thành (haven't met)."
+  },
+  {
+    "id": "TS10-U11-GR-11-0016",
+    "q": "A / new / laptop / give / him / on / his / birthday.",
+    "o": [
+      "A new laptop was given to him on his birthday.",
+      "A new laptop is given to him on his birthday.",
+      "A new laptop was given him on his birthday.",
+      "A new laptop gave to him on his birthday."
+    ],
+    "e": "Câu bị động có 2 tân ngữ ở thì quá khứ đơn: S + was/were + given + to + somebody."
+  },
+  {
+    "id": "TS10-U11-GR-11-0017",
+    "q": "She / prefer / read / books / watch / television.",
+    "o": [
+      "She prefers reading books to watching television.",
+      "She prefers read books to watch television.",
+      "She prefers reading books than watching television.",
+      "She prefers to read books to watch television."
+    ],
+    "e": "Cấu trúc sở thích: prefer V-ing to V-ing (thích làm việc này hơn việc kia)."
+  },
+  {
+    "id": "TS10-U11-GR-11-0018",
+    "q": "It / take / me / two hours / commute / work / every day.",
+    "o": [
+      "It takes me two hours to commute to work every day.",
+      "It took me two hours to commute to work every day.",
+      "It takes me two hours commuting to work every day.",
+      "It takes me two hours commute to work every day."
+    ],
+    "e": "Có 'every day' (hiện tại đơn). Cấu trúc: It takes + somebody + time + to V."
+  },
+  {
+    "id": "TS10-U11-GR-11-0019",
+    "q": "It / be / necessary / students / wear / uniforms / school.",
+    "o": [
+      "It is necessary for students to wear uniforms at school.",
+      "It is necessary of students to wear uniforms at school.",
+      "It is necessary for students wear uniforms at school.",
+      "It is necessary that students wearing uniforms at school."
+    ],
+    "e": "Cấu trúc: It is + adj + for somebody + to V (Thật cần thiết cho ai đó để làm gì)."
+  },
+  {
+    "id": "TS10-U11-GR-11-0020",
+    "q": "The / girl / stand / next / the window / be / my sister.",
+    "o": [
+      "The girl standing next to the window is my sister.",
+      "The girl stood next to the window is my sister.",
+      "The girl who standing next to the window is my sister.",
+      "The girl stands next to the window is my sister."
+    ],
+    "e": "Rút gọn mệnh đề quan hệ dạng chủ động bằng cách sử dụng Hiện tại phân từ (V-ing: standing)."
+  },
+  {
+    "id": "TS10-U11-GR-11-0021",
+    "q": "If / I / be / you, / I / not / accept / that / job / offer.",
+    "o": [
+      "If I were you, I would not accept that job offer.",
+      "If I was you, I will not accept that job offer.",
+      "If I had been you, I would not accept that job offer.",
+      "If I am you, I will not accept that job offer."
+    ],
+    "e": "Câu điều kiện loại 2 (lời khuyên): If I were you, S + would + V. Động từ to-be chia là 'were' cho mọi ngôi."
+  },
+  {
+    "id": "TS10-U11-GR-11-0022",
+    "q": "While / we / have / dinner, / the / power / go / out.",
+    "o": [
+      "While we were having dinner, the power went out.",
+      "While we had dinner, the power was going out.",
+      "While we are having dinner, the power goes out.",
+      "While we have had dinner, the power went out."
+    ],
+    "e": "Hành động đang xảy ra trong quá khứ (Quá khứ tiếp diễn - were having) thì hành động khác xen vào (Quá khứ đơn - went out)."
+  },
+  {
+    "id": "TS10-U11-GR-11-0023",
+    "q": "Your / room / be / dirty. It / need / clean / right away.",
+    "o": [
+      "Your room is dirty. It needs cleaning right away.",
+      "Your room is dirty. It needs to clean right away.",
+      "Your room is dirty. It need cleaning right away.",
+      "Your room is dirty. It needs cleaned right away."
+    ],
+    "e": "Cấu trúc bị động của 'need' với vật: S(vật) + need + V-ing (hoặc to be V3/ed). Chú ý 'needs' phải thêm 's'."
+  },
+  {
+    "id": "TS10-U11-GR-11-0024",
+    "q": "The / news / make / everyone / in / room / surprise.",
+    "o": [
+      "The news made everyone in the room surprised.",
+      "The news made everyone in the room surprising.",
+      "The news made everyone in the room surprise.",
+      "The news made everyone in the room to surprise."
+    ],
+    "e": "Cấu trúc: make + somebody + adj (làm cho ai cảm thấy thế nào). Cảm xúc của con người dùng tính từ đuôi -ed (surprised)."
+  },
+  {
+    "id": "TS10-U11-GR-11-0025",
+    "q": "Let's / go / out / for / dinner / tonight, / we?",
+    "o": [
+      "Let's go out for dinner tonight, shall we?",
+      "Let's go out for dinner tonight, do we?",
+      "Let's go out for dinner tonight, don't we?",
+      "Let's go out for dinner tonight, will we?"
+    ],
+    "e": "Câu hỏi đuôi của cấu trúc rủ rê 'Let's + V' luôn luôn là 'shall we?'."
+  },
+  {
+    "id": "TS10-U11-GR-11-0026",
+    "q": "Before / she / go / to / bed, / she / do / all / homework.",
+    "o": [
+      "Before she went to bed, she had done all her homework.",
+      "Before she goes to bed, she had done all her homework.",
+      "Before she had gone to bed, she did all her homework.",
+      "Before she went to bed, she did all her homework."
+    ],
+    "e": "Cấu trúc phối hợp thì: Before + Quá khứ đơn (went), Quá khứ hoàn thành (had done)."
+  },
+  {
+    "id": "TS10-U11-GR-11-0027",
+    "q": "Only / after / he / apologize, / she / forgive / him.",
+    "o": [
+      "Only after he had apologized did she forgive him.",
+      "Only after had he apologized she forgave him.",
+      "Only after he apologized she forgave him.",
+      "Only after he had apologized she did forgive him."
+    ],
+    "e": "Đảo ngữ với 'Only after': Only after + Mệnh đề 1 (có thể ở QKHT), Mệnh đề 2 (Đảo ngữ ở thì QKĐ: did + S + V)."
+  },
+  {
+    "id": "TS10-U11-GR-11-0028",
+    "q": "I / would rather / you / not / tell / anyone / about / this / secret.",
+    "o": [
+      "I would rather you didn't tell anyone about this secret.",
+      "I would rather you not tell anyone about this secret.",
+      "I would rather you won't tell anyone about this secret.",
+      "I would rather you hadn't tell anyone about this secret."
+    ],
+    "e": "Cấu trúc 'would rather' với 2 chủ ngữ khác nhau diễn tả ý muốn ở hiện tại/tương lai: S1 + would rather + S2 + V(quá khứ đơn)."
+  },
+  {
+    "id": "TS10-U11-GR-11-0029",
+    "q": "It / be / such / interesting / book / that / I / read / it / twice.",
+    "o": [
+      "It was such an interesting book that I read it twice.",
+      "It was such interesting a book that I read it twice.",
+      "It was such an interesting book that I read twice.",
+      "It was so an interesting book that I read it twice."
+    ],
+    "e": "Cấu trúc: S + V + such + a/an + adj + Noun + that + mệnh đề. Chữ 'interesting' bắt đầu bằng nguyên âm nên dùng mạo từ 'an'."
+  },
+  {
+    "id": "TS10-U11-GR-11-0030",
+    "q": "He / not only / speak / English / fluently / but also / play / piano / well.",
+    "o": [
+      "He not only speaks English fluently but also plays the piano well.",
+      "He speaks not only English fluently but also play the piano well.",
+      "He not only speaks English fluently but also plays piano well.",
+      "He not only speak English fluently but also play the piano well."
+    ],
+    "e": "Cấu trúc tương hỗ 'not only... but also' đi với 2 động từ thì hiện tại đơn. Cần mạo từ 'the' trước nhạc cụ (the piano)."
+  },
+  {
+    "id": "TS10-U11-GR-11-0031",
+    "q": "No sooner / he / arrive / home / than / phone / ring.",
+    "o": [
+      "No sooner had he arrived home than the phone rang.",
+      "No sooner did he arrive home than the phone had rung.",
+      "No sooner had he arrived home when the phone rang.",
+      "No sooner he had arrived home than the phone rang."
+    ],
+    "e": "Đảo ngữ: No sooner + had + S + V3/ed + than + S + V2/ed (Vừa mới... thì đã...)."
+  },
+  {
+    "id": "TS10-U11-GR-11-0032",
+    "q": "Many / students / have / difficulty / learn / phrasal verbs.",
+    "o": [
+      "Many students have difficulty learning phrasal verbs.",
+      "Many students have difficulties to learn phrasal verbs.",
+      "Many students have difficult learning phrasal verbs.",
+      "Many students have difficulty to learn phrasal verbs."
+    ],
+    "e": "Cấu trúc: have difficulty + (in) + V-ing (Gặp khó khăn trong việc làm gì)."
+  },
+  {
+    "id": "TS10-U11-GR-11-0033",
+    "q": "We / look / forward / hear / from / you / soon.",
+    "o": [
+      "We are looking forward to hearing from you soon.",
+      "We look forward to hear from you soon.",
+      "We are looking forward hearing from you soon.",
+      "We look forward hearing from you soon."
+    ],
+    "e": "Cấu trúc: look forward to + V-ing (Mong đợi, trông ngóng điều gì đó)."
+  },
+  {
+    "id": "TS10-U11-GR-11-0034",
+    "q": "After / live / in / UK / for / a / year, / I / be / used / drive / on / the left.",
+    "o": [
+      "After living in the UK for a year, I am used to driving on the left.",
+      "After living in the UK for a year, I am used to drive on the left.",
+      "After living in the UK for a year, I used to drive on the left.",
+      "After live in the UK for a year, I am used to driving on the left."
+    ],
+    "e": "Cấu trúc: be used to + V-ing (Đã quen với việc gì ở hiện tại)."
+  },
+  {
+    "id": "TS10-U11-GR-11-0035",
+    "q": "Would / you / mind / if / I / borrow / your / dictionary?",
+    "o": [
+      "Would you mind if I borrowed your dictionary?",
+      "Would you mind if I borrow your dictionary?",
+      "Would you mind me borrow your dictionary?",
+      "Would you mind if I borrowing your dictionary?"
+    ],
+    "e": "Cấu trúc xin phép lịch sự: Would you mind if I + V(quá khứ đơn)?"
+  },
+  {
+    "id": "TS10-U11-GR-11-0036",
+    "q": "She / spend / a lot of / money / buy / clothes / every / month.",
+    "o": [
+      "She spends a lot of money buying clothes every month.",
+      "She spend a lot of money buying clothes every month.",
+      "She spends a lot of money to buy clothes every month.",
+      "She spends a lot of money buy clothes every month."
+    ],
+    "e": "Cấu trúc: spend + time/money + V-ing. Chủ ngữ 'She' nên động từ 'spend' phải thêm 's' (spends)."
+  },
+  {
+    "id": "TS10-U07-GR-07-0101",
+    "q": "Joining the club is a great way (1) _____ your health …",
+    "o": [
+      "to improve",
+      "improving",
+      "improve",
+      "improved"
+    ],
+    "e": "Cấu trúc 'a great way to do something' mang nghĩa là 'một cách tuyệt vời để làm gì đó'.",
+    "r": "R-U07-GR-07-01"
+  },
+  {
+    "id": "TS10-U07-GR-07-0102",
+    "q": "Activities: basketball, badminton, swimming, (2) _____  athletics.",
+    "o": [
+      "and",
+      "or",
+      "but",
+      "so"
+    ],
+    "e": "Liên từ 'and' (và) được dùng để nối phần tử cuối cùng trong một danh sách liệt kê các môn thể thao.",
+    "r": "R-U07-GR-07-01"
+  },
+  {
+    "id": "TS10-U07-GR-07-0103",
+    "q": "Time: every Tuesday and Thursday, (3) _____  4:00 p.m.",
+    "o": [
+      "at",
+      "in",
+      "on",
+      "for"
+    ],
+    "e": "Giới từ 'at' luôn được dùng trước các mốc thời gian cụ thể trong ngày (ví dụ: at 4:00 p.m.).",
+    "r": "R-U07-GR-07-01"
+  },
+  {
+    "id": "TS10-U07-GR-07-0104",
+    "q": "Participants: All students (4) _____ welcome, regardless of experience level.",
+    "o": [
+      "are",
+      "had been",
+      "was",
+      "were"
+    ],
+    "e": "Chủ ngữ 'All students' là số nhiều và câu này là một thông báo chung ở thì hiện tại đơn, nên dùng to-be là 'are'.",
+    "r": "R-U07-GR-07-01"
+  },
+  {
+    "id": "TS10-U07-GR-07-0105",
+    "q": "Let’s stay (5) _____  together!",
+    "o": [
+      "active",
+      "acting",
+      "action",
+      "actively"
+    ],
+    "e": "Theo sau động từ liên kết 'stay' cần một tính từ. 'active' (năng động) là tính từ duy nhất và phù hợp nghĩa.",
+    "r": "R-U07-GR-07-01"
+  },
+  {
+    "id": "TS10-U07-GR-07-0201",
+    "q": "Joining the club is a great way to practice (1) _____ with native speakers.",
+    "o": [
+      "speaking",
+      "speak",
+      "spoken",
+      "to speak"
+    ],
+    "e": "Sau động từ 'practice' cần một danh động từ (V-ing).",
+    "r": "R-U07-GR-07-02"
+  },
+  {
+    "id": "TS10-U07-GR-07-0202",
+    "q": "* Activities: playing games and (2) _____ presentations.",
+    "o": [
+      "making",
+      "taking",
+      "bringing",
+      "doing"
+    ],
+    "e": "Cụm từ cố định: make presentations (thuyết trình).",
+    "r": "R-U07-GR-07-02"
+  },
+  {
+    "id": "TS10-U07-GR-07-0203",
+    "q": "* Time: every Saturday, (3) _____ 8:00 a.m.",
+    "o": [
+      "at",
+      "for",
+      "on",
+      "in"
+    ],
+    "e": "Dùng giới từ 'at' trước một mốc thời gian giờ cụ thể (8:00 a.m).",
+    "r": "R-U07-GR-07-02"
+  },
+  {
+    "id": "TS10-U07-GR-07-0204",
+    "q": "* Participants: All students (4) _____ interested in English.",
+    "o": [
+      "are",
+      "be",
+      "is",
+      "am"
+    ],
+    "e": "Chủ ngữ 'All students' là số nhiều, đại từ quan hệ (who) được lược bỏ hoặc ngầm hiểu nên dùng to-be 'are'.",
+    "r": "R-U07-GR-07-02"
+  },
+  {
+    "id": "TS10-U07-GR-07-0205",
+    "q": "We hope to see you (5) _____!",
+    "o": [
+      "there",
+      "outside",
+      "inside",
+      "here"
+    ],
+    "e": "Cụm từ giao tiếp quen thuộc: see you there (hẹn gặp bạn ở đó).",
+    "r": "R-U07-GR-07-02"
+  },
+  {
+    "id": "TS10-U07-GR-07-0301",
+    "q": "The library will be closed for renovation from Monday (1) _____ Wednesday.",
+    "o": [
+      "to",
+      "and",
+      "from",
+      "with"
+    ],
+    "e": "Cấu trúc từ... đến...: from [Time A] to [Time B].",
+    "r": "R-U07-GR-07-03"
+  },
+  {
+    "id": "TS10-U07-GR-07-0302",
+    "q": "Please return all borrowed books (2) _____ Friday afternoon.",
+    "o": [
+      "before",
+      "while",
+      "in",
+      "after"
+    ],
+    "e": "Dựa vào ngữ cảnh cần trả sách 'trước' chiều thứ Sáu -> 'before'.",
+    "r": "R-U07-GR-07-03"
+  },
+  {
+    "id": "TS10-U07-GR-07-0303",
+    "q": "If you need to (3) _____ books, visit the online library.",
+    "o": [
+      "read",
+      "to read",
+      "reads",
+      "reading"
+    ],
+    "e": "Sau cấu trúc 'need to' cần một động từ nguyên thể (V-inf).",
+    "r": "R-U07-GR-07-03"
+  },
+  {
+    "id": "TS10-U07-GR-07-0304",
+    "q": "(4) _____, the study rooms will remain open.",
+    "o": [
+      "However",
+      "Because",
+      "Therefore",
+      "Although"
+    ],
+    "e": "Trạng từ chỉ sự đối lập 'However' (Tuy nhiên) đứng đầu câu, ngăn cách với mệnh đề chính bằng dấu phẩy.",
+    "r": "R-U07-GR-07-03"
+  },
+  {
+    "id": "TS10-U07-GR-07-0305",
+    "q": "Thank you (5) _____ your cooperation!",
+    "o": [
+      "for",
+      "with",
+      "of",
+      "about"
+    ],
+    "e": "Cấu trúc cảm ơn vì điều gì: Thank you for + Noun/V-ing.",
+    "r": "R-U07-GR-07-03"
+  },
+  {
+    "id": "TS10-U07-GR-07-0401",
+    "q": "We are looking for enthusiastic students to (1) _____ our summer campaign.",
+    "o": [
+      "join",
+      "take part",
+      "participate",
+      "join in"
+    ],
+    "e": "Động từ 'join' mang trực tiếp tân ngữ (our summer campaign) mà không cần giới từ. (take part và participate cần 'in').",
+    "r": "R-U07-GR-07-04"
+  },
+  {
+    "id": "TS10-U07-GR-07-0402",
+    "q": "* Activities: planting trees and helping (2) _____ elderly.",
+    "o": [
+      "the",
+      "an",
+      "a",
+      "no article"
+    ],
+    "e": "Cấu trúc: the + tính từ (the elderly) dùng để chỉ một nhóm người (những người cao tuổi).",
+    "r": "R-U07-GR-07-04"
+  },
+  {
+    "id": "TS10-U07-GR-07-0403",
+    "q": "* Benefits: making friends and receiving a (3) _____ of participation.",
+    "o": [
+      "certificate",
+      "degree",
+      "paper",
+      "card"
+    ],
+    "e": "Cụm danh từ cố định: a certificate of participation (giấy chứng nhận tham gia).",
+    "r": "R-U07-GR-07-04"
+  },
+  {
+    "id": "TS10-U07-GR-07-0404",
+    "q": "* Meeting point: the school gate (4) _____ Sunday morning.",
+    "o": [
+      "on",
+      "for",
+      "in",
+      "at"
+    ],
+    "e": "Giới từ 'on' dùng trước buổi của một ngày cụ thể trong tuần (on Sunday morning).",
+    "r": "R-U07-GR-07-04"
+  },
+  {
+    "id": "TS10-U07-GR-07-0405",
+    "q": "Let's work together to make our community a (5) _____ place!",
+    "o": [
+      "better",
+      "best",
+      "good",
+      "well"
+    ],
+    "e": "Sử dụng so sánh hơn để mang ý nghĩa tích cực: make our community a better place (một nơi tốt đẹp hơn).",
+    "r": "R-U07-GR-07-04"
+  },
+  {
+    "id": "TS10-U07-GR-07-0501",
+    "q": "Are you good at singing or playing a musical (1) _____?",
+    "o": [
+      "instrument",
+      "machine",
+      "tool",
+      "device"
+    ],
+    "e": "Cụm từ cố định: musical instrument (nhạc cụ).",
+    "r": "R-U07-GR-07-05"
+  },
+  {
+    "id": "TS10-U07-GR-07-0502",
+    "q": "* Prizes: The winner will (2) _____ a cash prize.",
+    "o": [
+      "receive",
+      "take",
+      "give",
+      "borrow"
+    ],
+    "e": "Ngữ nghĩa phù hợp: receive a cash prize (nhận một giải thưởng tiền mặt).",
+    "r": "R-U07-GR-07-05"
+  },
+  {
+    "id": "TS10-U07-GR-07-0503",
+    "q": "Don't (3) _____ this great opportunity.",
+    "o": [
+      "miss",
+      "drop",
+      "lose",
+      "fail"
+    ],
+    "e": "Cụm từ: miss an opportunity (bỏ lỡ một cơ hội).",
+    "r": "R-U07-GR-07-05"
+  },
+  {
+    "id": "TS10-U07-GR-07-0504",
+    "q": "The deadline (4) _____ registration is Monday.",
+    "o": [
+      "for",
+      "to",
+      "about",
+      "of"
+    ],
+    "e": "Cụm từ cố định: the deadline for something (hạn chót cho việc gì).",
+    "r": "R-U07-GR-07-05"
+  },
+  {
+    "id": "TS10-U07-GR-07-0505",
+    "q": "Bring your friends to (5) _____ you!",
+    "o": [
+      "support",
+      "supporting",
+      "to support",
+      "supported"
+    ],
+    "e": "Động từ mang nghĩa cổ vũ, ủng hộ tinh thần: support.",
+    "r": "R-U07-GR-07-05"
+  },
+  {
+    "id": "TS10-U07-GR-07-0601",
+    "q": "Discover the (1) _____ of science.",
+    "o": [
+      "wonders",
+      "wonder",
+      "wonderfully",
+      "wonderful"
+    ],
+    "e": "Sau mạo từ 'the' và trước giới từ 'of' cần danh từ ('wonders': những điều kỳ diệu).",
+    "r": "R-U07-GR-07-06"
+  },
+  {
+    "id": "TS10-U07-GR-07-0602",
+    "q": "* Activities: watching experiments and (2) _____ part in quizzes.",
+    "o": [
+      "taking",
+      "getting",
+      "having",
+      "making"
+    ],
+    "e": "Cấu trúc song song, nối bởi 'and' với từ 'watching' phía trước nên cần V-ing. Cụm từ: take part in (tham gia vào).",
+    "r": "R-U07-GR-07-06"
+  },
+  {
+    "id": "TS10-U07-GR-07-0603",
+    "q": "If you have a project, you can display (3) _____ at our exhibition.",
+    "o": [
+      "it",
+      "they",
+      "them",
+      "its"
+    ],
+    "e": "Đại từ 'it' thay thế cho danh từ số ít 'a project' ở mệnh đề trước.",
+    "r": "R-U07-GR-07-06"
+  },
+  {
+    "id": "TS10-U07-GR-07-0604",
+    "q": "The most creative project (4) _____ awarded a big prize.",
+    "o": [
+      "will be",
+      "will",
+      "is",
+      "be"
+    ],
+    "e": "Thể bị động ở tương lai đơn: will be + V3/ed (sẽ được trao thưởng).",
+    "r": "R-U07-GR-07-06"
+  },
+  {
+    "id": "TS10-U07-GR-07-0605",
+    "q": "(5) _____ a scientist for a day!",
+    "o": [
+      "Be",
+      "Being",
+      "To be",
+      "Been"
+    ],
+    "e": "Câu mệnh lệnh khẳng định bắt đầu bằng một động từ nguyên thể (Be a scientist: Hãy trở thành nhà khoa học).",
+    "r": "R-U07-GR-07-06"
+  },
+  {
+    "id": "TS10-U07-GR-07-0701",
+    "q": "Let's celebrate Earth Day by keeping our environment (1) _____!",
+    "o": [
+      "clean",
+      "cleaner",
+      "cleanly",
+      "cleaning"
+    ],
+    "e": "Cấu trúc keep + O + adj (giữ cho môi trường sạch sẽ).",
+    "r": "R-U07-GR-07-07"
+  },
+  {
+    "id": "TS10-U07-GR-07-0702",
+    "q": "* What to bring: gloves, trash bags, (2) _____ water.",
+    "o": [
+      "and",
+      "so",
+      "but",
+      "or"
+    ],
+    "e": "Liên từ 'and' dùng để nối phần tử cuối cùng trong một danh sách liệt kê.",
+    "r": "R-U07-GR-07-07"
+  },
+  {
+    "id": "TS10-U07-GR-07-0703",
+    "q": "Each team will be (3) _____ for a specific area.",
+    "o": [
+      "responsible",
+      "suitable",
+      "careful",
+      "available"
+    ],
+    "e": "Cấu trúc cố định: be responsible for (chịu trách nhiệm cho khu vực nào đó).",
+    "r": "R-U07-GR-07-07"
+  },
+  {
+    "id": "TS10-U07-GR-07-0704",
+    "q": "After the work, we will have a picnic (4) _____ the trees.",
+    "o": [
+      "under",
+      "inside",
+      "on",
+      "above"
+    ],
+    "e": "Giới từ 'under' (dưới). Nghĩa: dưới bóng cây.",
+    "r": "R-U07-GR-07-07"
+  },
+  {
+    "id": "TS10-U07-GR-07-0705",
+    "q": "Please invite friends because many hands make light (5) _____.",
+    "o": [
+      "work",
+      "works",
+      "worker",
+      "working"
+    ],
+    "e": "Thành ngữ tiếng Anh: 'Many hands make light work' (Nhiều người làm thì công việc nhẹ nhàng/Một cây làm chẳng nên non...).",
+    "r": "R-U07-GR-07-07"
+  },
+  {
+    "id": "TS10-U07-GR-07-0801",
+    "q": "* Purpose: to learn (1) _____ local history.",
+    "o": [
+      "about",
+      "of",
+      "on",
+      "for"
+    ],
+    "e": "Cấu trúc: learn about something (học, tìm hiểu về vấn đề gì).",
+    "r": "R-U07-GR-07-08"
+  },
+  {
+    "id": "TS10-U07-GR-07-0802",
+    "q": "Students must wear their school (2) _____ during the trip.",
+    "o": [
+      "uniforms",
+      "uniform",
+      "clothing",
+      "clothes"
+    ],
+    "e": "Cụm từ: school uniforms (đồng phục học sinh, dùng số nhiều vì chủ ngữ là students số nhiều).",
+    "r": "R-U07-GR-07-08"
+  },
+  {
+    "id": "TS10-U07-GR-07-0803",
+    "q": "Please ask your parents to sign the permission (3) _____ and return it.",
+    "o": [
+      "form",
+      "letter",
+      "paper",
+      "note"
+    ],
+    "e": "Cụm danh từ: permission form (giấy/mẫu đơn xin phép).",
+    "r": "R-U07-GR-07-08"
+  },
+  {
+    "id": "TS10-U07-GR-07-0804",
+    "q": "You should bring a notebook to (4) _____ down information.",
+    "o": [
+      "write",
+      "keep",
+      "put",
+      "take"
+    ],
+    "e": "Cụm động từ: write down (ghi chép lại).",
+    "r": "R-U07-GR-07-08"
+  },
+  {
+    "id": "TS10-U07-GR-07-0805",
+    "q": "It will be an (5) _____ trip!",
+    "o": [
+      "exciting",
+      "excite",
+      "excited",
+      "excitedly"
+    ],
+    "e": "Cần tính từ chỉ bản chất sự vật (chuyến đi). 'Exciting' (thú vị) phù hợp vì nó đứng sau mạo từ 'an'.",
+    "r": "R-U07-GR-07-08"
+  },
+  {
+    "id": "TS10-U07-GR-07-0901",
+    "q": "* Requirements: Your artwork must be drawn (1) _____ A3 paper.",
+    "o": [
+      "on",
+      "with",
+      "at",
+      "in"
+    ],
+    "e": "Giới từ 'on' dùng cho bề mặt (on paper: vẽ trên giấy).",
+    "r": "R-U07-GR-07-09"
+  },
+  {
+    "id": "TS10-U07-GR-07-0902",
+    "q": "* Submission: Submit to the Art Room (2) _____ October 15th.",
+    "o": [
+      "by",
+      "since",
+      "to",
+      "until"
+    ],
+    "e": "Giới từ 'by' mang nghĩa là trước/chậm nhất là vào lúc (chỉ thời hạn/deadline).",
+    "r": "R-U07-GR-07-09"
+  },
+  {
+    "id": "TS10-U07-GR-07-0903",
+    "q": "The best artworks will be (3) _____ on the notice board.",
+    "o": [
+      "displayed",
+      "display",
+      "displaying",
+      "displays"
+    ],
+    "e": "Cấu trúc bị động: will be + V3/ed (sẽ được trưng bày).",
+    "r": "R-U07-GR-07-09"
+  },
+  {
+    "id": "TS10-U07-GR-07-0904",
+    "q": "The first prize is a set of painting (4) _____.",
+    "o": [
+      "tools",
+      "engines",
+      "machines",
+      "things"
+    ],
+    "e": "Cụm từ: painting tools (dụng cụ vẽ tranh).",
+    "r": "R-U07-GR-07-09"
+  },
+  {
+    "id": "TS10-U07-GR-07-0905",
+    "q": "(5) _____ luck to all participants!",
+    "o": [
+      "Good",
+      "Better",
+      "Best",
+      "Great"
+    ],
+    "e": "Cụm từ giao tiếp quen thuộc: Good luck (Chúc may mắn).",
+    "r": "R-U07-GR-07-09"
+  },
+  {
+    "id": "TS10-U07-GR-07-1001",
+    "q": "* Rule: For every book you bring, you can (1) _____ another book home.",
+    "o": [
+      "take",
+      "keep",
+      "carry",
+      "hold"
+    ],
+    "e": "Cụm động từ: take something home (mang cái gì về nhà).",
+    "r": "R-U07-GR-07-10"
+  },
+  {
+    "id": "TS10-U07-GR-07-1002",
+    "q": "* Types: storybooks, comics (no textbooks, (2) _____).",
+    "o": [
+      "please",
+      "welcome",
+      "sorry",
+      "thanks"
+    ],
+    "e": "Từ 'please' (vui lòng) thường được thêm vào các quy định/ghi chú để diễn đạt lịch sự (Vui lòng không mang sách giáo khoa).",
+    "r": "R-U07-GR-07-10"
+  },
+  {
+    "id": "TS10-U07-GR-07-1003",
+    "q": "This is a great way to read without (3) _____ any money.",
+    "o": [
+      "spending",
+      "spent",
+      "spend",
+      "to spend"
+    ],
+    "e": "Sau giới từ 'without' cần một danh động từ V-ing (mà không tiêu tốn tiền).",
+    "r": "R-U07-GR-07-10"
+  },
+  {
+    "id": "TS10-U07-GR-07-1004",
+    "q": "It also helps to save trees by (4) _____ paper.",
+    "o": [
+      "reusing",
+      "returning",
+      "recycling",
+      "reducing"
+    ],
+    "e": "Từ vựng phù hợp ngữ cảnh: reusing paper (tái sử dụng giấy - để cứu lấy cây xanh).",
+    "r": "R-U07-GR-07-10"
+  },
+  {
+    "id": "TS10-U07-GR-07-1005",
+    "q": "Come and share your love (5) _____ reading!",
+    "o": [
+      "for",
+      "with",
+      "of",
+      "to"
+    ],
+    "e": "Cụm từ: love for something (tình yêu dành cho cái gì).",
+    "r": "R-U07-GR-07-10"
+  },
+  {
+    "id": "TS10-U08-GR-08-0101",
+    "q": "What is the passage mainly about?",
+    "o": [
+      "A school trip to a traditional craft village",
+      "A history of Bat Trang village",
+      "Buying souvenirs for mothers",
+      "How to make a ceramic cup"
+    ],
+    "e": "Câu hỏi ý chính: Toàn bộ đoạn văn kể về chuyến đi ngoại khóa của lớp đến làng nghề gốm Bát Tràng.",
+    "r": "R-U08-GR-08-01"
+  },
+  {
+    "id": "TS10-U08-GR-08-0102",
+    "q": "The word 'fascinating' in paragraph 1 is CLOSEST in meaning to ______.",
+    "o": [
+      "interesting",
+      "terrible",
+      "tiring",
+      "boring"
+    ],
+    "e": "Từ 'fascinating' mang nghĩa là vô cùng hấp dẫn, thú vị, đồng nghĩa với 'interesting'.",
+    "r": "R-U08-GR-08-01"
+  },
+  {
+    "id": "TS10-U08-GR-08-0103",
+    "q": "The word 'they' in paragraph 1 refers to ______.",
+    "o": [
+      "the artisans",
+      "the hands",
+      "the products",
+      "the vases"
+    ],
+    "e": "Đại từ 'they' thay thế cho danh từ số nhiều chỉ người 'the artisans' (những người thợ thủ công) ở vế câu trước đó.",
+    "r": "R-U08-GR-08-01"
+  },
+  {
+    "id": "TS10-U08-GR-08-0104",
+    "q": "The word 'traditional' in paragraph 1 is OPPOSITE in meaning to ______.",
+    "o": [
+      "modern",
+      "historic",
+      "ancient",
+      "old"
+    ],
+    "e": "Từ 'traditional' (truyền thống, cổ truyền) trái nghĩa với 'modern' (hiện đại).",
+    "r": "R-U08-GR-08-01"
+  },
+  {
+    "id": "TS10-U08-GR-08-0105",
+    "q": "According to the passage, which of the following is NOT TRUE?",
+    "o": [
+      "The writer's cup was beautifully perfect.",
+      "The students traveled there by bus.",
+      "The village is famous for ceramics.",
+      "The writer bought a vase for his mother."
+    ],
+    "e": "Đoạn văn viết 'although it was not perfect' (mặc dù nó không hoàn hảo), nên nói chiếc cốc hoàn hảo là SAI.",
+    "r": "R-U08-GR-08-01"
+  },
+  {
+    "id": "TS10-U08-GR-08-0106",
+    "q": "According to the passage, why did the writer buy a lovely vase?",
+    "o": [
+      "Because his mother loves flowers.",
+      "Because it was very cheap.",
+      "Because he broke his mother's vase.",
+      "Because the artisan gave it to him."
+    ],
+    "e": "Chi tiết trong bài: 'I bought a lovely vase as a souvenir for my mother because she loves flowers'.",
+    "r": "R-U08-GR-08-01"
+  },
+  {
+    "id": "TS10-U08-GR-08-0201",
+    "q": "What is the passage mainly about?",
+    "o": [
+      "The wonderful benefits of reading books",
+      "The best time to read a book",
+      "How to improve writing skills",
+      "Why students prefer watching videos"
+    ],
+    "e": "Đoạn văn liệt kê các lợi ích của việc đọc sách: mở rộng kiến thức, giảm căng thẳng, tăng vốn từ...",
+    "r": "R-U08-GR-08-02"
+  },
+  {
+    "id": "TS10-U08-GR-08-0202",
+    "q": "The word 'broadens' in paragraph 1 is CLOSEST in meaning to ______.",
+    "o": [
+      "expands",
+      "stops",
+      "forgets",
+      "limits"
+    ],
+    "e": "Từ 'broaden' (mở rộng) đồng nghĩa với 'expand'.",
+    "r": "R-U08-GR-08-02"
+  },
+  {
+    "id": "TS10-U08-GR-08-0203",
+    "q": "The word 'It' in paragraph 1 refers to ______.",
+    "o": [
+      "Reading a good story",
+      "Working",
+      "A peaceful sleep",
+      "Studying"
+    ],
+    "e": "Đại từ 'It' thay thế cho việc 'getting lost in a good story' (đọc một câu chuyện hay) giúp thư giãn tâm trí.",
+    "r": "R-U08-GR-08-02"
+  },
+  {
+    "id": "TS10-U08-GR-08-0204",
+    "q": "The word 'reduce' in paragraph 1 is OPPOSITE in meaning to ______.",
+    "o": [
+      "increase",
+      "prevent",
+      "decrease",
+      "remove"
+    ],
+    "e": "Từ 'reduce' (giảm bớt) trái nghĩa với 'increase' (làm tăng lên).",
+    "r": "R-U08-GR-08-02"
+  },
+  {
+    "id": "TS10-U08-GR-08-0205",
+    "q": "According to the passage, which of the following is NOT TRUE?",
+    "o": [
+      "Reading makes our brain stop thinking actively.",
+      "Reading improves our vocabulary.",
+      "Reading helps to reduce daily stress.",
+      "We should read at least thirty minutes a day."
+    ],
+    "e": "Bài đọc nói 'reading requires active thinking' (đọc sách đòi hỏi suy nghĩ tích cực), nên nói đọc sách làm não ngừng suy nghĩ là SAI.",
+    "r": "R-U08-GR-08-02"
+  },
+  {
+    "id": "TS10-U08-GR-08-0206",
+    "q": "According to the passage, why does reading help us before sleep?",
+    "o": [
+      "Because it relaxes our mind and makes us forget daily worries.",
+      "Because we can watch videos at the same time.",
+      "Because it teaches us scientific discoveries.",
+      "Because it requires a lot of active thinking."
+    ],
+    "e": "Chi tiết trong bài: 'It relaxes our mind and prepares us for a peaceful sleep'.",
+    "r": "R-U08-GR-08-02"
+  },
+  {
+    "id": "TS10-U08-GR-08-0301",
+    "q": "What is the passage mainly about?",
+    "o": [
+      "A memorable camping trip in a national park",
+      "How to set up a tent",
+      "Singing around a campfire",
+      "Wild animals in the forest"
+    ],
+    "e": "Đoạn văn kể về trải nghiệm chuyến đi cắm trại của tác giả và bạn bè.",
+    "r": "R-U08-GR-08-03"
+  },
+  {
+    "id": "TS10-U08-GR-08-0302",
+    "q": "The word 'set up' in paragraph 1 is CLOSEST in meaning to ______.",
+    "o": [
+      "put up",
+      "leave",
+      "destroy",
+      "buy"
+    ],
+    "e": "Cụm từ 'set up a tent' (dựng lều) đồng nghĩa với 'put up a tent'.",
+    "r": "R-U08-GR-08-03"
+  },
+  {
+    "id": "TS10-U08-GR-08-0303",
+    "q": "The word 'they' in paragraph 1 refers to ______.",
+    "o": [
+      "the writer and his friends",
+      "the bright stars",
+      "the colorful birds",
+      "the wild monkeys"
+    ],
+    "e": "Từ 'we' (chuyển thành 'they' trong câu hỏi) chỉ nhóm bạn của tác giả đi cắm trại.",
+    "r": "R-U08-GR-08-03"
+  },
+  {
+    "id": "TS10-U08-GR-08-0304",
+    "q": "The word 'memorable' in the passage's topic is OPPOSITE in meaning to ______.",
+    "o": [
+      "forgettable",
+      "unforgettable",
+      "wonderful",
+      "interesting"
+    ],
+    "e": "Từ 'memorable' (đáng nhớ) trái nghĩa với 'forgettable' (dễ quên, đáng quên).",
+    "r": "R-U08-GR-08-03"
+  },
+  {
+    "id": "TS10-U08-GR-08-0305",
+    "q": "According to the passage, which of the following is NOT TRUE?",
+    "o": [
+      "They set up the tent perfectly in five minutes.",
+      "They roasted marshmallows around the campfire.",
+      "They arrived at the national park early in the morning.",
+      "They saw a wild monkey jumping in the forest."
+    ],
+    "e": "Bài đọc nói 'It took us nearly an hour', dựng lều mất gần 1 tiếng, nên nói dựng trong 5 phút là SAI.",
+    "r": "R-U08-GR-08-03"
+  },
+  {
+    "id": "TS10-U08-GR-08-0306",
+    "q": "According to the passage, why did they enjoy the trip so much?",
+    "o": [
+      "Because it was a great chance to connect with nature and relax.",
+      "Because they slept during the whole trip.",
+      "Because they caught a wild monkey.",
+      "Because they stayed in a luxury hotel."
+    ],
+    "e": "Chi tiết trong bài: 'We enjoyed the trip so much because it was a great chance to connect with nature and relax'.",
+    "r": "R-U08-GR-08-03"
+  },
+  {
+    "id": "TS10-U08-GR-08-0401",
+    "q": "What is the passage mainly about?",
+    "o": [
+      "The importance and benefits of eating breakfast",
+      "Why teenagers sleep late",
+      "The negative effects of eating too much",
+      "How to cook eggs and milk"
+    ],
+    "e": "Đoạn văn nhấn mạnh tầm quan trọng của bữa sáng đối với cơ thể và học tập.",
+    "r": "R-U08-GR-08-04"
+  },
+  {
+    "id": "TS10-U08-GR-08-0402",
+    "q": "The word 'essential' in paragraph 1 is CLOSEST in meaning to ______.",
+    "o": [
+      "necessary",
+      "unimportant",
+      "harmful",
+      "useless"
+    ],
+    "e": "Từ 'essential' (thiết yếu, cần thiết) đồng nghĩa với 'necessary'.",
+    "r": "R-U08-GR-08-04"
+  },
+  {
+    "id": "TS10-U08-GR-08-0403",
+    "q": "The word 'their' in paragraph 1 refers to ______.",
+    "o": [
+      "the teenagers'",
+      "the teachers'",
+      "the vitamins'",
+      "the scientists'"
+    ],
+    "e": "Đại từ 'their' trong đoạn thay thế cho danh từ 'teenagers' (thanh thiếu niên).",
+    "r": "R-U08-GR-08-04"
+  },
+  {
+    "id": "TS10-U08-GR-08-0404",
+    "q": "The word 'skip' in paragraph 1 is OPPOSITE in meaning to ______.",
+    "o": [
+      "eat",
+      "miss",
+      "forget",
+      "leave"
+    ],
+    "e": "Trong ngữ cảnh 'skip meals' (bỏ bữa), từ trái nghĩa của nó là 'eat' (ăn).",
+    "r": "R-U08-GR-08-04"
+  },
+  {
+    "id": "TS10-U08-GR-08-0405",
+    "q": "According to the passage, which of the following is NOT TRUE?",
+    "o": [
+      "Skipping breakfast helps students get better grades.",
+      "Breakfast provides energy to start a new day.",
+      "Many teenagers skip breakfast because of lacking time.",
+      "A simple breakfast can be prepared the night before."
+    ],
+    "e": "Bài đọc ghi ăn sáng đàng hoàng mới điểm cao, bỏ bữa (skipping) dẫn đến mệt mỏi, nên câu Option 1 là SAI so với bài.",
+    "r": "R-U08-GR-08-04"
+  },
+  {
+    "id": "TS10-U08-GR-08-0406",
+    "q": "According to the passage, why do many teenagers skip breakfast?",
+    "o": [
+      "Because they wake up late and do not have enough time.",
+      "Because they do not like eating bread or eggs.",
+      "Because scientists advise them to do so.",
+      "Because breakfast makes them tired."
+    ],
+    "e": "Chi tiết trong bài: 'many teenagers often skip breakfast because they wake up late and do not have enough time before school'.",
+    "r": "R-U08-GR-08-04"
+  },
+  {
+    "id": "TS10-U08-GR-08-0501",
+    "q": "What is the passage mainly about?",
+    "o": [
+      "The writer's favorite hobby of gardening",
+      "Dealing with insects in the garden",
+      "The history of daisies",
+      "How to buy safe vegetables in the market"
+    ],
+    "e": "Đoạn văn kể về sở thích làm vườn của tác giả.",
+    "r": "R-U08-GR-08-05"
+  },
+  {
+    "id": "TS10-U08-GR-08-0502",
+    "q": "The word 'rewarding' in paragraph 1 is CLOSEST in meaning to ______.",
+    "o": [
+      "satisfying",
+      "disappointing",
+      "boring",
+      "terrible"
+    ],
+    "e": "Từ 'rewarding' (bổ ích, thỏa mãn) đồng nghĩa với 'satisfying'.",
+    "r": "R-U08-GR-08-05"
+  },
+  {
+    "id": "TS10-U08-GR-08-0503",
+    "q": "The word 'which' in paragraph 1 refers to ______.",
+    "o": [
+      "gardening",
+      "daisies",
+      "vegetables",
+      "insects"
+    ],
+    "e": "Đại từ quan hệ 'which' (trong cấu trúc 'gardening... which requires') thay thế cho việc làm vườn (gardening).",
+    "r": "R-U08-GR-08-05"
+  },
+  {
+    "id": "TS10-U08-GR-08-0504",
+    "q": "The word 'patient' in paragraph 1 is OPPOSITE in meaning to ______.",
+    "o": [
+      "impatient",
+      "careful",
+      "healthy",
+      "calm"
+    ],
+    "e": "Từ 'patient' (kiên nhẫn) trái nghĩa với 'impatient' (thiếu kiên nhẫn, nóng vội).",
+    "r": "R-U08-GR-08-05"
+  },
+  {
+    "id": "TS10-U08-GR-08-0505",
+    "q": "According to the passage, which of the following is NOT TRUE?",
+    "o": [
+      "The writer dislikes eating tomatoes and cucumbers.",
+      "Gardening requires physical effort.",
+      "The writer grows organic vegetables behind the house.",
+      "The hobby started when the writer received a pot of daisies."
+    ],
+    "e": "Bài đọc ghi 'I love eating the fresh tomatoes and cucumbers', nên nói 'dislikes' (ghét) là SAI.",
+    "r": "R-U08-GR-08-05"
+  },
+  {
+    "id": "TS10-U08-GR-08-0506",
+    "q": "According to the passage, why does the writer prefer home-grown vegetables?",
+    "o": [
+      "Because they are safer and tastier than those in the market.",
+      "Because they look ugly.",
+      "Because they grow faster than weeds.",
+      "Because they are more expensive to sell."
+    ],
+    "e": "Chi tiết trong bài: 'because they are much safer and tastier than those bought in the market'.",
+    "r": "R-U08-GR-08-05"
+  },
+  {
+    "id": "TS10-U08-GR-08-0601",
+    "q": "What is the passage mainly about?",
+    "o": [
+      "A volunteer campaign to clean up a local beach",
+      "The dangers of marine life",
+      "A school trip to an island",
+      "How to catch fish using nets"
+    ],
+    "e": "Đoạn văn mô tả chiến dịch tình nguyện dọn rác bãi biển của trường học.",
+    "r": "R-U08-GR-08-06"
+  },
+  {
+    "id": "TS10-U08-GR-08-0602",
+    "q": "The word 'gathered' in paragraph 1 is CLOSEST in meaning to ______.",
+    "o": [
+      "assembled",
+      "separated",
+      "destroyed",
+      "left"
+    ],
+    "e": "Từ 'gather' (tập trung, tụ tập) đồng nghĩa với 'assemble'.",
+    "r": "R-U08-GR-08-06"
+  },
+  {
+    "id": "TS10-U08-GR-08-0603",
+    "q": "The word 'It' in paragraph 1 refers to ______.",
+    "o": [
+      "Seeing how much trash was left on the sand",
+      "Dividing into small groups",
+      "Working for three hours",
+      "Taking buses"
+    ],
+    "e": "Đại từ 'It' (trong 'It was shocking to see...') là chủ ngữ giả thay thế cho việc nhìn thấy lượng rác khổng lồ trên cát.",
+    "r": "R-U08-GR-08-06"
+  },
+  {
+    "id": "TS10-U08-GR-08-0604",
+    "q": "The word 'cleaner' in paragraph 1 is OPPOSITE in meaning to ______.",
+    "o": [
+      "dirtier",
+      "safer",
+      "brighter",
+      "nicer"
+    ],
+    "e": "Từ 'cleaner' (sạch hơn) trái nghĩa với 'dirtier' (bẩn hơn).",
+    "r": "R-U08-GR-08-06"
+  },
+  {
+    "id": "TS10-U08-GR-08-0605",
+    "q": "According to the passage, which of the following is NOT TRUE?",
+    "o": [
+      "Only five students participated in the campaign.",
+      "They collected plastic bottles and food wrappers.",
+      "The volunteers worked hard for three hours.",
+      "The groups were given trash bags and gloves."
+    ],
+    "e": "Bài đọc ghi 'More than two hundred students and teachers participated', nên nói chỉ có 5 học sinh là SAI.",
+    "r": "R-U08-GR-08-06"
+  },
+  {
+    "id": "TS10-U08-GR-08-0606",
+    "q": "According to the passage, why did the school organize this campaign?",
+    "o": [
+      "To raise awareness of environmental protection.",
+      "To find lost fishing nets.",
+      "To have a swimming competition.",
+      "To sell plastic bottles for money."
+    ],
+    "e": "Chi tiết trong bài: 'because we wanted to raise people's awareness of environmental protection'.",
+    "r": "R-U08-GR-08-06"
+  },
+  {
+    "id": "TS10-U08-GR-08-0701",
+    "q": "What is the passage mainly about?",
+    "o": [
+      "The benefits and drawbacks of using smartphones",
+      "Why teenagers shouldn't talk to their families",
+      "The history of modern mini-computers",
+      "How to repair a broken smartphone"
+    ],
+    "e": "Đoạn văn nói về vai trò của điện thoại thông minh (lợi ích) và những tác hại nếu dùng quá nhiều.",
+    "r": "R-U07-GR-07-07"
+  },
+  {
+    "id": "TS10-U08-GR-08-0702",
+    "q": "The word 'convenient' in paragraph 1 is CLOSEST in meaning to ______.",
+    "o": [
+      "handy",
+      "useless",
+      "terrible",
+      "difficult"
+    ],
+    "e": "Từ 'convenient' (tiện lợi) đồng nghĩa với 'handy'.",
+    "r": "R-U07-GR-07-07"
+  },
+  {
+    "id": "TS10-U08-GR-08-0703",
+    "q": "The word 'which' in paragraph 1 refers to ______.",
+    "o": [
+      "spending hours staring at screens",
+      "making phone calls",
+      "reading news",
+      "staying connected"
+    ],
+    "e": "Đại từ 'which' thay thế cho cả mệnh đề phía trước 'spending hours staring at their screens' (việc dành hàng giờ nhìn vào màn hình).",
+    "r": "R-U07-GR-07-07"
+  },
+  {
+    "id": "TS10-U08-GR-08-0704",
+    "q": "The word 'connect' in paragraph 1 is OPPOSITE in meaning to ______.",
+    "o": [
+      "disconnect",
+      "join",
+      "combine",
+      "link"
+    ],
+    "e": "Từ 'connect' (kết nối) trái nghĩa với 'disconnect' (ngắt kết nối).",
+    "r": "R-U07-GR-07-07"
+  },
+  {
+    "id": "TS10-U08-GR-08-0705",
+    "q": "According to the passage, which of the following is NOT TRUE?",
+    "o": [
+      "Smartphones have no negative effects on our health.",
+      "Staring at screens too much can harm eyesight.",
+      "Smartphones can be used to access the Internet.",
+      "It is important to limit our screen time."
+    ],
+    "e": "Đoạn văn nêu rõ điện thoại thông minh có thể gây hại mắt, thiếu ngủ, nên nói nó không có tác động tiêu cực (no negative effects) là SAI.",
+    "r": "R-U07-GR-07-07"
+  },
+  {
+    "id": "TS10-U08-GR-08-0706",
+    "q": "According to the passage, why should we limit our screen time?",
+    "o": [
+      "To maintain a healthy lifestyle and face-to-face interactions.",
+      "To avoid paying high internet bills.",
+      "Because mini-computers are very heavy.",
+      "To save battery power for the next day."
+    ],
+    "e": "Chi tiết trong bài: 'limit our screen time to maintain a healthy lifestyle' và tránh giảm 'face-to-face interactions'.",
+    "r": "R-U07-GR-07-07"
+  },
+  {
+    "id": "TS10-U08-GR-08-0801",
+    "q": "What is the passage mainly about?",
+    "o": [
+      "The numerous benefits of learning a foreign language",
+      "How to travel abroad cheaply",
+      "Why international companies pay high salaries",
+      "The history of the English language"
+    ],
+    "e": "Đoạn văn nói về các lợi ích tuyệt vời của việc học ngoại ngữ, đặc biệt là tiếng Anh.",
+    "r": "R-U08-GR-08-08"
+  },
+  {
+    "id": "TS10-U08-GR-08-0802",
+    "q": "The word 'opportunities' in paragraph 1 is CLOSEST in meaning to ______.",
+    "o": [
+      "chances",
+      "problems",
+      "challenges",
+      "failures"
+    ],
+    "e": "Từ 'opportunities' (cơ hội) đồng nghĩa với 'chances'.",
+    "r": "R-U08-GR-08-08"
+  },
+  {
+    "id": "TS10-U08-GR-08-0803",
+    "q": "The word 'It' in paragraph 1 refers to ______.",
+    "o": [
+      "Learning a new language",
+      "The globalized world",
+      "An international company",
+      "A top university"
+    ],
+    "e": "Đại từ 'It' (trong câu 'It improves our memory') thay thế cho 'learning a new language' ở câu trước.",
+    "r": "R-U08-GR-08-08"
+  },
+  {
+    "id": "TS10-U08-GR-08-0804",
+    "q": "The word 'confident' in paragraph 1 is OPPOSITE in meaning to ______.",
+    "o": [
+      "insecure",
+      "sure",
+      "proud",
+      "brave"
+    ],
+    "e": "Từ 'confident' (tự tin) trái nghĩa với 'insecure' (thiếu tự tin, bất an).",
+    "r": "R-U08-GR-08-08"
+  },
+  {
+    "id": "TS10-U08-GR-08-0805",
+    "q": "According to the passage, which of the following is NOT TRUE?",
+    "o": [
+      "Learning a foreign language is always quick and easy.",
+      "Studying a language improves memory.",
+      "You can learn about customs and culture through language.",
+      "English is required by many top universities."
+    ],
+    "e": "Bài đọc ghi 'mastering a foreign language can be difficult and takes a lot of time', nên nói việc học luôn nhanh và dễ là SAI.",
+    "r": "R-U08-GR-08-08"
+  },
+  {
+    "id": "TS10-U08-GR-08-0806",
+    "q": "According to the passage, why is learning a foreign language good for the brain?",
+    "o": [
+      "Because it improves memory and problem-solving skills.",
+      "Because you don't have to think actively.",
+      "Because it requires a lot of money.",
+      "Because it makes you sleep better at night."
+    ],
+    "e": "Chi tiết trong bài: 'It improves our memory and enhances our problem-solving skills'.",
+    "r": "R-U08-GR-08-08"
+  },
+  {
+    "id": "TS10-U08-GR-08-0901",
+    "q": "What is the passage mainly about?",
+    "o": [
+      "An exciting school trip to the city zoo",
+      "A sunny day in the city center",
+      "The importance of animal conservation",
+      "How to feed monkeys and crocodiles"
+    ],
+    "e": "Đoạn văn kể lại chuyến đi thú vị của học sinh đến sở thú thành phố.",
+    "r": "R-U08-GR-08-09"
+  },
+  {
+    "id": "TS10-U08-GR-08-0902",
+    "q": "The word 'huge' in paragraph 1 is CLOSEST in meaning to ______.",
+    "o": [
+      "enormous",
+      "small",
+      "narrow",
+      "tiny"
+    ],
+    "e": "Từ 'huge' (rộng lớn, khổng lồ) đồng nghĩa với 'enormous'.",
+    "r": "R-U08-GR-08-09"
+  },
+  {
+    "id": "TS10-U08-GR-08-0903",
+    "q": "The word 'their' in paragraph 1 refers to ______.",
+    "o": [
+      "the students'",
+      "the guides'",
+      "the crocodiles'",
+      "the monkeys'"
+    ],
+    "e": "Đại từ 'their' (trong 'their first time seeing...') chỉ sự sở hữu của những học sinh ('the students').",
+    "r": "R-U08-GR-08-09"
+  },
+  {
+    "id": "TS10-U08-GR-08-0904",
+    "q": "The word 'wild' in paragraph 1 is OPPOSITE in meaning to ______.",
+    "o": [
+      "tame",
+      "dangerous",
+      "crazy",
+      "fierce"
+    ],
+    "e": "Từ 'wild' (hoang dã) trái nghĩa với 'tame' (đã thuần chủng, hiền lành).",
+    "r": "R-U08-GR-08-09"
+  },
+  {
+    "id": "TS10-U08-GR-08-0905",
+    "q": "According to the passage, which of the following is NOT TRUE?",
+    "o": [
+      "The lions were sleeping quietly when they entered.",
+      "They saw tall giraffes eating leaves.",
+      "The weather was sunny and pleasant.",
+      "The students learned about animal conservation."
+    ],
+    "e": "Bài đọc ghi 'immediately attracted by the loud roars of the lions' (tiếng gầm lớn), nên nói sư tử đang ngủ yên tĩnh (sleeping quietly) là SAI.",
+    "r": "R-U08-GR-08-09"
+  },
+  {
+    "id": "TS10-U08-GR-08-0906",
+    "q": "According to the passage, why were the students very excited?",
+    "o": [
+      "Because it was their first time seeing wild animals in real life.",
+      "Because they could ride the giraffes.",
+      "Because the zoo was closed.",
+      "Because it started to rain heavily."
+    ],
+    "e": "Chi tiết trong bài: 'The students were very excited because it was their first time seeing these wild animals in real life'.",
+    "r": "R-U08-GR-08-09"
+  },
+  {
+    "id": "TS10-U08-GR-08-1001",
+    "q": "What is the passage mainly about?",
+    "o": [
+      "An enjoyable trip to the countryside",
+      "The life in the countryside",
+      "A very peaceful countryside",
+      "A beautiful forest in the countryside"
+    ],
+    "e": "Câu hỏi ý chính: Đoạn văn kể về một chuyến đi thú vị đến vùng nông thôn của tác giả ('spending an enjoyable day in the countryside').",
+    "r": "R-U08-GR-08-10"
+  },
+  {
+    "id": "TS10-U08-GR-08-1002",
+    "q": "The word “roaming” in paragraph 1 is CLOSEST in meaning to ______ .",
+    "o": [
+      "walking around",
+      "sleeping in",
+      "standing in",
+      "lying in"
+    ],
+    "e": "Từ 'roaming' (đi lang thang, thong dong) gần nghĩa nhất với cụm từ 'walking around' (đi dạo quanh).",
+    "r": "R-U08-GR-08-10"
+  },
+  {
+    "id": "TS10-U08-GR-08-1003",
+    "q": "The word “it” in paragraph 1 refers to _______.",
+    "o": [
+      "the boat",
+      "the river",
+      "the view",
+      "the fish"
+    ],
+    "e": "Đại từ 'it' trong câu 'we rented a boat and rode it' thay thế cho danh từ 'a boat' (chiếc thuyền) vừa được nhắc đến ngay trước đó.",
+    "r": "R-U08-GR-08-10"
+  },
+  {
+    "id": "TS10-U08-GR-08-1004",
+    "q": "The word “failed” in paragraph 1 is OPPOSITE in meaning to _______.",
+    "o": [
+      "succeeded",
+      "enjoyed",
+      "watched",
+      "saw"
+    ],
+    "e": "Từ 'failed' (thất bại) trái nghĩa với từ 'succeeded' (thành công).",
+    "r": "R-U08-GR-08-10"
+  },
+  {
+    "id": "TS10-U08-GR-08-1005",
+    "q": "According to the passage, which of the following is NOT TRUE?",
+    "o": [
+      "The writer went on a trip to the countryside alone.",
+      "The writer could not count birds and animals in the forest.",
+      "The writer went fishing on a boat and caught some big fish.",
+      "The writer enjoyed a wonderful day in the countryside."
+    ],
+    "e": "Bài đọc có chi tiết 'My brother and sister also went with me that day' (Anh và em gái tôi cũng đi cùng), do đó thông tin tác giả đi một mình (alone) là SAI.",
+    "r": "R-U08-GR-08-10"
+  },
+  {
+    "id": "TS10-U08-GR-08-1006",
+    "q": "According to the passage, why did the storyteller really enjoy the day out?",
+    "o": [
+      "Because it brought him close to a peaceful, natural environment away from the busy city.",
+      "Because the countryside was very far from where he lived.",
+      "Because he caught some small fish while fishing.",
+      "Because he could count all the different kinds of birds and animals."
+    ],
+    "e": "Chi tiết được nêu rõ ở câu cuối cùng của đoạn văn: 'because it brought me close to a very peaceful and natural environment, away from the busy and noisy city life'.",
+    "r": "R-U08-GR-08-10"
+  },
+  {
+    "id": "TS10-U03-GR-03-0001",
+    "q": "What does the sign say?",
+    "o": [
+      "Eating and drinking are not permitted in this area at all times.",
+      "You are allowed to eat and drink here without any restrictions.",
+      "You can bring drinks but not food into this area.",
+      "Food is permitted but drinks are not allowed in this area."
+    ],
+    "e": ""
+  },
+  {
+    "id": "TS10-U03-GR-03-0002",
+    "q": "What does this notice say?",
+    "o": [
+      "£50 will be given to the person who returns the gold watch.",
+      "The gold watch has been found and is available for £50.",
+      "You need to pay £50 to get the lost gold watch back.",
+      "The owner is offering £100 for the return of the gold watch."
+    ],
+    "e": ""
+  },
+  {
+    "id": "TS10-U03-GR-03-0003",
+    "q": "What does the sign say",
+    "o": [
+      "You should only drive if you have not had any alcohol to drink.",
+      "Drinking alcohol is not safe when you are driving a car or other vehicles.",
+      "You can drive a car if you drink only a little alcohol and feel okay.",
+      "It is good to drink water while driving so you stay awake and safe."
+    ],
+    "e": ""
+  },
+  {
+    "id": "TS10-U03-GR-03-0004",
+    "q": "What should you bring?",
+    "o": [
+      "Bring a notebook and a pen",
+      "Bring a book and a pencil",
+      "Bring a laptop and a highlighter",
+      "Bring a tablet and a notebook"
+    ],
+    "e": ""
+  },
+  {
+    "id": "TS10-U03-GR-03-0005",
+    "q": "What does this sign mean?",
+    "o": [
+      "You are not allowed to jump into the water",
+      "You must be careful when jumping up and down",
+      "Jumping into the water alone is great fun",
+      "Before you jump into the water, ask for help"
+    ],
+    "e": ""
+  },
+  {
+    "id": "TS10-U03-GR-03-0006",
+    "q": "What does this notice say?",
+    "o": [
+      "You will get a free cookie when you buy milk tea on Tuesday",
+      "You buy milk tea and get a free cookie every day",
+      "Milk tea and cookies are always free on Tuesday",
+      "You get milk tea and a cookie for 35,000 VND every day"
+    ],
+    "e": ""
+  },
+  {
+    "id": "TS10-U03-GR-03-0007",
+    "q": "What does this sign mean?",
+    "o": [
+      "Be careful as the floor is wet.",
+      "Don't make the floor wet.",
+      "Wet floor makes you cautious.",
+      "Don't step on the wet floor."
+    ],
+    "e": ""
+  },
+  {
+    "id": "TS10-U03-GR-03-0008",
+    "q": "What does this notice say?",
+    "o": [
+      "You must not take photographs here.",
+      "You should take photographs here.",
+      "You can take photographs here.",
+      "You don’t have to take photographs here."
+    ],
+    "e": ""
+  },
+  {
+    "id": "TS10-U03-GR-03-0009",
+    "q": "What does the sign mean?",
+    "o": [
+      "You must not drive over 40 km per hour.",
+      "You can only park here for 40 minutes.",
+      "You should travel exactly 40 miles today.",
+      "You only carry loads under 40 kilograms."
+    ],
+    "e": ""
+  },
+  {
+    "id": "TS10-U03-GR-03-0010",
+    "q": "What does the notice say?",
+    "o": [
+      "Keep your cell phone off during the meeting.",
+      "Turn off your cell phone after the meeting.",
+      "Use your cell phone freely during the meeting.",
+      "Charge your cell phone before the meeting starts."
+    ],
+    "e": ""
+  }
+]

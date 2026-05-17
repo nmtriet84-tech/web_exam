@@ -1,0 +1,101 @@
+{
+  "U01": {
+    "title": "Part 01",
+    "grammar": {
+      "GR-01": "Mark the letter A, B, C or D on your answer sheet to indicate the correct answer to each of the foll..."
+    },
+    "config": {
+      "pick_questions": 9
+    }
+  },
+  "U02": {
+    "title": "Part 02",
+    "grammar": {
+      "GR-02": "Mark the letter A, B, C or D on your answer sheet to indicate the sentence that best completes each ..."
+    },
+    "config": {
+      "pick_questions": 2
+    }
+  },
+  "U04": {
+    "title": "Part 04",
+    "grammar": {
+      "GR-04": "Mark the letter A, B, C or D on your answer sheet to indicate the best arrangement of utterances or ..."
+    },
+    "config": {
+      "pick_questions": 2
+    }
+  },
+  "U05": {
+    "title": "Part 05",
+    "grammar": {
+      "GR-05": "Mark the letter A, B, C or D on your answer sheet to indicate the sentence that is closest in meanin..."
+    },
+    "config": {
+      "pick_questions": 2
+    }
+  },
+  "U06": {
+    "title": "Part 06",
+    "grammar": {
+      "GR-06": "Mark the letter A, B, C or D on your answer sheet to indicate the sentence that best combines two se..."
+    },
+    "config": {
+      "pick_questions": 4
+    }
+  },
+  "U07": {
+    "title": "Part 07",
+    "grammar": {
+      "GR-07": "Read the following announcement and mark the letter A, B, C, or D on your answer sheet to indicate t..."
+    },
+    "config": {
+      "pick_readings": 1
+    }
+  },
+  "U08": {
+    "title": "Part 08",
+    "grammar": {
+      "GR-08": "Read the following text and mark the letter A, B, C or D on your answer sheet to indicate the best a..."
+    },
+    "config": {
+      "pick_readings": 1
+    }
+  },
+  "U09": {
+    "title": "Part 09",
+    "grammar": {
+      "GR-09": "Complete each of the following sentences with the correct forms of the words in the brackets"
+    },
+    "config": {
+      "pick_questions": 4
+    }
+  },
+  "U10": {
+    "title": "Part 10",
+    "grammar": {
+      "GR-10": "Rewrite each of the following sentences in such a way that it means almost the same as the original ..."
+    },
+    "config": {
+      "pick_questions": 4
+    }
+  },
+  "U11": {
+    "title": "Part 11",
+    "grammar": {
+      "GR-11": "Use the words/ phrases provided to make meaningful sentences."
+    },
+    "config": {
+      "pick_questions": 4
+    }
+  },
+  "U03": {
+    "title": "Part 03",
+    "grammar": {
+      "GR-03": "Look at the signs. Choose the best answer (A, B, C or D) for each question."
+    },
+    "config": {
+      "pick_questions": 2
+    }
+  }
+}
