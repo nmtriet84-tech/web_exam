@@ -15,14 +15,19 @@
             <div>
                 <p class="eyebrow">Grade 8 English</p>
                 <h1>Exam Practice</h1>
-                <p class="subtitle">Tạo đề luyện tập 20 câu từ ngân hàng ngữ pháp và bài đọc.</p>
+                <p id="brand-subtitle" class="subtitle">Tạo đề luyện tập 20 câu từ ngân hàng ngữ pháp và bài đọc.</p>
+            </div>
+            
+            <div class="mode-selector" style="display: flex; gap: 10px; margin-top: 1.5rem; margin-bottom: 1rem; width: 100%;">
+                <button id="mode-grammar-btn" class="primary-btn" type="button" style="border-radius: 8px; flex: 1; padding: 12px; font-weight: 600;">📝 Luyện Ngữ Pháp</button>
+                <button id="mode-vocab-btn" class="secondary-btn" type="button" style="border-radius: 8px; flex: 1; padding: 12px; font-weight: 600;">📘 Luyện Từ Vựng</button>
             </div>
             <div class="stats-strip" aria-label="Thông tin đề luyện tập">
                 <div>
                     <strong>20</strong>
                     <span>câu hỏi</span>
                 </div>
-                <div>
+                <div id="reading-stat">
                     <strong>2</strong>
                     <span>bài đọc</span>
                 </div>
@@ -33,12 +38,14 @@
             </div>
         </section>
 
+
+
         <section class="workspace-panel">
             <div id="setup-screen" class="screen setup-screen">
                 <div class="panel-heading">
                     <div>
                         <p class="eyebrow">Chọn nội dung</p>
-                        <h2>Grammar Points</h2>
+                        <h2 id="setup-title">Grammar Points</h2>
                     </div>
                     <div class="selection-actions" aria-label="Thao tác chọn nhanh">
                         <button id="select-all-btn" class="ghost-btn" type="button">Chọn tất cả</button>

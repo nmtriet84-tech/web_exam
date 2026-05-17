@@ -5,6 +5,9 @@ const EXAM_DURATION_SECONDS = 20 * 60;
 let ALL_QUESTIONS = [];
 let ALL_READINGS = [];
 let ALL_GRAMMAR = {};
+let ALL_VOCAB_INFO = {};
+let ALL_VOCAB_QUIZ = [];
+let currentMode = 'grammar';
 
 let currentExam = [];
 let userAnswers = {};
@@ -40,6 +43,40 @@ const reviewList = document.getElementById("review-list");
 const newExamBtn = document.getElementById("new-exam-btn");
 const timerBadge = document.getElementById("timer-badge");
 
+const modeGrammarBtn = document.getElementById("mode-grammar-btn");
+const modeVocabBtn = document.getElementById("mode-vocab-btn");
+
+if (modeGrammarBtn && modeVocabBtn) {
+    modeGrammarBtn.addEventListener("click", () => setMode("grammar"));
+    modeVocabBtn.addEventListener("click", () => setMode("vocab"));
+}
+
+function setMode(mode) {
+    currentMode = mode;
+    
+    const subtitle = document.getElementById('brand-subtitle');
+    const readingStat = document.getElementById('reading-stat');
+    const setupTitle = document.getElementById('setup-title');
+    
+    if (mode === "grammar") {
+        modeGrammarBtn.classList.replace("secondary-btn", "primary-btn");
+        modeVocabBtn.classList.replace("primary-btn", "secondary-btn");
+        
+        if(subtitle) subtitle.textContent = 'Tạo đề luyện tập 20 câu từ ngân hàng ngữ pháp và bài đọc.';
+        if(readingStat) readingStat.style.display = 'block';
+        if(setupTitle) setupTitle.textContent = 'Grammar Points';
+    } else {
+        modeVocabBtn.classList.replace("secondary-btn", "primary-btn");
+        modeGrammarBtn.classList.replace("primary-btn", "secondary-btn");
+        
+        if(subtitle) subtitle.textContent = 'Tạo đề luyện tập 20 câu trắc nghiệm từ vựng chuyên sâu.';
+        if(readingStat) readingStat.style.display = 'none';
+        if(setupTitle) setupTitle.textContent = 'Vocabulary Units';
+    }
+    renderSelector();
+    updateSelectionSummary();
+}
+
 async function init() {
     setLoadingState(true);
     try {
@@ -61,11 +98,15 @@ function getQuestionUnit(question) {
 }
 
 async function loadData() {
-    const [questions, readings, grammar] = await Promise.all([
+    const [questions, readings, grammar, vInfo, vQuiz] = await Promise.all([
         fetchJson(`${DATA_BASE_PATH}/questions.json`),
         fetchJson(`${DATA_BASE_PATH}/reading.json`),
-        fetchJson(`${DATA_BASE_PATH}/unit.json`)
+        fetchJson(`${DATA_BASE_PATH}/unit.json`),
+        fetchJson(`data/EN08_VOCAB/English8Vocabulary_info.json`).catch(e=>null),
+        fetchJson(`data/EN08_VOCAB/English8Vocabulary_quiz.json`).catch(e=>null)
     ]);
+    if (vInfo) ALL_VOCAB_INFO = vInfo;
+    if (vQuiz) ALL_VOCAB_QUIZ = vQuiz;
 
     if (!Array.isArray(questions)) throw new Error("questions.json must be an array.");
     if (!Array.isArray(readings)) throw new Error("reading.json must be an array.");
@@ -102,6 +143,34 @@ function getGrammarKey(question) {
 }
 
 function renderSelector() {
+    if (currentMode === 'vocab') {
+        unifiedSelector.replaceChildren();
+        const units = ALL_VOCAB_INFO.units || [];
+        units.forEach(unit => {
+            const unitGroup = document.createElement("section");
+            unitGroup.className = "unit-group";
+            const unitHeader = document.createElement("div");
+            unitHeader.className = "unit-header";
+            
+            const unitCheckbox = document.createElement("input");
+            unitCheckbox.type = "checkbox";
+            unitCheckbox.id = `unit-${unit.id}`;
+            unitCheckbox.className = "unit-cb";
+            unitCheckbox.value = unit.id;
+            unitCheckbox.checked = true;
+            unitCheckbox.addEventListener("change", () => updateSelectionSummary());
+            
+            const unitLabel = document.createElement("label");
+            unitLabel.className = "unit-title";
+            unitLabel.htmlFor = unitCheckbox.id;
+            unitLabel.textContent = unit.title;
+            
+            unitHeader.append(unitCheckbox, unitLabel);
+            unitGroup.append(unitHeader);
+            unifiedSelector.appendChild(unitGroup);
+        });
+        return;
+    }
     const unitMap = new Map();
 
     ALL_QUESTIONS.forEach((question) => {
@@ -203,11 +272,40 @@ function getSelectedGrammarKeys() {
 }
 
 function getSelectedPool() {
+    if (currentMode === 'vocab') {
+        const selectedUnitNumbers = new Set([...document.querySelectorAll(".unit-cb:checked")].map(cb => {
+            const match = cb.value.match(/u(\d+)/i);
+            return match ? match[1] : cb.value;
+        }));
+        let pool = [];
+        ALL_VOCAB_QUIZ.forEach(wordObj => {
+            const unitMatch = wordObj.id.match(/u(\d+)_/i);
+            const uNum = unitMatch ? unitMatch[1] : null;
+            if (uNum && selectedUnitNumbers.has(uNum)) {
+                wordObj.questions.forEach(q => {
+                    pool.push({
+                        ...q,
+                        q: q.question,
+                        o: q.options,
+                        vocabHint: wordObj.hint,
+                        e: q.explanation
+                    });
+                });
+            }
+        });
+        return pool;
+    }
     const selectedKeys = new Set(getSelectedGrammarKeys());
     return ALL_QUESTIONS.filter((question) => selectedKeys.has(getGrammarKey(question)));
 }
 
 function updateSelectionSummary() {
+    if (currentMode === 'vocab') {
+        const pool = getSelectedPool();
+        selectionCount.textContent = `Chế độ Luyện Từ Vựng`;
+        questionPoolCount.textContent = `${pool.length} câu hỏi MC`;
+        return;
+    }
     const selectedGrammar = getSelectedGrammarKeys();
     const pool = getSelectedPool();
     const readingCount = new Set(pool.filter((question) => question.r).map((question) => question.r)).size;
@@ -219,6 +317,20 @@ function updateSelectionSummary() {
 
 function generateExam() {
     const pool = getSelectedPool();
+    
+    if (currentMode === 'vocab') {
+        if (pool.length < TOTAL_QUESTIONS) {
+            alert(`Không đủ câu hỏi để tạo đề ${TOTAL_QUESTIONS} câu. Hiện có ${pool.length} câu.`);
+            return;
+        }
+        currentExam = shuffle(pool).slice(0, TOTAL_QUESTIONS).map(question => ({
+            ...question,
+            shuffledOptions: shuffle(question.o.map((text, originalIdx) => ({ text, originalIdx })))
+        }));
+        startTest();
+        return;
+    }
+    
     const mcPool = pool.filter((question) => !question.r);
     const readingQuestions = pool.filter((question) => question.r);
     const readingRefs = [...new Set(readingQuestions.map((question) => question.r))];
@@ -299,7 +411,13 @@ function renderQuestion() {
     qCounter.textContent = `${currentIdx + 1} / ${total}`;
     examTitle.textContent = `Question ${currentIdx + 1}`;
     answeredBadge.textContent = `${answeredCount}/${total} đã trả lời`;
-    questionMeta.textContent = `${getQuestionUnit(question)} - ${getQuestionGrammar(question)}`;
+    if (currentMode === 'vocab') {
+        const unitMatch = question.id.match(/u(\d+)_/i);
+        const uDisplay = unitMatch ? 'Unit ' + unitMatch[1] : 'VOCAB';
+        questionMeta.textContent = uDisplay;
+    } else {
+        questionMeta.textContent = `${getQuestionUnit(question)} - ${getQuestionGrammar(question)}`;
+    }
 
     renderQuestionNav();
     renderReading(question);
