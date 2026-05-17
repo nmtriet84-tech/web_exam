@@ -5,6 +5,9 @@
       "GR-01": "Verbs (to express preference) + gerund",
       "GR-02": "Present Simple for future meaning",
       "GR-03": "Prepositions of time (at, on, in, until)"
+    },
+    "config": {
+      "pick_questions_per_grammar": 4
     }
   },
   "U02": {
@@ -13,6 +16,9 @@
       "GR-01": "Quantifiers with countable/uncountable nouns",
       "GR-02": "Verbs (to express preference) + to-infinitives",
       "GR-03": "Adverbs of frequency"
+    },
+    "config": {
+      "pick_questions_per_grammar": 4
     }
   },
   "U03": {
@@ -21,6 +27,9 @@
       "GR-01": "First Conditional (If / Unless)",
       "GR-02": "Compound sentences with and (FANBOYS)",
       "GR-03": "Complex sentences with so (that) (Purpose)"
+    },
+    "config": {
+      "pick_questions_per_grammar": 4
     }
   },
   "U04": {
@@ -29,6 +38,9 @@
       "GR-01": "Wh-questions (Information questions)",
       "GR-02": "Prepositions of place",
       "GR-03": "Prepositions of movement"
+    },
+    "config": {
+      "pick_questions_per_grammar": 4
     }
   },
   "U05": {
@@ -36,6 +48,9 @@
     "grammar": {
       "GR-01": "Wh-questions and Yes/No questions",
       "GR-02": "Comparative adverbs"
+    },
+    "config": {
+      "pick_questions_per_grammar": 4
     }
   },
   "U06": {
@@ -43,6 +58,9 @@
     "grammar": {
       "GR-01": "Past Continuous and Past Simple",
       "GR-02": "Future forms (will, be going to, Present forms)"
+    },
+    "config": {
+      "pick_questions_per_grammar": 4
     }
   },
   "U07": {
@@ -50,6 +68,9 @@
     "grammar": {
       "GR-01": "Possessive pronouns",
       "GR-02": "Reported speech for statements"
+    },
+    "config": {
+      "pick_questions_per_grammar": 4
     }
   },
   "U08": {
@@ -57,6 +78,9 @@
     "grammar": {
       "GR-01": "Articles (a, an, the, zero article)",
       "GR-02": "Reported speech for questions"
+    },
+    "config": {
+      "pick_questions_per_grammar": 4
     }
   }
 }
