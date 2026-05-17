@@ -15,13 +15,13 @@
             <div>
                 <p class="eyebrow">Grade 8 English</p>
                 <h1>Exam Practice</h1>
-                <p id="brand-subtitle" class="subtitle">Tạo đề luyện tập 20 câu từ ngân hàng ngữ pháp và bài đọc.</p>
+                <p id="brand-subtitle" class="subtitle">Đang tải cấu hình bộ đề...</p>
             </div>
             
-            <div class="mode-selector" style="display: flex; gap: 10px; margin-top: 1.5rem; margin-bottom: 1rem; width: 100%;">
-                <button id="mode-grammar-btn" class="primary-btn" type="button" style="border-radius: 8px; flex: 1; padding: 12px; font-weight: 600;">📝 Luyện Ngữ Pháp</button>
-                <button id="mode-vocab-btn" class="secondary-btn" type="button" style="border-radius: 8px; flex: 1; padding: 12px; font-weight: 600;">📘 Luyện Từ Vựng</button>
+            <div id="dataset-selector" class="mode-selector" style="display: flex; gap: 10px; margin-top: 1.5rem; margin-bottom: 1rem; width: 100%; flex-wrap: wrap;">
+                <!-- Nút chọn bộ đề sẽ được render tự động bằng JS -->
             </div>
+            
             <div class="stats-strip" aria-label="Thông tin đề luyện tập">
                 <div>
                     <strong>20</strong>
@@ -60,7 +60,13 @@
 
                 <div id="unified-selector" class="unified-selector" aria-live="polite"></div>
 
-                <button id="start-btn" class="primary-btn" type="button">Tạo đề luyện tập</button>
+                <div style="display: flex; gap: 15px; margin-top: 25px;">
+                    <select id="exam-duration" class="secondary-btn" style="padding: 12px; border-radius: 8px; flex: 1;">
+                        <option value="20">15 phút (20 câu)</option>
+                        <option value="40">30 phút (40 câu)</option>
+                    </select>
+                    <button id="start-btn" class="primary-btn" type="button" style="flex: 2;">Tạo đề luyện tập</button>
+                </div>
             </div>
 
             <div id="exam-screen" class="screen exam-screen" hidden>
@@ -85,7 +91,9 @@
 
                 <article class="question-card">
                     <p id="question-meta" class="question-meta"></p>
+                    <div id="question-instruction" style="font-style: italic; color: #4b5563; margin-bottom: 15px; font-weight: 500; display: none;"></div>
                     <h3 id="question-text" class="question-text">Loading question...</h3>
+                    <img id="question-img" style="max-width: 100%; border-radius: 8px; margin: 15px 0; display: none;" />
                     <div id="options-list" class="options-list"></div>
                 </article>
 

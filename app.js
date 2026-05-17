@@ -1,18 +1,17 @@
-﻿const TOTAL_QUESTIONS = 20;
-const DATA_BASE_PATH = "data/EN08_GRAMMAR";
-const EXAM_DURATION_SECONDS = 20 * 60;
+
+
+let DATASETS = [];
+let currentDataset = null;
 
 let ALL_QUESTIONS = [];
 let ALL_READINGS = [];
 let ALL_GRAMMAR = {};
-let ALL_VOCAB_INFO = {};
-let ALL_VOCAB_QUIZ = [];
-let currentMode = 'grammar';
+let ALL_INSTRUCTIONS = {};
 
 let currentExam = [];
 let userAnswers = {};
 let currentIdx = 0;
-let remainingSeconds = EXAM_DURATION_SECONDS;
+let remainingSeconds = 0;
 let timerId = null;
 
 const setupScreen = document.getElementById("setup-screen");
@@ -31,6 +30,7 @@ const answeredBadge = document.getElementById("answered-badge");
 const questionNav = document.getElementById("question-nav");
 const readingArea = document.getElementById("reading-area");
 const questionMeta = document.getElementById("question-meta");
+const questionInstruction = document.getElementById("question-instruction");
 const questionText = document.getElementById("question-text");
 const optionsList = document.getElementById("options-list");
 const prevBtn = document.getElementById("prev-btn");
@@ -43,87 +43,93 @@ const reviewList = document.getElementById("review-list");
 const newExamBtn = document.getElementById("new-exam-btn");
 const timerBadge = document.getElementById("timer-badge");
 
-const modeGrammarBtn = document.getElementById("mode-grammar-btn");
-const modeVocabBtn = document.getElementById("mode-vocab-btn");
-
-if (modeGrammarBtn && modeVocabBtn) {
-    modeGrammarBtn.addEventListener("click", () => setMode("grammar"));
-    modeVocabBtn.addEventListener("click", () => setMode("vocab"));
-}
-
-function setMode(mode) {
-    currentMode = mode;
-    
-    const subtitle = document.getElementById('brand-subtitle');
-    const readingStat = document.getElementById('reading-stat');
-    const setupTitle = document.getElementById('setup-title');
-    
-    if (mode === "grammar") {
-        modeGrammarBtn.classList.replace("secondary-btn", "primary-btn");
-        modeVocabBtn.classList.replace("primary-btn", "secondary-btn");
-        
-        if(subtitle) subtitle.textContent = 'Tạo đề luyện tập 20 câu từ ngân hàng ngữ pháp và bài đọc.';
-        if(readingStat) readingStat.style.display = 'block';
-        if(setupTitle) setupTitle.textContent = 'Grammar Points';
-    } else {
-        modeVocabBtn.classList.replace("secondary-btn", "primary-btn");
-        modeGrammarBtn.classList.replace("primary-btn", "secondary-btn");
-        
-        if(subtitle) subtitle.textContent = 'Tạo đề luyện tập 20 câu trắc nghiệm từ vựng chuyên sâu.';
-        if(readingStat) readingStat.style.display = 'none';
-        if(setupTitle) setupTitle.textContent = 'Vocabulary Units';
-    }
-    renderSelector();
-    updateSelectionSummary();
-}
-
 async function init() {
     setLoadingState(true);
     try {
-        await loadData();
-        renderSelector();
-        updateSelectionSummary();
+        DATASETS = await fetchJson('data/datasets.json');
+        renderDatasetSelector();
+        if (DATASETS.length > 0) {
+            await setMode(DATASETS[0].id);
+        }
     } catch (error) {
         console.error(error);
-        selectionCount.textContent = "Không tải được dữ liệu JSON.";
-        questionPoolCount.textContent = "Kiểm tra thư mục data/EN08_GRAMMAR trên GitHub.";
+        selectionCount.textContent = "Không tải được cấu hình hệ thống.";
     } finally {
         setLoadingState(false);
     }
 }
 
-function getQuestionUnit(question) {
-    const match = question.id.match(/U\d{2}/);
-    return match ? match[0] : "U00";
+function renderDatasetSelector() {
+    const container = document.getElementById('dataset-selector');
+    if (!container) return;
+    container.replaceChildren();
+    
+    DATASETS.forEach(ds => {
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'secondary-btn dataset-btn';
+        btn.style.cssText = 'border-radius: 8px; flex: 1; padding: 12px; font-weight: 600; min-width: 150px;';
+        btn.id = `ds-btn-${ds.id}`;
+        btn.textContent = ds.title;
+        btn.addEventListener('click', () => setMode(ds.id));
+        container.appendChild(btn);
+    });
+}
+
+async function setMode(datasetId) {
+    setLoadingState(true);
+    currentDataset = DATASETS.find(ds => ds.id === datasetId);
+    
+    document.querySelectorAll('.dataset-btn').forEach(btn => {
+        if (btn.id === `ds-btn-${datasetId}`) {
+            btn.classList.replace('secondary-btn', 'primary-btn');
+        } else {
+            btn.classList.replace('primary-btn', 'secondary-btn');
+        }
+    });
+    
+    const subtitle = document.getElementById('brand-subtitle');
+    const readingStat = document.getElementById('reading-stat');
+    const setupTitle = document.getElementById('setup-title');
+    
+    if (subtitle) subtitle.textContent = currentDataset.subtitle || '';
+    if (readingStat) readingStat.style.display = currentDataset.has_reading ? 'block' : 'none';
+    if (setupTitle) setupTitle.textContent = currentDataset.setup_title || 'Select Units';
+    
+    try {
+        await loadData();
+        renderSelector();
+        updateSelectionSummary();
+    } catch(e) {
+        console.error(e);
+        selectionCount.textContent = `Lỗi tải bộ đề ${datasetId}`;
+    } finally {
+        setLoadingState(false);
+    }
 }
 
 async function loadData() {
-    const [questions, readings, grammar, vInfo, vQuiz] = await Promise.all([
-        fetchJson(`${DATA_BASE_PATH}/questions.json`),
-        fetchJson(`${DATA_BASE_PATH}/reading.json`),
-        fetchJson(`${DATA_BASE_PATH}/unit.json`),
-        fetchJson(`data/EN08_VOCAB/English8Vocabulary_info.json`).catch(e=>null),
-        fetchJson(`data/EN08_VOCAB/English8Vocabulary_quiz.json`).catch(e=>null)
+    ALL_QUESTIONS = [];
+    ALL_READINGS = [];
+    ALL_GRAMMAR = {};
+    ALL_INSTRUCTIONS = {};
+    
+    const [questions, grammar, readings, instructions] = await Promise.all([
+        fetchJson(`${currentDataset.path}/questions.json`),
+        fetchJson(`${currentDataset.path}/unit.json`),
+        currentDataset.has_reading ? fetchJson(`${currentDataset.path}/reading.json`).catch(()=>[]) : Promise.resolve([]),
+        fetchJson(`${currentDataset.path}/instruction.json`).catch(()=>({}))
     ]);
-    if (vInfo) ALL_VOCAB_INFO = vInfo;
-    if (vQuiz) ALL_VOCAB_QUIZ = vQuiz;
 
-    if (!Array.isArray(questions)) throw new Error("questions.json must be an array.");
-    if (!Array.isArray(readings)) throw new Error("reading.json must be an array.");
-    if (!grammar || typeof grammar !== "object" || Array.isArray(grammar)) {
-        throw new Error("unit.json must be an object.");
-    }
-
-    ALL_QUESTIONS = questions;
-    ALL_READINGS = readings;
-    ALL_GRAMMAR = grammar;
+    ALL_QUESTIONS = questions || [];
+    ALL_GRAMMAR = grammar || {};
+    ALL_READINGS = readings || [];
+    ALL_INSTRUCTIONS = instructions || {};
 }
 
 async function fetchJson(url) {
     const response = await fetch(url, { cache: "no-store" });
-    if (!response.ok) {
-        throw new Error(`Cannot load ${url}: ${response.status} ${response.statusText}`);
-    }
+    if (!response.ok) throw new Error(`Cannot load ${url}`);
     return response.json();
 }
 
@@ -133,9 +139,14 @@ function setLoadingState(isLoading) {
     clearAllBtn.disabled = isLoading;
 }
 
+function getQuestionUnit(question) {
+    const match = question.id.match(/U\d{2}/i);
+    return match ? match[0].toUpperCase() : "U00";
+}
+
 function getQuestionGrammar(question) {
-    const match = question.id.match(/GR-\d{2}/);
-    return match ? match[0] : "GR-00";
+    const match = question.id.match(/GR-\d{2}/i);
+    return match ? match[0].toUpperCase() : "GR-00";
 }
 
 function getGrammarKey(question) {
@@ -143,69 +154,58 @@ function getGrammarKey(question) {
 }
 
 function renderSelector() {
-    if (currentMode === 'vocab') {
-        unifiedSelector.replaceChildren();
-        const units = ALL_VOCAB_INFO.units || [];
-        units.forEach(unit => {
-            const unitGroup = document.createElement("section");
-            unitGroup.className = "unit-group";
-            const unitHeader = document.createElement("div");
-            unitHeader.className = "unit-header";
-            
-            const unitCheckbox = document.createElement("input");
-            unitCheckbox.type = "checkbox";
-            unitCheckbox.id = `unit-${unit.id}`;
-            unitCheckbox.className = "unit-cb";
-            unitCheckbox.value = unit.id;
-            unitCheckbox.checked = true;
-            unitCheckbox.addEventListener("change", () => updateSelectionSummary());
-            
-            const unitLabel = document.createElement("label");
-            unitLabel.className = "unit-title";
-            unitLabel.htmlFor = unitCheckbox.id;
-            unitLabel.textContent = unit.title;
-            
-            unitHeader.append(unitCheckbox, unitLabel);
-            unitGroup.append(unitHeader);
-            unifiedSelector.appendChild(unitGroup);
-        });
-        return;
-    }
     const unitMap = new Map();
+    const unitQuestionCount = new Map(); // Đếm tổng số câu hỏi thực tế của mỗi Unit
 
     ALL_QUESTIONS.forEach((question) => {
         const unit = getQuestionUnit(question);
         const grammar = getQuestionGrammar(question);
+        
         if (!unitMap.has(unit)) unitMap.set(unit, new Set());
         unitMap.get(unit).add(grammar);
+        
+        if (!unitQuestionCount.has(unit)) unitQuestionCount.set(unit, 0);
+        unitQuestionCount.set(unit, unitQuestionCount.get(unit) + 1);
     });
 
     unifiedSelector.replaceChildren();
 
-    [...unitMap.keys()].sort().forEach((unit) => {
-        const unitData = typeof ALL_GRAMMAR !== "undefined" ? ALL_GRAMMAR[unit] : null;
+    [...unitMap.keys()].sort((a,b)=>a.localeCompare(b, undefined, {numeric: true})).forEach((unit) => {
+        let unitKey = unit;
+        let unitData = ALL_GRAMMAR[unitKey] || ALL_GRAMMAR[unitKey.replace(/^0+/, '')] || ALL_GRAMMAR[unitKey.replace(/^U0*/i, 'U')];
+        
         const unitGroup = document.createElement("section");
         unitGroup.className = "unit-group";
 
         const unitHeader = document.createElement("div");
         unitHeader.className = "unit-header";
 
+        const isRequired = unitData?.config?.required === true;
+        
         const unitCheckbox = document.createElement("input");
         unitCheckbox.type = "checkbox";
         unitCheckbox.id = `unit-${unit}`;
         unitCheckbox.className = "unit-cb";
         unitCheckbox.value = unit;
         unitCheckbox.checked = true;
+        if (isRequired) {
+            unitCheckbox.disabled = true;
+            unitCheckbox.title = "Phần này là bắt buộc";
+        }
         unitCheckbox.addEventListener("change", () => toggleUnitGroup(unit));
 
         const unitLabel = document.createElement("label");
         unitLabel.className = "unit-title";
         unitLabel.htmlFor = unitCheckbox.id;
-        unitLabel.textContent = `Unit ${unit.replace("U", "")}: ${unitData ? unitData.title : unit}`;
+        unitLabel.textContent = unitData ? unitData.title : `Unit ${unit.replace(/^U0*/i, "")}`;
 
         const unitCount = document.createElement("span");
         unitCount.className = "unit-count";
-        unitCount.textContent = `${unitMap.get(unit).size} points`;
+        const totalPoints = unitMap.get(unit).size;
+        const totalQuestions = unitQuestionCount.get(unit) || 0;
+        unitCount.textContent = currentDataset.type === 'vocab' 
+            ? `${totalQuestions} câu` 
+            : `${totalPoints} points, ${totalQuestions} câu`;
 
         unitHeader.append(unitCheckbox, unitLabel, unitCount);
 
@@ -223,6 +223,9 @@ function renderSelector() {
             checkbox.className = `gr-cb gr-cb-${unit}`;
             checkbox.value = `${unit}-${grammar}`;
             checkbox.checked = true;
+            if (isRequired) {
+                checkbox.disabled = true;
+            }
             checkbox.addEventListener("change", () => toggleGrammarItem(unit));
 
             const textWrap = document.createElement("span");
@@ -246,7 +249,9 @@ function renderSelector() {
 function toggleUnitGroup(unit) {
     const unitCheckbox = document.getElementById(`unit-${unit}`);
     document.querySelectorAll(`.gr-cb-${unit}`).forEach((checkbox) => {
-        checkbox.checked = unitCheckbox.checked;
+        if (!checkbox.disabled) {
+            checkbox.checked = unitCheckbox.checked;
+        }
     });
     updateSelectionSummary();
 }
@@ -261,8 +266,10 @@ function toggleGrammarItem(unit) {
 
 function setAllSelections(checked) {
     document.querySelectorAll(".unit-cb, .gr-cb").forEach((checkbox) => {
-        checkbox.checked = checked;
-        checkbox.indeterminate = false;
+        if (!checkbox.disabled) {
+            checkbox.checked = checked;
+            checkbox.indeterminate = false;
+        }
     });
     updateSelectionSummary();
 }
@@ -272,90 +279,130 @@ function getSelectedGrammarKeys() {
 }
 
 function getSelectedPool() {
-    if (currentMode === 'vocab') {
-        const selectedUnitNumbers = new Set([...document.querySelectorAll(".unit-cb:checked")].map(cb => {
-            const match = cb.value.match(/u(\d+)/i);
-            return match ? match[1] : cb.value;
-        }));
-        let pool = [];
-        ALL_VOCAB_QUIZ.forEach(wordObj => {
-            const unitMatch = wordObj.id.match(/u(\d+)_/i);
-            const uNum = unitMatch ? unitMatch[1] : null;
-            if (uNum && selectedUnitNumbers.has(uNum)) {
-                wordObj.questions.forEach(q => {
-                    pool.push({
-                        ...q,
-                        q: q.question,
-                        o: q.options,
-                        vocabHint: wordObj.hint,
-                        e: q.explanation
-                    });
-                });
-            }
-        });
-        return pool;
-    }
     const selectedKeys = new Set(getSelectedGrammarKeys());
     return ALL_QUESTIONS.filter((question) => selectedKeys.has(getGrammarKey(question)));
 }
 
 function updateSelectionSummary() {
-    if (currentMode === 'vocab') {
-        const pool = getSelectedPool();
-        selectionCount.textContent = `Chế độ Luyện Từ Vựng`;
-        questionPoolCount.textContent = `${pool.length} câu hỏi MC`;
-        return;
-    }
-    const selectedGrammar = getSelectedGrammarKeys();
     const pool = getSelectedPool();
-    const readingCount = new Set(pool.filter((question) => question.r).map((question) => question.r)).size;
-    const mcCount = pool.filter((question) => !question.r).length;
+    const readingCount = new Set(pool.filter((q) => q.r).map((q) => q.r)).size;
+    const mcCount = pool.filter((q) => !q.r).length;
 
-    selectionCount.textContent = `${selectedGrammar.length} grammar points đã chọn`;
-    questionPoolCount.textContent = `${readingCount} bài đọc, ${mcCount} câu MC`;
+    if (currentDataset.has_reading) {
+        const selectedGrammar = getSelectedGrammarKeys();
+        selectionCount.textContent = `${selectedGrammar.length} điểm kiến thức đã chọn`;
+        questionPoolCount.textContent = `${readingCount} bài đọc, ${mcCount} câu MC`;
+    } else {
+        selectionCount.textContent = `Chế độ ${currentDataset.title}`;
+        questionPoolCount.textContent = `${pool.length} câu hỏi MC`;
+    }
 }
 
 function generateExam() {
     const pool = getSelectedPool();
+    if (pool.length === 0) {
+        alert("Vui lòng chọn ít nhất 1 phần để tạo đề.");
+        return;
+    }
     
-    if (currentMode === 'vocab') {
-        if (pool.length < TOTAL_QUESTIONS) {
-            alert(`Không đủ câu hỏi để tạo đề ${TOTAL_QUESTIONS} câu. Hiện có ${pool.length} câu.`);
-            return;
+    const targetCount = parseInt(document.getElementById('exam-duration').value); // 20 or 40
+    if (pool.length < targetCount) {
+        alert(`Ngân hàng đề không đủ ${targetCount} câu (hiện chỉ có ${pool.length} câu trong các phần đã chọn). Vui lòng chọn thêm Unit/Chuyên đề.`);
+        return;
+    }
+
+    let finalExam = [];
+    const selectedGrammars = getSelectedGrammarKeys();
+    let allocation = {};
+    // 1. Pick reading passages globally
+    const readingQs = pool.filter(q => q.r);
+    const mcQs = pool.filter(q => !q.r);
+    const uniqueRefs = [...new Set(readingQs.map(q => q.r))];
+    
+    const maxReadings = Math.max(1, Math.floor(targetCount / 10)); // 20->2, 40->4 readings max
+    const selectedRefs = shuffle(uniqueRefs).slice(0, maxReadings);
+    
+    for (const ref of selectedRefs) {
+        const qsForRef = readingQs.filter(q => q.r === ref);
+        if (finalExam.length + qsForRef.length <= targetCount + 2) { // Allow slight exceed
+            finalExam.push(...qsForRef);
         }
-        currentExam = shuffle(pool).slice(0, TOTAL_QUESTIONS).map(question => ({
-            ...question,
-            shuffledOptions: shuffle(question.o.map((text, originalIdx) => ({ text, originalIdx })))
-        }));
-        startTest();
-        return;
     }
     
-    const mcPool = pool.filter((question) => !question.r);
-    const readingQuestions = pool.filter((question) => question.r);
-    const readingRefs = [...new Set(readingQuestions.map((question) => question.r))];
+    let remaining = targetCount - finalExam.length;
+    
+    // 2. Distribute remaining across grammar points using MC questions
+    let activeGrammars = [...selectedGrammars];
+    activeGrammars.forEach(g => allocation[g] = 0);
+    
+    while (remaining > 0 && activeGrammars.length > 0) {
+        const perGrammar = Math.max(1, Math.floor(remaining / activeGrammars.length));
+        let stillActive = [];
+        
+        for (const g of activeGrammars) {
+            if (remaining <= 0) break;
+            
+            const availableMC = mcQs.filter(q => getGrammarKey(q) === g);
+            const currentAlloc = allocation[g];
+            const take = Math.min(perGrammar, availableMC.length - currentAlloc);
+            
+            if (take > 0) {
+                allocation[g] += take;
+                remaining -= take;
+                if (allocation[g] < availableMC.length) {
+                    stillActive.push(g);
+                }
+            }
+        }
+        
+        if (activeGrammars.length === stillActive.length && remaining > 0 && remaining < activeGrammars.length) {
+            const shuffled = shuffle(stillActive);
+            for (let i = 0; i < remaining; i++) {
+                allocation[shuffled[i]] += 1;
+            }
+            remaining = 0;
+            break;
+        }
+        activeGrammars = stillActive;
+    }
 
-    if (readingRefs.length < 2) {
-        alert("Cần ít nhất 2 bài đọc trong phần đã chọn.");
+    // 3. Fulfill the MC allocation
+    for (const g of selectedGrammars) {
+        let needed = allocation[g];
+        if (needed <= 0) continue;
+        const availableMC = mcQs.filter(q => getGrammarKey(q) === g);
+        finalExam.push(...shuffle(availableMC).slice(0, needed));
+    }
+    
+    // 4. Cắt gọt MC dư thừa nếu pick reading bị lố
+    let exceed = finalExam.length - targetCount;
+    if (exceed > 0) {
+        let mcIndices = [];
+        finalExam.forEach((q, idx) => { if (!q.r) mcIndices.push(idx); });
+        mcIndices = shuffle(mcIndices).slice(0, exceed).sort((a,b) => b-a);
+        for (let idx of mcIndices) {
+            finalExam.splice(idx, 1);
+        }
+    }
+    
+    // 5. Nếu thiếu MC, lấy đại các MC chưa được chọn để bù vào
+    let deficit = targetCount - finalExam.length;
+    if (deficit > 0) {
+        const selectedIds = new Set(finalExam.map(q => q.id));
+        const unusedMC = mcQs.filter(q => !selectedIds.has(q.id));
+        finalExam.push(...shuffle(unusedMC).slice(0, deficit));
+    }
+
+    if (finalExam.length === 0) {
+        alert("Không có câu hỏi nào được tạo. Vui lòng kiểm tra lại cấu hình.");
         return;
     }
 
-    const selectedReadings = shuffle(readingRefs).slice(0, 2);
-    const finalReadings = selectedReadings.flatMap((readingId) =>
-        readingQuestions.filter((question) => question.r === readingId)
-    );
-    const remainingSlots = TOTAL_QUESTIONS - finalReadings.length;
-
-    if (remainingSlots < 0 || mcPool.length < remainingSlots) {
-        alert(`Không đủ câu hỏi để tạo đề ${TOTAL_QUESTIONS} câu. Hiện có ${finalReadings.length} câu đọc và ${mcPool.length} câu trắc nghiệm.`);
-        return;
-    }
-
-    currentExam = [...finalReadings, ...shuffle(mcPool).slice(0, remainingSlots)].map((question) => ({
+    currentExam = finalExam.map(question => ({
         ...question,
         shuffledOptions: shuffle(question.o.map((text, originalIdx) => ({ text, originalIdx })))
     }));
-
+    
     startTest();
 }
 
@@ -374,7 +421,11 @@ function startTest() {
 
 function startTimer() {
     stopTimer();
-    remainingSeconds = EXAM_DURATION_SECONDS;
+    
+    const targetCount = parseInt(document.getElementById('exam-duration').value);
+    const durationMins = targetCount === 40 ? 30 : 15;
+    remainingSeconds = durationMins * 60;
+    
     updateTimerDisplay();
     timerId = window.setInterval(() => {
         remainingSeconds -= 1;
@@ -411,17 +462,43 @@ function renderQuestion() {
     qCounter.textContent = `${currentIdx + 1} / ${total}`;
     examTitle.textContent = `Question ${currentIdx + 1}`;
     answeredBadge.textContent = `${answeredCount}/${total} đã trả lời`;
-    if (currentMode === 'vocab') {
-        const unitMatch = question.id.match(/u(\d+)_/i);
-        const uDisplay = unitMatch ? 'Unit ' + unitMatch[1] : 'VOCAB';
-        questionMeta.textContent = uDisplay;
+    
+    questionMeta.textContent = getGrammarKey(question);
+    
+    // Xử lý Instruction
+    const grammarKey = getQuestionGrammar(question);
+    if (ALL_INSTRUCTIONS[grammarKey]) {
+        questionInstruction.textContent = ALL_INSTRUCTIONS[grammarKey];
+        questionInstruction.style.display = 'block';
     } else {
-        questionMeta.textContent = `${getQuestionUnit(question)} - ${getQuestionGrammar(question)}`;
+        questionInstruction.style.display = 'none';
     }
 
     renderQuestionNav();
     renderReading(question);
     questionText.textContent = question.q;
+    
+    const qImg = document.getElementById("question-img");
+    if(qImg) {
+        const hasImage = currentDataset.id === 'TS10_ENGLISH' && question.id.includes('GR-03');
+        if (hasImage) {
+            qImg.src = `${currentDataset.path}/img/${question.id}.png`;
+            qImg.style.display = 'block';
+            qImg.onerror = function() {
+                if (this.src.endsWith('.png')) {
+                    this.src = `${currentDataset.path}/img/${question.id}.jpg`;
+                } else if (this.src.endsWith('.jpg')) {
+                    this.src = `${currentDataset.path}/img/${question.id}.jpeg`;
+                } else {
+                    this.style.display = 'none';
+                }
+            };
+        } else {
+            qImg.style.display = 'none';
+            qImg.src = '';
+        }
+    }
+    
     renderOptions(question);
 
     prevBtn.style.visibility = currentIdx === 0 ? "hidden" : "visible";
@@ -455,7 +532,7 @@ function renderQuestionNav() {
 }
 
 function renderReading(question) {
-    if (!question.r) {
+    if (!question.r || !currentDataset.has_reading) {
         readingArea.hidden = true;
         readingArea.replaceChildren();
         return;
@@ -516,7 +593,7 @@ function showResult(options = {}) {
     }, 0);
 
     finalScore.textContent = score;
-    scoreTen.textContent = `Điểm thang 10: ${(score / TOTAL_QUESTIONS * 10).toFixed(1)}`;
+    scoreTen.textContent = `Điểm thang 10: ${(score / currentExam.length * 10).toFixed(1)}`;
     resultMsg.textContent = options.timedOut ? `Hết giờ. ${getResultMessage(score)}` : getResultMessage(score);
     renderReview();
 }
@@ -525,7 +602,7 @@ function getResultMessage(score) {
     if (score >= 18) return "Excellent! Bạn đã sẵn sàng cho bài kiểm tra thật.";
     if (score >= 15) return "Good job! Chỉ cần ôn lại vài điểm nhỏ nữa.";
     if (score >= 10) return "Khá ổn, nhưng nên xem lại phần giải thích bên dưới.";
-    return "Nên ôn tập thêm các grammar points rồi thử lại một đề mới.";
+    return "Nên ôn tập thêm các kiến thức rồi thử lại một đề mới.";
 }
 
 function renderReview() {
@@ -555,19 +632,24 @@ function renderReview() {
         const correct = document.createElement("p");
         correct.innerHTML = `<strong>Đáp án đúng:</strong> ${escapeHtml(correctOption.text)}`;
 
+        const explainWrap = document.createElement("div");
+        
         const explain = document.createElement("p");
         explain.className = "review-explain";
-        explain.textContent = question.e || "Chưa có giải thích cho câu này.";
+        explain.innerHTML = `<strong>Giải thích:</strong> ${question.e || "Chưa có giải thích cho câu này."}`;
+        
+        explainWrap.appendChild(explain);
+
 
         item.append(status, title);
         if (readingReview) item.appendChild(readingReview);
-        item.append(chosen, correct, explain);
+        item.append(chosen, correct, explainWrap);
         reviewList.appendChild(item);
     });
 }
 
 function createReadingReview(question) {
-    if (!question.r) return null;
+    if (!question.r || !currentDataset.has_reading) return null;
 
     const passage = ALL_READINGS.find((reading) => reading.id === question.r);
     const wrapper = document.createElement("section");
@@ -630,4 +712,3 @@ newExamBtn.addEventListener("click", () => {
 });
 
 init();
-
