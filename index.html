@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=20260517-security-anti-cheat-v7">
+    <link rel="stylesheet" href="style.css?v=20260520-next-lock-v9">
 </head>
 <body>
     <main class="app-shell">
@@ -82,7 +82,7 @@
                 <div class="exam-topbar">
                     <div>
                         <p class="eyebrow">Đang làm bài</p>
-                        <h2 id="exam-title">Question 1</h2>
+                        <h2 id="exam-title">Làm bài</h2>
                     </div>
                     <div class="exam-status">
                         <div id="timer-badge" class="timer-badge">20:00</div>
@@ -108,8 +108,8 @@
 
                 <div class="nav-footer">
                     <button id="prev-btn" class="secondary-btn" type="button">Previous</button>
-                    <div id="q-counter" class="q-counter">1 / 20</div>
-                    <button id="next-btn" class="secondary-btn" type="button">Next</button>
+                    <div id="q-counter" class="q-counter" aria-hidden="true">1 / 20</div>
+                    <button id="next-btn" class="secondary-btn next-btn" type="button">Câu tiếp theo</button>
                     <button id="submit-btn" class="primary-btn submit-btn" type="button" hidden>Nộp bài</button>
                 </div>
             </div>
@@ -133,12 +133,14 @@
                             <span class="result-sep">·</span>
                             <span>Thời gian làm bài: <strong id="result-duration">—</strong></span>
                         </div>
+                        <div id="result-unit-list" class="result-unit-list"></div>
                     </div>
 
                     <div class="score-circle">
                         <span id="final-score" class="score-value">0</span>
                         <span id="score-label-text" class="score-label">Đúng 0 câu</span>
                     </div>
+                    <div id="result-attempt-summary" class="result-attempt-summary" aria-live="polite"></div>
                     <p id="result-msg" class="result-msg"></p>
                     <button id="new-exam-btn" class="primary-btn" type="button">Làm đề mới</button>
                 </div>
@@ -160,13 +162,13 @@
     <div id="cheat-modal" class="modal-overlay" style="display: none;">
         <div class="modal-card">
             <div class="modal-icon">⚠️</div>
-            <h2>Phát hiện chuyển Tab!</h2>
+            <h2>Phát hiện chuyển tab!</h2>
             <p>Hệ thống phát hiện bạn đã rời khỏi màn hình làm bài thi.</p>
-            <p class="modal-sub">Để bảo đảm tính khách quan, bài thi hiện tại đã bị hủy. Nhấn nút bên dưới để nhận đề thi mới.</p>
-            <button id="cheat-reset-btn" class="primary-btn" type="button" style="width: 100%; min-height: 48px; font-weight: 800;">Bốc đề mới & Làm lại</button>
+            <p id="cheat-penalty-text" class="modal-sub">Bạn bị phạt thêm 1 câu vào đề. Hãy tiếp tục làm bài.</p>
+            <button id="cheat-reset-btn" class="primary-btn" type="button" style="width: 100%; min-height: 48px; font-weight: 800;">Tiếp tục làm bài</button>
         </div>
     </div>
 
-    <script src="app.js?v=20260517-security-anti-cheat-v7"></script>
+    <script src="app.js?v=20260523-result-units-v11"></script>
 </body>
 </html>

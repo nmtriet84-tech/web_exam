@@ -11,6 +11,13 @@ let ALL_INSTRUCTIONS = {};
 let currentExam = [];
 let userAnswers = {};
 let currentIdx = 0;
+let initialExamCount = 0;
+let addedBonusQuestions = 0;
+let bonusQuestionQueue = [];
+let evaluatedQuestionIds = new Set();
+let baseExamQuestionCount = 20;
+let selectedUnitTitles = [];
+let totalExamSeconds = 0;
 let remainingSeconds = 0;
 let timerId = null;
 let examStartTime = null;   // Thời điểm bắt đầu làm bài
@@ -55,6 +62,120 @@ const timerBadge = document.getElementById("timer-badge");
 const studentNameInput = document.getElementById("student-name");
 const studentClassInput = document.getElementById("student-class");
 
+const RETRY_COUNT_KEY = "examPendingRetryCount";
+const ACTIVE_SESSION_KEY = "examActiveSession";
+const SCORE_HISTORY_KEY = "examScoreHistory";
+let suppressCheatDetection = false;
+let deadlineAt = 0;
+let isRestoringSession = false;
+
+function clearPendingCheatDetection() {
+    if (typeof cheatDetectionTimer !== "undefined" && cheatDetectionTimer) {
+        window.clearTimeout(cheatDetectionTimer);
+        cheatDetectionTimer = null;
+    }
+}
+
+function isInternalPopupOpen() {
+    return Boolean(cheatModal && cheatModal.style.display !== "none");
+}
+
+function runWithCheatDetectionPaused(callback) {
+    clearPendingCheatDetection();
+    suppressCheatDetection = true;
+    try {
+        return callback();
+    } finally {
+        window.setTimeout(() => {
+            suppressCheatDetection = false;
+        }, 1000);
+    }
+}
+
+function safeAlert(message) {
+    return runWithCheatDetectionPaused(() => alert(message));
+}
+
+function safeConfirm(message) {
+    return runWithCheatDetectionPaused(() => confirm(message));
+}
+
+function getActiveSession() {
+    try {
+        const session = JSON.parse(localStorage.getItem(ACTIVE_SESSION_KEY) || "null");
+        if (!session || !Array.isArray(session.currentExam) || session.submitted) return null;
+        return session;
+    } catch {
+        return null;
+    }
+}
+
+function clearActiveSession() {
+    localStorage.removeItem(ACTIVE_SESSION_KEY);
+}
+
+function saveActiveSession() {
+    if (!document.body.classList.contains("exam-active") || currentExam.length === 0) return;
+
+    localStorage.setItem(ACTIVE_SESSION_KEY, JSON.stringify(createSessionSnapshot()));
+}
+
+function createSessionSnapshot() {
+    const session = {
+        datasetId: currentDataset?.id || "",
+        currentExam,
+        userAnswers,
+        currentIdx,
+        initialExamCount,
+        addedBonusQuestions,
+        bonusQuestionQueue,
+        evaluatedQuestionIds: [...evaluatedQuestionIds],
+        baseExamQuestionCount,
+        selectedUnitTitles,
+        currentExamTargetCount,
+        totalExamSeconds,
+        deadlineAt,
+        examStartTimestamp,
+        examStartTimeIso: examStartTime ? examStartTime.toISOString() : null,
+        studentName,
+        studentClass
+    };
+
+    return session;
+}
+
+function restoreActiveSession(session) {
+    currentExam = session.currentExam || [];
+    userAnswers = session.userAnswers || {};
+    currentIdx = Math.min(session.currentIdx || 0, Math.max(currentExam.length - 1, 0));
+    initialExamCount = session.initialExamCount || currentExam.length;
+    addedBonusQuestions = session.addedBonusQuestions || 0;
+    bonusQuestionQueue = session.bonusQuestionQueue || [];
+    evaluatedQuestionIds = new Set(session.evaluatedQuestionIds || []);
+    baseExamQuestionCount = session.baseExamQuestionCount || initialExamCount || 20;
+    selectedUnitTitles = session.selectedUnitTitles || getUnitTitlesFromQuestions(currentExam);
+    currentExamTargetCount = session.currentExamTargetCount || currentExam.length || 20;
+    totalExamSeconds = session.totalExamSeconds || (baseExamQuestionCount === 40 ? 1800 : 900);
+    deadlineAt = session.deadlineAt || (Date.now() + totalExamSeconds * 1000);
+    examStartTimestamp = session.examStartTimestamp || Date.now();
+    examStartTime = session.examStartTimeIso ? new Date(session.examStartTimeIso) : new Date(examStartTimestamp);
+    studentName = session.studentName || studentName;
+    studentClass = session.studentClass || studentClass;
+
+    if (studentNameInput && studentName) studentNameInput.value = studentName;
+    if (studentClassInput && studentClass) studentClassInput.value = studentClass;
+
+    setupScreen.hidden = true;
+    resultScreen.hidden = true;
+    examScreen.hidden = false;
+    document.body.classList.add("exam-active");
+    document.body.classList.remove("result-active");
+
+    startTimer({ resume: true });
+    updateExamStats();
+    renderQuestion();
+}
+
 // Tải thông tin học sinh đã lưu từ localStorage
 function loadStudentInfo() {
     const savedName = localStorage.getItem('examStudentName') || '';
@@ -82,12 +203,29 @@ async function init() {
         if (DATASETS.length > 0) {
             await setMode(DATASETS[0].id);
         }
+        offerResumeActiveSession();
     } catch (error) {
         console.error(error);
         selectionCount.textContent = "Không tải được cấu hình hệ thống.";
     } finally {
         setLoadingState(false);
     }
+}
+
+function offerResumeActiveSession() {
+    const session = getActiveSession();
+    if (!session || session.datasetId !== currentDataset?.id) return;
+
+    const remaining = Math.ceil(((session.deadlineAt || 0) - Date.now()) / 1000);
+    if (remaining <= 0) {
+        gradeStoredSession(session);
+        clearActiveSession();
+        setPendingRetryCount(0);
+        safeAlert("Phiên làm bài trước đã hết giờ. Hệ thống đã tự chấm điểm và lưu vào điểm trung bình.");
+        return;
+    }
+
+    restoreActiveSession(session);
 }
 
 function renderDatasetSelector() {
@@ -184,6 +322,25 @@ function getQuestionGrammar(question) {
 
 function getGrammarKey(question) {
     return `${getQuestionUnit(question)}-${getQuestionGrammar(question)}`;
+}
+
+function getUnitTitle(unit) {
+    const unitData = ALL_GRAMMAR[unit] || ALL_GRAMMAR[unit.replace(/^0+/, '')] || ALL_GRAMMAR[unit.replace(/^U0*/i, 'U')];
+    return unitData ? unitData.title : `Unit ${unit.replace(/^U0*/i, "")}`;
+}
+
+function getUnitTitlesFromKeys(grammarKeys) {
+    const units = [...new Set(grammarKeys.map((key) => key.split("-GR-")[0]))];
+    return units
+        .sort((a, b) => a.localeCompare(b, undefined, { numeric: true }))
+        .map((unit) => getUnitTitle(unit));
+}
+
+function getUnitTitlesFromQuestions(questions) {
+    const units = [...new Set(questions.map((question) => getQuestionUnit(question)))];
+    return units
+        .sort((a, b) => a.localeCompare(b, undefined, { numeric: true }))
+        .map((unit) => getUnitTitle(unit));
 }
 
 function renderSelector() {
@@ -331,7 +488,67 @@ function updateSelectionSummary() {
     }
 }
 
-function generateExam(targetCount) {
+function getPendingRetryCount() {
+    const raw = localStorage.getItem(RETRY_COUNT_KEY);
+    if (!raw) return { count: 0, base: 0 };
+
+    try {
+        const parsed = JSON.parse(raw);
+        return {
+            count: Number(parsed.count) || 0,
+            base: Number(parsed.base) || 0
+        };
+    } catch {
+        const value = Number(raw);
+        return { count: Number.isFinite(value) ? value : 0, base: 0 };
+    }
+}
+
+function setPendingRetryCount(count) {
+    if (count > 0) {
+        localStorage.setItem(RETRY_COUNT_KEY, JSON.stringify({
+            count,
+            base: baseExamQuestionCount || currentExamTargetCount || 20
+        }));
+    } else {
+        localStorage.removeItem(RETRY_COUNT_KEY);
+    }
+}
+
+function finalizeOldSessionBeforeNewExam(nextTargetCount) {
+    const session = getActiveSession();
+    if (!session || session.datasetId !== currentDataset?.id) return false;
+
+    restoreActiveSession(session);
+    safeAlert("Bạn cần hoàn tất và nộp bài đang làm trước khi tạo bài mới.");
+    return true;
+}
+
+function gradeStoredSession(session) {
+    const questions = session.currentExam || [];
+    const answers = session.userAnswers || {};
+    const score = questions.reduce((total, question) => {
+        const selectedIdx = answers[question.id];
+        if (selectedIdx === undefined) return total;
+        return total + (question.shuffledOptions?.[selectedIdx]?.originalIdx === 0 ? 1 : 0);
+    }, 0);
+    const scoreTenVal = questions.length ? (score / questions.length * 10) : 0;
+    const formattedScore = Number(scoreTenVal.toFixed(2)).toString().replace('.', ',');
+
+    const oldStudentName = studentName;
+    const oldStudentClass = studentClass;
+    studentName = session.studentName || studentName || "guest";
+    studentClass = session.studentClass || studentClass || "";
+    const summary = saveAttemptScore(scoreTenVal);
+    studentName = oldStudentName;
+    studentClass = oldStudentClass;
+
+    return { score, total: questions.length, scoreTenVal, formattedScore, summary };
+}
+
+function generateExam(targetCount, options = {}) {
+    if (!options.skipOldSessionCheck && finalizeOldSessionBeforeNewExam(targetCount)) return;
+
     // Yêu cầu điền tên trước khi làm bài
     const nameVal = studentNameInput ? studentNameInput.value.trim() : '';
     if (!nameVal) {
@@ -349,6 +566,9 @@ function generateExam(targetCount) {
         return;
     }
     
+    const pendingRetry = getPendingRetryCount();
+    baseExamQuestionCount = pendingRetry.base || targetCount;
+    targetCount = Math.max(targetCount, pendingRetry.count);
     currentExamTargetCount = targetCount;
     if (pool.length < targetCount) {
         alert(`Ngân hàng đề không đủ ${targetCount} câu (hiện chỉ có ${pool.length} câu trong các phần đã chọn). Vui lòng chọn thêm Unit/Chuyên đề.`);
@@ -357,6 +577,7 @@ function generateExam(targetCount) {
 
     let finalExam = [];
     const selectedGrammars = getSelectedGrammarKeys();
+    selectedUnitTitles = getUnitTitlesFromKeys(selectedGrammars);
     let allocation = {};
     // 1. Pick reading passages globally
     const readingQs = pool.filter(q => q.r);
@@ -442,10 +663,12 @@ function generateExam(targetCount) {
         return;
     }
 
-    currentExam = finalExam.map(question => ({
-        ...question,
-        shuffledOptions: shuffle(question.o.map((text, originalIdx) => ({ text, originalIdx })))
-    }));
+    currentExam = finalExam.map(prepareExamQuestion);
+    initialExamCount = currentExam.length;
+    addedBonusQuestions = 0;
+    evaluatedQuestionIds = new Set();
+    const selectedIds = new Set(currentExam.map((question) => question.id));
+    bonusQuestionQueue = shuffle(pool.filter((question) => !selectedIds.has(question.id)));
     
     startTest();
 }
@@ -475,19 +698,26 @@ function startTest() {
     if (dCountEl) dCountEl.textContent = currentExam.length === 40 ? 30 : 15;
     
     startTimer();
+    updateExamStats();
     window.scrollTo({ top: 0, behavior: "auto" });
     renderQuestion();
 }
 
-function startTimer() {
+function startTimer(options = {}) {
     stopTimer();
     
-    const durationMins = currentExamTargetCount === 40 ? 30 : 15;
-    remainingSeconds = durationMins * 60;
+    if (!options.resume) {
+        const baseSeconds = baseExamQuestionCount === 40 ? 30 * 60 : 15 * 60;
+        totalExamSeconds = baseSeconds + Math.max(0, currentExam.length - baseExamQuestionCount) * 30;
+        remainingSeconds = totalExamSeconds;
+        deadlineAt = Date.now() + remainingSeconds * 1000;
+    } else {
+        remainingSeconds = Math.ceil((deadlineAt - Date.now()) / 1000);
+    }
     
     updateTimerDisplay();
     timerId = window.setInterval(() => {
-        remainingSeconds -= 1;
+        remainingSeconds = Math.ceil((deadlineAt - Date.now()) / 1000);
         updateTimerDisplay();
 
         if (remainingSeconds <= 0) {
@@ -495,6 +725,7 @@ function startTimer() {
             showResult({ timedOut: true });
         }
     }, 1000);
+    saveActiveSession();
 }
 
 function stopTimer() {
@@ -512,15 +743,100 @@ function updateTimerDisplay() {
     timerBadge.classList.toggle("timer-warning", safeSeconds <= 60);
 }
 
+function prepareExamQuestion(question) {
+    return {
+        ...question,
+        bonusChecked: false,
+        shuffledOptions: shuffle(question.o.map((text, originalIdx) => ({ text, originalIdx })))
+    };
+}
+
+function updateExamStats() {
+    const total = currentExam.length;
+    const answeredCount = Object.keys(userAnswers).length;
+    const scoreInfo = getRealtimeScoreInfo();
+    const qCountEl = document.getElementById("stat-questions");
+    const dCountEl = document.getElementById("stat-duration");
+
+    if (qCountEl && initialExamCount > 0) qCountEl.textContent = total;
+    if (dCountEl && totalExamSeconds > 0) dCountEl.textContent = Math.ceil(totalExamSeconds / 60);
+    answeredBadge.textContent = `${answeredCount}/${total} \u0111\u00e3 ch\u1ea5m - \u0110\u00fang ${scoreInfo.correct}/${answeredCount || 0} - \u0110i\u1ec3m ${scoreInfo.formatted}/10`;
+}
+
+function getRealtimeScoreInfo() {
+    const answeredQuestions = currentExam.filter((question) => userAnswers[question.id] !== undefined);
+    const correct = answeredQuestions.reduce((total, question) => {
+        return total + (isQuestionCorrect(question) ? 1 : 0);
+    }, 0);
+    const scoreTenVal = answeredQuestions.length ? (correct / answeredQuestions.length * 10) : 0;
+
+    return {
+        correct,
+        answered: answeredQuestions.length,
+        scoreTenVal,
+        formatted: Number(scoreTenVal.toFixed(2)).toString().replace('.', ',')
+    };
+}
+
+function isQuestionCorrect(question) {
+    const selectedIdx = userAnswers[question.id];
+    return selectedIdx !== undefined && question.shuffledOptions[selectedIdx]?.originalIdx === 0;
+}
+
+function appendBonusQuestion() {
+    const usedIds = new Set(currentExam.map((item) => item.id));
+    const nextQuestion = bonusQuestionQueue.find((item) => !usedIds.has(item.id));
+    if (!nextQuestion) return false;
+
+    bonusQuestionQueue = bonusQuestionQueue.filter((item) => item.id !== nextQuestion.id);
+    currentExam.push(prepareExamQuestion(nextQuestion));
+    addedBonusQuestions += 1;
+    totalExamSeconds += 30;
+    remainingSeconds += 30;
+    deadlineAt += 30 * 1000;
+    setPendingRetryCount(currentExam.length);
+    saveActiveSession();
+    return true;
+}
+
+function addBonusQuestionsForCurrentRound() {
+    let addedCount = 0;
+    let wrongCount = 0;
+
+    currentExam.forEach((question) => {
+        if (evaluatedQuestionIds.has(question.id)) return;
+
+        const selectedIdx = userAnswers[question.id];
+        if (selectedIdx === undefined) return;
+
+        evaluatedQuestionIds.add(question.id);
+        const selectedOption = question.shuffledOptions[selectedIdx];
+        if (selectedOption?.originalIdx !== 0) {
+            wrongCount += 1;
+            if (appendBonusQuestion()) {
+                addedCount += 1;
+            }
+        }
+    });
+
+    if (addedCount > 0) {
+        safeAlert(`Bạn làm sai ${wrongCount} câu, đề sẽ tự động thêm ${addedCount} câu để làm lại.`);
+        currentIdx = currentExam.length - addedCount;
+        updateTimerDisplay();
+        updateExamStats();
+        renderQuestion();
+    }
+
+    return { addedCount, wrongCount };
+}
+
 function renderQuestion() {
     const question = currentExam[currentIdx];
     const total = currentExam.length;
-    const answeredCount = Object.keys(userAnswers).length;
-
     progressFill.style.width = `${((currentIdx + 1) / total) * 100}%`;
     qCounter.textContent = `${currentIdx + 1} / ${total}`;
-    examTitle.textContent = `Question ${currentIdx + 1}`;
-    answeredBadge.textContent = `${answeredCount}/${total} đã trả lời`;
+    examTitle.textContent = "L\u00e0m b\u00e0i";
+    updateExamStats();
     
     questionMeta.textContent = getGrammarKey(question);
     
@@ -533,7 +849,6 @@ function renderQuestion() {
         questionInstruction.style.display = 'none';
     }
 
-    renderQuestionNav();
     renderReading(question);
     questionText.innerHTML = question.q;
     
@@ -562,32 +877,14 @@ function renderQuestion() {
 
     prevBtn.style.visibility = currentIdx === 0 ? "hidden" : "visible";
     nextBtn.hidden = currentIdx === total - 1;
+    nextBtn.disabled = userAnswers[question.id] === undefined;
+    nextBtn.setAttribute("aria-disabled", String(nextBtn.disabled));
     submitBtn.hidden = currentIdx !== total - 1;
+    saveActiveSession();
 }
 
 function renderQuestionNav() {
     questionNav.replaceChildren();
-    let activeButton = null;
-
-    currentExam.forEach((question, index) => {
-        const button = document.createElement("button");
-        button.type = "button";
-        button.className = "question-nav-btn";
-        if (index === currentIdx) {
-            button.classList.add("active");
-            activeButton = button;
-        }
-        if (userAnswers[question.id] !== undefined) button.classList.add("answered");
-        button.textContent = index + 1;
-        button.setAttribute("aria-label", `Question ${index + 1}`);
-        button.addEventListener("click", () => {
-            currentIdx = index;
-            renderQuestion();
-        });
-        questionNav.appendChild(button);
-    });
-
-    activeButton?.scrollIntoView({ block: "nearest", inline: "center" });
 }
 
 function renderReading(question) {
@@ -610,12 +907,20 @@ function renderReading(question) {
 
 function renderOptions(question) {
     optionsList.replaceChildren();
+    const selectedIdx = userAnswers[question.id];
+    const isGraded = selectedIdx !== undefined;
 
     question.shuffledOptions.forEach((option, index) => {
         const button = document.createElement("button");
         button.type = "button";
         button.className = "option-btn";
-        if (userAnswers[question.id] === index) button.classList.add("selected");
+        if (selectedIdx === index) button.classList.add("selected");
+        if (isGraded) {
+            button.disabled = true;
+            button.classList.add("graded");
+            if (option.originalIdx === 0) button.classList.add("correct-answer");
+            if (selectedIdx === index && option.originalIdx !== 0) button.classList.add("wrong-answer");
+        }
         button.addEventListener("click", () => selectOption(index));
 
         const label = document.createElement("span");
@@ -627,18 +932,29 @@ function renderOptions(question) {
         text.textContent = option.text;
 
         button.append(label, text);
+        if (isGraded && option.originalIdx === 0) {
+            const marker = document.createElement("span");
+            marker.className = "answer-marker";
+            marker.textContent = "\u0110\u00e1p \u00e1n \u0111\u00fang";
+            button.appendChild(marker);
+        }
         optionsList.appendChild(button);
     });
 }
 
 function selectOption(index) {
     const question = currentExam[currentIdx];
+    if (userAnswers[question.id] !== undefined) return;
     userAnswers[question.id] = index;
+    updateExamStats();
+    saveActiveSession();
     renderQuestion();
 }
 
 function showResult(options = {}) {
     stopTimer();
+    setPendingRetryCount(0);
+    clearActiveSession();
     examScreen.hidden = true;
     resultScreen.hidden = false;
     document.body.classList.remove("exam-active");
@@ -674,11 +990,9 @@ function showResult(options = {}) {
         durationEl.textContent = `${mins} phút ${secs} giây`;
     }
 
-    const score = currentExam.reduce((total, question) => {
-        const selectedIdx = userAnswers[question.id];
-        if (selectedIdx === undefined) return total;
-        return total + (question.shuffledOptions[selectedIdx].originalIdx === 0 ? 1 : 0);
-    }, 0);
+    renderResultUnits();
+
+    const score = currentExam.reduce((total, question) => total + (isQuestionCorrect(question) ? 1 : 0), 0);
 
     // Tính điểm hệ 10 và định dạng dạng "8,5 điểm" hay "8,54 điểm"
     const scoreTenVal = (score / currentExam.length * 10);
@@ -686,6 +1000,9 @@ function showResult(options = {}) {
     finalScore.textContent = `${formattedScore} điểm`;
 
     // Cập nhật nhãn số câu trả lời đúng
+    const scoreSummary = saveAttemptScore(scoreTenVal);
+    renderScoreSummary(scoreSummary, formattedScore);
+
     const labelEl = document.getElementById('score-label-text');
     if (labelEl) {
         labelEl.textContent = `Đúng ${score}/${currentExam.length} câu`;
@@ -695,7 +1012,82 @@ function showResult(options = {}) {
     renderReview();
 }
 
+function renderResultUnits() {
+    const container = document.getElementById("result-unit-list");
+    if (!container) return;
+
+    const units = selectedUnitTitles.length ? selectedUnitTitles : getUnitTitlesFromQuestions(currentExam);
+    container.replaceChildren();
+
+    const label = document.createElement("span");
+    label.textContent = "Unit đã chọn:";
+
+    const value = document.createElement("strong");
+    value.textContent = units.length ? units.join(", ") : "Không có dữ liệu Unit";
+
+    container.append(label, value);
+}
+
+function getScoreHistoryKey() {
+    const datasetId = currentDataset?.id || "default";
+    const student = (studentName || "guest").toLowerCase();
+    return `${SCORE_HISTORY_KEY}:${datasetId}:${student}`;
+}
+
+function saveAttemptScore(scoreTenVal) {
+    const key = getScoreHistoryKey();
+    let history = [];
+
+    try {
+        history = JSON.parse(localStorage.getItem(key) || "[]");
+    } catch {
+        history = [];
+    }
+
+    history.push(Number(scoreTenVal.toFixed(2)));
+    localStorage.setItem(key, JSON.stringify(history));
+
+    const total = history.reduce((sum, value) => sum + value, 0);
+    const average = history.length ? total / history.length : scoreTenVal;
+    return {
+        attempt: history.length,
+        average: Number(average.toFixed(2))
+    };
+}
+
+function formatScoreValue(value) {
+    return Number(value.toFixed(2)).toString().replace('.', ',');
+}
+
+function renderScoreSummary(summary, currentScoreText) {
+    const container = document.getElementById("result-attempt-summary");
+    if (!container) return;
+
+    container.replaceChildren();
+
+    const rows = [
+        ["L\u1ea7n l\u00e0m b\u00e0i", summary.attempt],
+        ["\u0110i\u1ec3m trung b\u00ecnh", `${formatScoreValue(summary.average)} \u0111i\u1ec3m`],
+        ["\u0110i\u1ec3m l\u1ea7n n\u00e0y", `${currentScoreText} \u0111i\u1ec3m`]
+    ];
+
+    rows.forEach(([label, value]) => {
+        const item = document.createElement("div");
+        const labelEl = document.createElement("span");
+        const valueEl = document.createElement("strong");
+        labelEl.textContent = label;
+        valueEl.textContent = value;
+        item.append(labelEl, valueEl);
+        container.appendChild(item);
+    });
+}
+
 function getResultMessage(score) {
+    const ratio = currentExam.length ? score / currentExam.length : 0;
+    if (ratio >= 0.9) return "Excellent! B\u1ea1n \u0111\u00e3 s\u1eb5n s\u00e0ng cho b\u00e0i ki\u1ec3m tra th\u1eadt.";
+    if (ratio >= 0.75) return "Good job! Ch\u1ec9 c\u1ea7n \u00f4n l\u1ea1i v\u00e0i \u0111i\u1ec3m nh\u1ecf n\u1eefa.";
+    if (ratio >= 0.5) return "Kh\u00e1 \u1ed5n, nh\u01b0ng n\u00ean xem l\u1ea1i ph\u1ea7n gi\u1ea3i th\u00edch b\u00ean d\u01b0\u1edbi.";
+    return "N\u00ean \u00f4n t\u1eadp th\u00eam c\u00e1c ki\u1ebfn th\u1ee9c r\u1ed3i th\u1eed l\u1ea1i m\u1ed9t \u0111\u1ec1 m\u1edbi.";
     if (score >= 18) return "Excellent! Bạn đã sẵn sàng cho bài kiểm tra thật.";
     if (score >= 15) return "Good job! Chỉ cần ôn lại vài điểm nhỏ nữa.";
     if (score >= 10) return "Khá ổn, nhưng nên xem lại phần giải thích bên dưới.";
@@ -784,6 +1176,19 @@ selectAllBtn.addEventListener("click", () => setAllSelections(true));
 clearAllBtn.addEventListener("click", () => setAllSelections(false));
 if (start15Btn) start15Btn.addEventListener("click", () => generateExam(20));
 if (start30Btn) start30Btn.addEventListener("click", () => generateExam(40));
+
+window.addEventListener("beforeunload", () => {
+    isPageUnloading = true;
+    if (cheatDetectionTimer) {
+        window.clearTimeout(cheatDetectionTimer);
+        cheatDetectionTimer = null;
+    }
+    if (document.body.classList.contains("exam-active") && currentExam.length > 0) {
+        setPendingRetryCount(currentExam.length);
+        saveActiveSession();
+    }
+});
+
 prevBtn.addEventListener("click", () => {
     if (currentIdx > 0) {
         currentIdx--;
@@ -791,18 +1196,22 @@ prevBtn.addEventListener("click", () => {
     }
 });
 nextBtn.addEventListener("click", () => {
-    if (currentIdx < currentExam.length - 1) {
+    const question = currentExam[currentIdx];
+    if (userAnswers[question.id] !== undefined && currentIdx < currentExam.length - 1) {
         currentIdx++;
         renderQuestion();
     }
 });
 submitBtn.addEventListener("click", () => {
     const answeredCount = Object.keys(userAnswers).length;
-    if (answeredCount < currentExam.length && !confirm(`Bạn mới trả lời ${answeredCount}/${currentExam.length} câu. Vẫn nộp bài?`)) return;
+    if (answeredCount < currentExam.length && !safeConfirm(`Bạn mới trả lời ${answeredCount}/${currentExam.length} câu. Vẫn nộp bài?`)) return;
+    const bonusResult = addBonusQuestionsForCurrentRound();
+    if (bonusResult.addedCount > 0) return;
     showResult();
 });
 newExamBtn.addEventListener("click", () => {
     stopTimer();
+    setPendingRetryCount(0);
     resultScreen.hidden = true;
     setupScreen.hidden = false;
     document.body.classList.remove("exam-active", "result-active");
@@ -850,46 +1259,75 @@ document.addEventListener('keydown', event => {
 const cheatModal = document.getElementById("cheat-modal");
 const cheatResetBtn = document.getElementById("cheat-reset-btn");
 let isCheatTriggered = false;
+let isPageUnloading = false;
+let cheatDetectionTimer = null;
+
+function scheduleExamCheatingCheck() {
+    if (isPageUnloading || suppressCheatDetection || isInternalPopupOpen()) return;
+    if (cheatDetectionTimer) window.clearTimeout(cheatDetectionTimer);
+    cheatDetectionTimer = window.setTimeout(() => {
+        cheatDetectionTimer = null;
+        if (!isPageUnloading && !suppressCheatDetection && !isInternalPopupOpen()) {
+            handleExamCheating();
+        }
+    }, 350);
+}
 
 function handleExamCheating() {
     // Chỉ kích hoạt hình phạt khi đang ở trong phòng thi tích cực và chưa bị cảnh báo trước đó
-    if (!document.body.classList.contains("exam-active") || isCheatTriggered) {
+    if (isPageUnloading || suppressCheatDetection || isInternalPopupOpen() || !document.body.classList.contains("exam-active") || isCheatTriggered) {
         return;
     }
     
     isCheatTriggered = true;
-    stopTimer(); // Dừng thời gian đếm ngược ngay lập tức
-    
-    // Hiển thị modal cảnh báo gian lận
+    const addedPenalty = appendBonusQuestion();
+    updateTimerDisplay();
+    updateExamStats();
+    saveActiveSession();
+
     if (cheatModal) {
+        clearPendingCheatDetection();
+        const penaltyText = document.getElementById("cheat-penalty-text");
+        if (penaltyText) {
+            penaltyText.textContent = addedPenalty
+                ? "Bạn bị phạt thêm 1 câu vào đề. Hãy tiếp tục làm bài."
+                : "Hệ thống không thể thêm câu phạt vì đã đạt giới hạn câu hỏi.";
+        }
         cheatModal.style.display = "flex";
+    } else {
+        safeAlert(addedPenalty ? "Bạn đã chuyển tab. Hệ thống phạt thêm 1 câu vào đề." : "Bạn đã chuyển tab.");
+        isCheatTriggered = false;
     }
 }
 
 // Khi nhấn "Bốc đề mới & Làm lại" trên modal cảnh báo
 if (cheatResetBtn) {
     cheatResetBtn.addEventListener("click", () => {
+        clearPendingCheatDetection();
+        suppressCheatDetection = true;
         if (cheatModal) {
             cheatModal.style.display = "none";
         }
         isCheatTriggered = false;
         
         // Hủy kết quả làm bài hiện tại và tự động bốc bộ đề mới với cấu hình tương đương
-        const targetCount = currentExamTargetCount || 20;
-        generateExam(targetCount);
+        renderQuestion();
+        window.setTimeout(() => {
+            suppressCheatDetection = false;
+        }, 800);
     });
 }
 
 // Lắng nghe sự kiện ẩn/hiện tab (Page Visibility API)
 document.addEventListener("visibilitychange", () => {
     if (document.hidden) {
-        handleExamCheating();
+        scheduleExamCheatingCheck();
     }
 });
 
 // Lắng nghe sự kiện mất tiêu điểm của trình duyệt (chuyển cửa sổ khác, chia màn hình)
 window.addEventListener("blur", () => {
-    handleExamCheating();
+    scheduleExamCheatingCheck();
 });
 
 init();
